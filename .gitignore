@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.env
+.venv
+env/
+venv/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Rendered image cache — large, reproducible via render_pdf.py
+data/rendered_pages/
+
+# Model checkpoints — large, stored in GCS
+checkpoints/
+
+# Training logs — stored in GCS
+logs/
+
+# Evaluation output
+eval_output/
+
+# Temp download dir used by drive_to_gcs.py
+/tmp/hallucination_pdfs_*/
+
+# Local PDF source folders — Hebrew folder names, stored in GCS not in repo
+data/pdf_s*/
+data/מסמכים*/
+
+# Sensitive / credential files
+*.json
+service_account*.json
+credentials*.json
+*_key.json
+
+# Split CSVs — generated, not committed
+data/splits/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
