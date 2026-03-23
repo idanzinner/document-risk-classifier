@@ -11,32 +11,43 @@ After all PDFs are uploaded the script also uploads the metadata CSVs:
     gs://<BUCKET>/data/metadata.csv
     gs://<BUCKET>/data/labels_binary_clean.csv
 
+Download strategy (tried in order):
+    1. Google Drive API with Application Default Credentials (ADC) — works automatically
+       on Vertex AI Workbench when the Drive folder is shared with the VM service account.
+       Find your service account email with:
+           curl -s "http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/email" \
+                -H "Metadata-Flavor: Google"
+       Then share the Drive folder with that email (Viewer access).
+    2. gdown anonymous download — fallback for publicly shared files ("Anyone with the link").
+
 Prerequisites:
-    pip install gdown google-cloud-storage gcsfs tqdm
+    pip install google-api-python-client google-auth gdown google-cloud-storage gcsfs tqdm
 
 Authentication:
-    On Vertex AI Workbench / Colab Enterprise the VM service account credentials
-    are available automatically.  Locally, run:
-        gcloud auth application-default login
+    On Vertex AI Workbench / Colab Enterprise: share the Drive folder with the VM service
+    account email. ADC credentials are picked up automatically.
+    Locally: run  gcloud auth application-default login
 
 Usage:
     python scripts/drive_to_gcs.py --bucket my-bucket-name
     python scripts/drive_to_gcs.py --bucket my-bucket-name --input data/labels_binary_clean.csv
-    python scripts/drive_to_gcs.py --bucket my-bucket-name --workers 8 --dry-run
+    python scripts/drive_to_gcs.py --bucket my-bucket-name --workers 4 --dry-run
 
 Options:
-    --bucket       GCS bucket name (required, no gs:// prefix)
-    --input        Path to cleaned labels CSV (default: data/labels_binary_clean.csv)
-    --data-dir     Local data directory containing the CSV files (default: data/)
-    --prefix       GCS prefix / folder for raw PDFs (default: raw_pdfs)
-    --workers      Parallel download/upload workers (default: 4)
-    --dry-run      Print what would be done without downloading or uploading
-    --skip-existing  Skip files already present in GCS (default: True)
-    --tmp-dir      Local temp directory for downloads (default: /tmp/hallucination_pdfs)
+    --bucket          GCS bucket name (required, no gs:// prefix)
+    --input           Path to cleaned labels CSV (default: data/labels_binary_clean.csv)
+    --data-dir        Local data directory containing the CSV files (default: data/)
+    --prefix          GCS prefix / folder for raw PDFs (default: raw_pdfs)
+    --workers         Parallel download/upload workers (default: 4)
+    --dry-run         Print what would be done without downloading or uploading
+    --no-skip-existing  Re-upload files already in GCS (default: skip existing)
+    --tmp-dir         Local temp directory for downloads (default: system temp)
+    --no-drive-api    Skip Drive API and use only gdown (useful if ADC not configured)
 """
 
 import argparse
 import csv
+import io
 import logging
 import os
 import re
@@ -52,6 +63,10 @@ logging.basicConfig(
     datefmt="%H:%M:%S",
 )
 logger = logging.getLogger(__name__)
+
+# Module-level Drive API service (built once, reused across threads)
+_drive_service = None
+_drive_service_error: str | None = None
 
 
 def _import_or_fail(pkg: str, install_hint: str) -> object:
@@ -74,24 +89,102 @@ def gcs_blob_exists(bucket, blob_name: str) -> bool:
     return blob.exists()
 
 
-def download_from_drive(file_id: str, dest_path: Path, dry_run: bool = False) -> bool:
-    """Download a single file from Google Drive via gdown. Returns True on success."""
-    if dry_run:
-        logger.info("[DRY RUN] Would download Drive ID %s -> %s", file_id, dest_path)
-        return True
+def _build_drive_service():
+    """Build a Google Drive API service using Application Default Credentials.
 
-    gdown = _import_or_fail("gdown", "pip install gdown>=5.0.0")
+    On Vertex AI Workbench the VM service account credentials are used automatically.
+    The Drive folder must be shared with the VM service account email.
+    """
+    global _drive_service, _drive_service_error
+    if _drive_service is not None or _drive_service_error is not None:
+        return _drive_service
+
+    try:
+        import google.auth
+        from googleapiclient.discovery import build
+
+        creds, project = google.auth.default(
+            scopes=["https://www.googleapis.com/auth/drive.readonly"]
+        )
+        _drive_service = build("drive", "v3", credentials=creds, cache_discovery=False)
+        logger.info("Drive API ready (project=%s)", project or "unknown")
+    except Exception as exc:
+        _drive_service_error = str(exc)
+        logger.warning(
+            "Drive API unavailable (%s) — will fall back to gdown for all files.", exc
+        )
+    return _drive_service
+
+
+def _download_via_drive_api(file_id: str, dest_path: Path) -> bool:
+    """Download using the Drive API with ADC credentials. Returns True on success."""
+    service = _drive_service
+    if service is None:
+        return False
+    try:
+        from googleapiclient.http import MediaIoBaseDownload
+
+        request = service.files().get_media(fileId=file_id)
+        dest_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(dest_path, "wb") as fh:
+            downloader = MediaIoBaseDownload(fh, request, chunksize=8 * 1024 * 1024)
+            done = False
+            while not done:
+                _, done = downloader.next_chunk()
+        if not dest_path.exists() or dest_path.stat().st_size == 0:
+            dest_path.unlink(missing_ok=True)
+            return False
+        return True
+    except Exception as exc:
+        dest_path.unlink(missing_ok=True)
+        logger.debug("Drive API download failed for %s: %s", file_id, exc)
+        return False
+
+
+def _download_via_gdown(file_id: str, dest_path: Path) -> bool:
+    """Download via gdown (works for publicly shared files). Returns True on success."""
+    try:
+        import gdown
+    except ImportError:
+        logger.warning("gdown not installed; skipping gdown fallback")
+        return False
+
     url = f"https://drive.google.com/uc?id={file_id}"
     try:
         dest_path.parent.mkdir(parents=True, exist_ok=True)
         gdown.download(url, str(dest_path), quiet=True, fuzzy=False)
         if not dest_path.exists() or dest_path.stat().st_size == 0:
-            logger.warning("Download produced empty file for ID %s", file_id)
+            dest_path.unlink(missing_ok=True)
             return False
         return True
     except Exception as exc:
-        logger.warning("Download failed for ID %s: %s", file_id, exc)
+        dest_path.unlink(missing_ok=True)
+        logger.debug("gdown download failed for %s: %s", file_id, exc)
         return False
+
+
+def download_from_drive(
+    file_id: str,
+    dest_path: Path,
+    dry_run: bool = False,
+    use_drive_api: bool = True,
+) -> bool:
+    """Download a single file from Google Drive.
+
+    Tries Drive API first (authenticated, reliable), then falls back to gdown
+    (anonymous, works for publicly shared files).
+    Returns True on success.
+    """
+    if dry_run:
+        logger.info("[DRY RUN] Would download Drive ID %s -> %s", file_id, dest_path)
+        return True
+
+    if use_drive_api and _drive_service is not None:
+        if _download_via_drive_api(file_id, dest_path):
+            return True
+        logger.debug("Drive API failed for %s, trying gdown fallback", file_id)
+
+    return _download_via_gdown(file_id, dest_path)
 
 
 def upload_to_gcs(local_path: Path, bucket, blob_name: str, dry_run: bool = False) -> bool:
@@ -115,6 +208,7 @@ def process_row(
     tmp_dir: Path,
     skip_existing: bool,
     dry_run: bool,
+    use_drive_api: bool = True,
 ) -> tuple[str, str]:
     """Download one PDF from Drive and upload to GCS. Returns (filename, status)."""
     filename = row["file_path"]
@@ -133,7 +227,7 @@ def process_row(
             pass
 
     tmp_path = tmp_dir / filename
-    if not download_from_drive(file_id, tmp_path, dry_run=dry_run):
+    if not download_from_drive(file_id, tmp_path, dry_run=dry_run, use_drive_api=use_drive_api):
         return filename, "error:download_failed"
 
     ok = upload_to_gcs(tmp_path, bucket, blob_name, dry_run=dry_run)
@@ -177,9 +271,26 @@ def main() -> None:
         "--tmp-dir", default=None,
         help="Temporary directory for downloaded PDFs (default: system temp)",
     )
+    parser.add_argument(
+        "--no-drive-api", action="store_true",
+        help="Skip Drive API (ADC) and use only gdown. Use if ADC is not configured.",
+    )
     args = parser.parse_args()
 
     skip_existing = not args.no_skip_existing
+    use_drive_api = not args.no_drive_api
+
+    # Initialise Drive API service (uses ADC — automatic on Vertex AI Workbench)
+    if use_drive_api and not args.dry_run:
+        _build_drive_service()
+        if _drive_service is None:
+            logger.warning(
+                "Drive API not available. Falling back to gdown for all downloads.\n"
+                "  To enable the Drive API: share your Drive folder with the VM service account.\n"
+                "  Find it with: curl -s http://metadata.google.internal/computeMetadata/v1/"
+                "instance/service-accounts/default/email -H 'Metadata-Flavor: Google'\n"
+                "  Or run with --no-drive-api to suppress this warning."
+            )
 
     # Read cleaned CSV
     input_path = Path(args.input)
@@ -240,7 +351,8 @@ def main() -> None:
         with ThreadPoolExecutor(max_workers=args.workers) as pool:
             futures = {
                 pool.submit(
-                    process_row, row, bucket, args.prefix, tmp_dir, skip_existing, args.dry_run
+                    process_row, row, bucket, args.prefix, tmp_dir,
+                    skip_existing, args.dry_run, use_drive_api,
                 ): row["file_path"]
                 for row in rows
             }
