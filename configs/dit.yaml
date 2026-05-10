@@ -1,42 +1,39 @@
-# GCS bucket name — set this to your actual bucket before running on Vertex AI Workbench
-# On Vertex AI Workbench the bucket is mounted at /gcs/<bucket_name>/
-gcs:
-  bucket_name: "YOUR_BUCKET_NAME"          # <-- replace with your GCS bucket name
-  mount_root: "/gcs"                       # GCSFuse mount point on Vertex AI Workbench
-
 model:
   name: microsoft/dit-base
   num_classes: 1
   staged_training: true
 
 training:
-  stage1_epochs: 10
-  stage2_epochs: 10
-  stage3_epochs: 10
+  stage1_epochs: 30
+  stage2_epochs: 30
+  stage3_epochs: 30
   stage1_lr: 1.0e-3
   stage2_lr: 1.0e-5
   stage3_lr: 5.0e-6
   batch_size: 16
   weight_decay: 1.0e-4
-  early_stopping_patience: 5
+  early_stopping_patience: 15
   loss: bce_with_logits
+  device: auto              # "auto" | "cpu" | "mps" | "cuda"
+  pos_weight: auto          # "auto" (n_neg/n_pos from train set) | float | null
+  use_weighted_sampler: true  # oversample minority class each epoch
 
 data:
   dpi: 150
   image_size: 224
   grayscale: true
   augmentation: true
-  # GCS-mounted paths (auto-resolved via GCSFuse on Vertex AI Workbench)
-  metadata_csv: "/gcs/YOUR_BUCKET_NAME/data/metadata.csv"
-  rendered_dir: "/gcs/YOUR_BUCKET_NAME/rendered_pages"
+  metadata_csv: "data/metadata.csv"
+  rendered_dir: "data/rendered_pages"
 
 splits:
-  strategy: grouped
-  group_col: template_family          # NOTE: use template_family not institution —
-  train_ratio: 0.70                   # institution is perfectly correlated with label
+  strategy: grouped_holdout           # whole-document holdout: no page leakage across splits
+  group_col: source_doc_stem          # each unique source PDF is a group
+  stratify_col: label_binary          # balance classes when allocating groups to splits
+  train_ratio: 0.70
   val_ratio: 0.15
   test_ratio: 0.15
 
 output:
-  checkpoint_dir: "/gcs/YOUR_BUCKET_NAME/checkpoints/dit"
-  log_dir: "/gcs/YOUR_BUCKET_NAME/logs/dit"
+  checkpoint_dir: "checkpoints/dit"
+  log_dir: "logs/dit"

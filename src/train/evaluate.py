@@ -80,7 +80,7 @@ def _load_model(
         from src.models.resnet_baseline import ResNetClassifier
         model = ResNetClassifier(model_name=model_name, pretrained=pretrained, num_classes=num_classes)
 
-    ckpt = torch.load(checkpoint_path, map_location=device)
+    ckpt = torch.load(checkpoint_path, map_location=device, weights_only=False)
     state = ckpt.get("model_state_dict", ckpt)
     model.load_state_dict(state)
     model.to(device)
@@ -539,7 +539,7 @@ if __name__ == "__main__":
     # Derive thresholds from calibrator state if they were stored, otherwise
     # re-derive on the evaluation split (use val for threshold derivation in practice).
     # Here we load thresholds from the checkpoint if available.
-    ckpt = torch.load(args.checkpoint, map_location=device)
+    ckpt = torch.load(args.checkpoint, map_location=device, weights_only=False)
     if "thresholds" in ckpt:
         thresholds = ckpt["thresholds"]
         logger.info("Using stored thresholds: %s", thresholds)

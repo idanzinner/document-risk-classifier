@@ -37,11 +37,28 @@ eval_output/
 data/pdf_s*/
 data/מסמכים*/
 
-# Sensitive / credential files
-*.json
+# Sensitive / credential files — match specific secret filename patterns only
 service_account*.json
 credentials*.json
 *_key.json
+
+# Distribution staging packages + zipped bundles (regenerable via scripts/build_dit_package.py)
+_package/
+_dit_package/
+*.zip
+
+# Raw source PDFs + per-page PNGs — large, sourced from Google Drive, not committed
+data/handwritten/
+data/handwritten_and_questioniers/
+data/handwritten_edge_cases/
+data/regular_forms/
+data/regular_forms_edge_cases/
+data/spaciel_font/
+data/spaciel_font_pages/
+data/validation_set/
+
+# Hebrew Drive archive zip
+"data/פונט מוזר*"
 
 # Split CSVs — generated, not committed
 data/splits/

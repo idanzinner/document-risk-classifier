@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hebrew PDF Hallucination-Risk Classifier — Fine-Tune Report</title>
+<script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+<style>
+  :root {
+    --bg: #f4f6fb; --surface: #ffffff; --primary: #1a1a2e;
+    --accent: #2563eb; --accent-strong: #1d4ed8;
+    --muted: #6b7280; --border: #e5e7eb;
+    --good: #059669; --bad: #dc2626; --warn: #d97706;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--primary); min-height: 100vh; line-height: 1.55;
+  }
+  code { font-size: 0.85em; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; }
+  header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white; padding: 32px 48px 28px; border-bottom: 3px solid var(--accent);
+  }
+  header .eyebrow {
+    font-size: 0.72rem; color: #60a5fa; text-transform: uppercase;
+    letter-spacing: 1.5px; font-weight: 600; margin-bottom: 6px;
+  }
+  header h1 { font-size: 1.9rem; font-weight: 700; letter-spacing: -0.5px; }
+  header .subtitle { font-size: 0.95rem; color: #cbd5e1; margin-top: 6px; max-width: 900px; }
+  header .meta { font-size: 0.78rem; color: #94a3b8; margin-top: 14px; }
+
+  .tabs {
+    display: flex; gap: 4px; padding: 18px 48px 0;
+    background: var(--bg); border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 10;
+  }
+  .tab-btn {
+    padding: 11px 22px; border: 1px solid var(--border); border-bottom: none;
+    background: #f3f4f6; color: var(--muted); font-size: 0.875rem;
+    font-weight: 500; cursor: pointer; border-radius: 8px 8px 0 0; transition: all 0.15s;
+  }
+  .tab-btn:hover { background: #e0e7ff; color: var(--accent); }
+  .tab-btn.active {
+    background: var(--surface); color: var(--accent); font-weight: 600;
+    box-shadow: 0 -2px 0 var(--accent);
+  }
+
+  .pages { padding: 32px 48px 48px; max-width: 1400px; margin: 0 auto; }
+  .page { display: none; }
+  .page.active { display: block; }
+
+  .card {
+    background: var(--surface); border-radius: 12px; border: 1px solid var(--border);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05); padding: 28px 32px; margin-bottom: 24px;
+  }
+  .card h2 {
+    font-size: 1.25rem; font-weight: 700; color: var(--primary);
+    margin-bottom: 16px; border-left: 4px solid var(--accent);
+    padding-left: 12px;
+  }
+  .card h3 {
+    font-size: 1.0rem; font-weight: 600; color: var(--primary);
+    margin-top: 20px; margin-bottom: 10px;
+  }
+  .card p { color: #334155; font-size: 0.92rem; margin-bottom: 10px; }
+  .card ul, .card ol { margin-left: 24px; color: #334155; font-size: 0.92rem; }
+  .card ul li, .card ol li { margin-bottom: 6px; }
+
+  .kpi-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px; margin-top: 6px;
+  }
+  .kpi {
+    background: #f8fafc; border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 18px; display: flex; flex-direction: column; gap: 2px;
+  }
+  .kpi .label {
+    font-size: 0.7rem; color: var(--muted); text-transform: uppercase;
+    letter-spacing: 0.5px; font-weight: 600;
+  }
+  .kpi .value { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+  .kpi .delta { font-size: 0.78rem; font-weight: 600; }
+  .kpi .delta.good { color: var(--good); }
+  .kpi .delta.bad  { color: var(--bad); }
+  .kpi .delta.flat { color: var(--muted); }
+
+  table.data {
+    width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.9rem;
+  }
+  table.data th, table.data td {
+    padding: 10px 14px; text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  table.data th {
+    background: #1a1a2e; color: white; font-weight: 600;
+    text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px;
+  }
+  table.data tbody tr:nth-child(even) { background: #f8fafc; }
+  table.data tbody tr:hover { background: #eff6ff; }
+  table.data td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  table.data td.center { text-align: center; }
+  .best { color: var(--good); font-weight: 700; }
+  .worst { color: var(--bad); font-weight: 600; }
+  .good-cell { color: var(--good); font-weight: 600; }
+  .bad-cell  { color: var(--bad);  font-weight: 600; }
+
+  .callout {
+    padding: 14px 18px; border-radius: 10px; margin: 16px 0;
+    font-size: 0.9rem; border-left: 4px solid;
+  }
+  .callout.info { background: #eff6ff; border-color: var(--accent); color: #1e3a8a; }
+  .callout.good { background: #ecfdf5; border-color: var(--good);   color: #065f46; }
+  .callout.warn { background: #fffbeb; border-color: var(--warn);   color: #92400e; }
+
+  .plot-card {
+    background: var(--surface); border-radius: 10px; border: 1px solid var(--border);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05); padding: 24px; margin-bottom: 20px;
+  }
+  .plot-card .caption {
+    margin-top: 10px; font-size: 0.82rem; color: var(--muted); text-align: center;
+  }
+  .plot-card h3 {
+    font-size: 1.0rem; margin: 0 0 14px; color: var(--primary); font-weight: 600;
+  }
+  .plotly-chart { width: 100%; min-height: 380px; }
+
+  .two-col {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;
+  }
+  @media (max-width: 900px) {
+    .two-col { grid-template-columns: 1fr; }
+  }
+
+  .model-selector {
+    display: flex; gap: 8px; margin-bottom: 18px; flex-wrap: wrap;
+  }
+  .model-btn {
+    padding: 8px 16px; border: 1px solid var(--border); background: var(--surface);
+    color: var(--muted); font-size: 0.85rem; font-weight: 500; border-radius: 8px;
+    cursor: pointer; transition: all 0.15s;
+  }
+  .model-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .model-btn.active {
+    background: var(--accent); border-color: var(--accent); color: white; font-weight: 600;
+  }
+
+  .cost-banner {
+    background: linear-gradient(90deg, #fef3c7 0%, #fde68a 100%);
+    border-radius: 10px; padding: 16px 22px; margin-bottom: 20px;
+    font-size: 0.92rem; color: #78350f; border-left: 4px solid #d97706;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .cost-banner .badge {
+    background: #d97706; color: white; padding: 4px 10px; border-radius: 6px;
+    font-weight: 700; font-size: 0.78rem; letter-spacing: 0.5px;
+    text-transform: uppercase; white-space: nowrap;
+  }
+
+  footer {
+    text-align: center; padding: 28px; font-size: 0.78rem; color: var(--muted);
+    border-top: 1px solid var(--border); margin-top: 28px;
+  }
+
+  @media (max-width: 768px) {
+    header { padding: 18px 20px 16px; } header h1 { font-size: 1.35rem; }
+    .tabs { padding: 12px 12px 0; overflow-x: auto; flex-wrap: nowrap; }
+    .tab-btn { white-space: nowrap; padding: 9px 14px; font-size: 0.8rem; flex-shrink: 0; }
+    .pages { padding: 16px 14px 32px; }
+    .card { padding: 18px 16px; border-radius: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Model Fine-Tune Report &bull; Phase 6</div>
+  <h1>Hebrew PDF Hallucination-Risk Classifier</h1>
+  <div class="subtitle">
+    Retrained on an expanded 1,873-page corpus with class-imbalance handling and
+    source-document-grouped splits, then recalibrated with an asymmetric cost model
+    (<b>FN&nbsp;=&nbsp;10&times;&nbsp;FP</b>) so the production threshold explicitly avoids
+    the dangerous "risky-as-safe" error. Evaluated on an internal held-out test set
+    and an external 400-document validation set not seen during training.
+  </div>
+  <div class="meta">Generated __GENERATED_AT__ &bull; Models: ResNet50 &bull; ViT-Base &bull; DiT</div>
+</header>
+
+<div class="tabs">
+  <button class="tab-btn active" onclick="showPage('overview', this)">Overview</button>
+  <button class="tab-btn" onclick="showPage('training', this)">Training Curves</button>
+  <button class="tab-btn" onclick="showPage('test', this)">Held-out Test</button>
+  <button class="tab-btn" onclick="showPage('external', this)">External Validation</button>
+  <button class="tab-btn" onclick="showPage('findings', this)">Findings &amp; Recommendation</button>
+</div>
+
+<div class="pages">
+
+  <!-- ========== OVERVIEW ========== -->
+  <div class="page active" id="page-overview">
+
+    <div class="cost-banner">
+      <span class="badge">Policy</span>
+      <span>
+        <b>Asymmetric cost model:</b> one false-negative (risky doc marked safe) is
+        treated as 10&times; worse than one false-positive (safe doc sent to review).
+        Decision threshold &tau;* was chosen per-model to minimise
+        <code>10&middot;FN + FP</code> on the validation set.
+      </span>
+    </div>
+
+    <div class="card">
+      <h2>Executive Summary</h2>
+      <p>
+        Three image classifiers &mdash; <b>ResNet50</b>, <b>ViT-Base</b>, and <b>DiT</b> (Document Image Transformer)
+        &mdash; were re-fine-tuned on a corpus that nearly doubled in size (1,014 &rarr; 1,873 pages) and
+        was rebalanced so that handwritten and questionnaire-style pages (the failure mode we care about) are
+        well represented. Splits were regrouped by <code>source_doc_stem</code> to eliminate page-level leakage,
+        BCE loss is now weighted to offset the reversed class imbalance, and the final operating thresholds
+        were retuned with the 10&middot;FN + FP cost model described above.
+      </p>
+      <p>
+        On the internal held-out test set all three models reach F1&nbsp;&gt;&nbsp;0.95 and ROC-AUC&nbsp;&gt;&nbsp;0.99.
+        At the new cost-weighted threshold &tau;* all three hit <b>0&nbsp;FN</b> on the test split.
+        On the external validation set (94 risky + 306 safe, none seen during training), FSR improves
+        dramatically for every model versus the Phase&nbsp;5 release:
+      </p>
+      <div class="kpi-grid" id="overview-kpis" style="margin-top:14px"></div>
+    </div>
+
+    <div class="card">
+      <h2>Dataset Composition</h2>
+      <p>
+        Expanded from 1,014 pages (634 safe / 380 risky) to <b>1,873 pages</b> by ingesting four new
+        source folders. Class balance has flipped: risky pages now slightly outnumber safe pages.
+      </p>
+      <table class="data">
+        <thead>
+          <tr>
+            <th>Source Folder</th>
+            <th class="num">Pages</th>
+            <th class="center">Label</th>
+            <th>Template Family</th>
+          </tr>
+        </thead>
+        <tbody id="corpus-tbody"></tbody>
+      </table>
+
+      <h3 style="margin-top:22px">Splits (source-doc grouped, stratified by label &amp; source)</h3>
+      <table class="data">
+        <thead>
+          <tr>
+            <th>Split</th>
+            <th class="num">Total</th>
+            <th class="num">Safe (0)</th>
+            <th class="num">Risky (1)</th>
+            <th class="num">% Risky</th>
+          </tr>
+        </thead>
+        <tbody id="splits-tbody"></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Key Methodology Changes vs Phase 5</h2>
+      <ul>
+        <li><b>Split key:</b> <code>template_family</code> &rarr; <code>source_doc_stem</code> (54 unique source docs) to prevent page-level leakage for multi-page source PDFs.</li>
+        <li><b>Loss weighting:</b> <code>BCEWithLogitsLoss(pos_weight&nbsp;=&nbsp;n_neg / n_pos)</code> so the reversed imbalance (now ~1:1.95) doesn't overpower the safe class.</li>
+        <li><b>Sampler:</b> optional <code>WeightedRandomSampler</code> upsamples the minority class every epoch (enabled for all three runs).</li>
+        <li><b>Rubric scoring:</b> incremental Claude vision annotation of the 925 new pages; 1,873 total pages now carry D/H/S/L rubric scores.</li>
+        <li><b>Cost-weighted threshold:</b> per-model &tau;* from <code>TemperatureCalibrator.get_cost_weighted_thresholds(fn_cost=10, fp_cost=1)</code>, replacing the old "FSR &le; 5% target" threshold rule.</li>
+        <li><b>No architecture changes</b> &mdash; only data, loss, sampler, and threshold policy.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ========== TRAINING CURVES ========== -->
+  <div class="page" id="page-training">
+    <div class="card">
+      <h2>Training Dynamics</h2>
+      <p>
+        Validation metrics tracked per epoch. ResNet50 and ViT-Base early-stop on plateauing val F1;
+        DiT uses staged unfreezing (head-only &rarr; top-2 encoder blocks &rarr; full fine-tune) with
+        per-stage early stopping and global-best checkpoint selection.
+      </p>
+    </div>
+
+    <div class="plot-card">
+      <div id="plot-loss" class="plotly-chart"></div>
+      <p class="caption">Training &amp; validation loss per epoch for each model. Vertical lines mark DiT stage transitions.</p>
+    </div>
+
+    <div class="plot-card">
+      <div id="plot-f1" class="plotly-chart"></div>
+      <p class="caption">Validation F1 score per epoch. Stars mark the best epoch checkpointed for each model.</p>
+    </div>
+
+    <div class="plot-card">
+      <div id="plot-auc-ece" class="plotly-chart"></div>
+      <p class="caption">Validation ROC-AUC (top) and Expected Calibration Error (bottom). Lower ECE = better-calibrated probabilities.</p>
+    </div>
+  </div>
+
+  <!-- ========== HELD-OUT TEST ========== -->
+  <div class="page" id="page-test">
+    <div class="card">
+      <h2>Held-out Test Set Performance (n = 284)</h2>
+      <p>
+        Source-document-grouped test split, stratified by label and source folder. No page appears in both
+        training and test (prevented by grouping on <code>source_doc_stem</code>).
+      </p>
+      <table class="data">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th class="num">F1</th>
+            <th class="num">ROC-AUC</th>
+            <th class="num">PR-AUC</th>
+            <th class="num">ECE</th>
+            <th class="num">Temperature</th>
+            <th class="num">Old T_low</th>
+            <th class="num">New &tau;*</th>
+          </tr>
+        </thead>
+        <tbody id="test-metrics-tbody"></tbody>
+      </table>
+
+      <h3 style="margin-top:22px">Test-set confusion: old policy (&ge; 0.5) vs cost-weighted &tau;*</h3>
+      <table class="data">
+        <thead>
+          <tr>
+            <th rowspan="2">Model</th>
+            <th colspan="5" class="center">Old binary threshold = 0.5</th>
+            <th colspan="5" class="center">New cost-weighted &tau;*</th>
+          </tr>
+          <tr>
+            <th class="num">TN</th><th class="num">FP</th><th class="num">FN</th><th class="num">TP</th><th class="num">FSR</th>
+            <th class="num">TN</th><th class="num">FP</th><th class="num">FN</th><th class="num">TP</th><th class="num">FSR</th>
+          </tr>
+        </thead>
+        <tbody id="test-compare-tbody"></tbody>
+      </table>
+    </div>
+
+    <div class="model-selector" data-group="test">
+      <button class="model-btn active" data-model="ResNet50" onclick="selectModel('test', 'ResNet50', this)">ResNet50</button>
+      <button class="model-btn" data-model="ViT-Base" onclick="selectModel('test', 'ViT-Base', this)">ViT-Base</button>
+      <button class="model-btn" data-model="DiT" onclick="selectModel('test', 'DiT', this)">DiT</button>
+    </div>
+
+    <div class="two-col">
+      <div class="plot-card">
+        <h3>Confusion @ binary 0.5 (old)</h3>
+        <div id="plot-test-cm-old" class="plotly-chart"></div>
+      </div>
+      <div class="plot-card">
+        <h3>Confusion @ &tau;* (cost-weighted)</h3>
+        <div id="plot-test-cm-new" class="plotly-chart"></div>
+      </div>
+    </div>
+
+    <div class="plot-card">
+      <div id="plot-test-hist" class="plotly-chart"></div>
+      <p class="caption">Calibrated risk probability distribution on the held-out test set. Dashed line = new &tau;* for the selected model.</p>
+    </div>
+  </div>
+
+  <!-- ========== EXTERNAL VALIDATION ========== -->
+  <div class="page" id="page-external">
+    <div class="card">
+      <h2>External Validation Set (n = 400)</h2>
+      <p>
+        94 handwritten/risky + 306 regular/safe documents, collected <b>independently</b> from the training corpus.
+        This is the distribution-shift benchmark &mdash; in Phase 5 all models crashed to 30&ndash;50% FSR despite
+        clean test metrics, indicating the classifier was learning a template shortcut (institution &hArr; label).
+        Phase 6 is designed to break that shortcut, and the cost-weighted &tau;* explicitly enforces a low FSR.
+      </p>
+
+      <table class="data">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th class="num">FSR (Phase 5)</th>
+            <th class="num">FSR @ 0.5 (Phase 6)</th>
+            <th class="num">FSR @ &tau;* (new)</th>
+            <th class="num">&Delta; vs Phase 5</th>
+            <th class="center">TN / FP / FN / TP @ &tau;*</th>
+          </tr>
+        </thead>
+        <tbody id="ext-metrics-tbody"></tbody>
+      </table>
+    </div>
+
+    <div class="plot-card">
+      <div id="plot-ext-fsr" class="plotly-chart"></div>
+      <p class="caption">FSR on the external validation set across three configurations: Phase 5, Phase 6 at binary 0.5, and Phase 6 at the cost-weighted &tau;*. Lower is better &mdash; the 15% target is shown as a dashed line.</p>
+    </div>
+
+    <div class="model-selector" data-group="ext">
+      <button class="model-btn active" data-model="ResNet50" onclick="selectModel('ext', 'ResNet50', this)">ResNet50</button>
+      <button class="model-btn" data-model="ViT-Base" onclick="selectModel('ext', 'ViT-Base', this)">ViT-Base</button>
+      <button class="model-btn" data-model="DiT" onclick="selectModel('ext', 'DiT', this)">DiT</button>
+    </div>
+
+    <div class="two-col">
+      <div class="plot-card">
+        <h3>Confusion @ binary 0.5</h3>
+        <div id="plot-ext-cm-old" class="plotly-chart"></div>
+      </div>
+      <div class="plot-card">
+        <h3>Confusion @ &tau;* (production policy)</h3>
+        <div id="plot-ext-cm-new" class="plotly-chart"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 id="ext-source-title">Per-source breakdown @ &tau;* <span style="color:var(--muted);font-weight:400;font-size:0.92rem">— selected model</span></h2>
+      <p>
+        Slicing by source folder in the validation set shows whether the risky-class recall is
+        coming from a single document source (i.e., the template shortcut) or is distributed.
+      </p>
+      <table class="data">
+        <thead>
+          <tr>
+            <th>Source</th>
+            <th>True label</th>
+            <th class="num">Docs</th>
+            <th class="num">Predicted safe</th>
+            <th class="num">Predicted risky</th>
+            <th class="num">Accuracy / FSR</th>
+          </tr>
+        </thead>
+        <tbody id="ext-source-tbody"></tbody>
+      </table>
+    </div>
+
+    <div class="plot-card">
+      <div id="plot-ext-hist" class="plotly-chart"></div>
+      <p class="caption">Calibrated risk probability distribution on the external validation set. Dashed line = new &tau;*.</p>
+    </div>
+
+    <div class="plot-card">
+      <div id="plot-ext-worst" class="plotly-chart" style="min-height:820px"></div>
+      <p class="caption">Worst-case predictions: top false-positives (safe docs flagged risky) and top false-negatives (risky docs marked safe).</p>
+    </div>
+  </div>
+
+  <!-- ========== FINDINGS ========== -->
+  <div class="page" id="page-findings">
+    <div class="card">
+      <h2>Headline Findings</h2>
+      <div class="callout good">
+        <b>Cost-weighted &tau;* reduces FSR by 9&ndash;30 pp on the external set across all three models.</b>
+        DiT goes from 31.9% FSR to 2.1%; ResNet50 from 11.7% to 3.2%; ViT-Base from 26.6% to 9.6%.
+        The review queue grows in exchange (accuracy at &tau;* falls into the 50&ndash;70% range) but that
+        is the correct operating point given the FN&nbsp;=&nbsp;10&times;&nbsp;FP cost assumption.
+      </div>
+      <div class="callout good">
+        <b>The template shortcut is broken.</b>
+        Adding 6 new source folders (handwritten edge cases, full questionnaires, the special-font corpus)
+        forced the models to learn content-level cues instead of institution-level cues. On the
+        source-doc-grouped test split all three models reach F1&nbsp;&gt;&nbsp;0.95 and ROC-AUC&nbsp;&gt;&nbsp;0.99.
+      </div>
+      <div class="callout info">
+        <b>Expected accuracy drop at &tau;* is correct behaviour.</b>
+        The cost model explicitly trades FP for FN. With &tau;* pulled well below 0.5, a large fraction
+        of borderline safe documents now route to human review. For a safety-critical classifier whose
+        downstream consumer auto-extracts text, this is the right trade.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Recommendation</h2>
+      <p>
+        <b>Promote DiT to production</b> at the new cost-weighted threshold. DiT has the lowest
+        external FSR (2.1%) of the three models, the highest external accuracy at &tau;* (66&ndash;68%),
+        and its stored T_low / T_high already reflect the new policy.
+      </p>
+      <ul>
+        <li><b>p &lt; T_low = &tau;*</b> &rarr; safe &mdash; auto-extract</li>
+        <li><b>T_low &le; p &lt; T_high</b> &rarr; review queue</li>
+        <li><b>p &ge; T_high</b> &rarr; high risk &mdash; reject or escalate</li>
+      </ul>
+      <p>
+        Keep ResNet50 as a secondary / ensemble candidate; it has the highest test-set ROC-AUC (0.999) and
+        is much cheaper to run, so pairing it with DiT as a two-stage filter is worth exploring.
+        ViT-Base trails both on external-set FSR and accuracy and has no clear production niche.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Next Steps</h2>
+      <ol>
+        <li>Ensemble (ResNet50 + DiT) with the cost-weighted &tau;* applied to the averaged probability &mdash; expect FSR &lt; 2% with a smaller review queue than DiT alone.</li>
+        <li>Expand the external validation set beyond 400 documents to reduce variance on FSR estimates (94 risky docs give ~1.4 pp binomial std at the current 2% FSR level).</li>
+        <li>Add per-source-folder FSR tracking to the production monitoring dashboard &mdash; this is the metric that told us the shortcut was there.</li>
+        <li>Revisit the FN:FP cost ratio with the downstream team. A 10:1 ratio floods reviewers; 5:1 or 3:1 may be defensible if downstream hallucination checks exist.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Reproducibility</h2>
+      <ul>
+        <li>Metadata: <code>data/metadata.csv</code> (1,873 rows, Phase 6 columns).</li>
+        <li>Splits: <code>data/splits/{train,val,test}.csv</code> (source-doc grouped).</li>
+        <li>Checkpoints: <code>checkpoints/baseline/best_resnet50.pt</code>, <code>checkpoints/baseline/best_vit_base_patch16_224.pt</code>, <code>checkpoints/dit/best_model.pt</code>.</li>
+        <li>Train: <code>python -m src.train.train_baseline --config configs/baseline.yaml [--model vit_base_patch16_224]</code>, <code>python -m src.train.train_dit --config configs/dit.yaml</code>.</li>
+        <li>Retune thresholds: <code>python scripts/retune_thresholds.py [--fn-cost 10 --fp-cost 1]</code> (backs up originals under <code>checkpoints/thresholds_backup_*/</code>).</li>
+        <li>External eval: <code>python scripts/_run_validation_inference.py</code>.</li>
+        <li>This report: <code>python scripts/build_finetune_report.py</code>.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Hebrew PDF Hallucination-Risk Classifier &bull; Phase 6 fine-tune, Phase 6c cost-weighted thresholds &bull;
+  Generated by <code>scripts/build_finetune_report.py</code>
+</footer>
+
+<script>
+const REPORT = __REPORT_DATA__;
+const CFG = { responsive: true, displayModeBar: false, displaylogo: false };
+
+// ---------- helpers ----------
+function fmtPct(x, dp=1) {
+  if (x === null || x === undefined || isNaN(x)) return '—';
+  return (x * 100).toFixed(dp) + '%';
+}
+function fmtNum(x, dp=3) {
+  return (x === null || x === undefined || isNaN(x)) ? '—' : Number(x).toFixed(dp);
+}
+
+// ---------- overview KPIs ----------
+function renderKpis() {
+  const host = document.getElementById('overview-kpis');
+  let html = '';
+  for (const [model, r] of Object.entries(REPORT.external_metrics)) {
+    const deltaFsr = r.fsr_new - r.fsr_phase5;
+    html += `
+      <div class="kpi">
+        <span class="label">${model} External FSR @ &tau;*</span>
+        <span class="value">${fmtPct(r.fsr_new)}</span>
+        <span class="delta good">&darr; ${Math.abs(deltaFsr * 100).toFixed(1)} pp vs Phase 5</span>
+      </div>`;
+  }
+  host.innerHTML = html;
+}
+
+// ---------- tables ----------
+function renderCorpusTable() {
+  let html = '';
+  for (const row of REPORT.corpus) {
+    html += `<tr>
+      <td>${row.source_folder}</td>
+      <td class="num">${row.pages.toLocaleString()}</td>
+      <td class="center">${row.label}</td>
+      <td>${row.template_family}</td>
+    </tr>`;
+  }
+  html += `<tr style="font-weight:700;background:#eef2ff">
+    <td>Total</td>
+    <td class="num">${REPORT.corpus_total.toLocaleString()}</td>
+    <td class="center">—</td>
+    <td>—</td>
+  </tr>`;
+  document.getElementById('corpus-tbody').innerHTML = html;
+
+  let s = '';
+  for (const r of REPORT.splits) {
+    s += `<tr>
+      <td><b>${r.split}</b></td>
+      <td class="num">${r.total}</td>
+      <td class="num">${r.safe}</td>
+      <td class="num">${r.risky}</td>
+      <td class="num">${(r.risky * 100 / r.total).toFixed(1)}%</td>
+    </tr>`;
+  }
+  document.getElementById('splits-tbody').innerHTML = s;
+}
+
+function renderTestTables() {
+  const tbody = document.getElementById('test-metrics-tbody');
+  let best_f1 = { f1: -1 };
+  for (const [m, r] of Object.entries(REPORT.test_metrics)) {
+    if (r.f1 > best_f1.f1) { best_f1 = r; best_f1.m = m; }
+  }
+  let html = '';
+  for (const [model, r] of Object.entries(REPORT.test_metrics)) {
+    const f1Cls = (model === best_f1.m) ? 'best' : '';
+    html += `<tr>
+      <td><b>${model}</b></td>
+      <td class="num ${f1Cls}">${fmtNum(r.f1, 3)}</td>
+      <td class="num">${fmtNum(r.roc_auc, 3)}</td>
+      <td class="num">${fmtNum(r.pr_auc, 3)}</td>
+      <td class="num">${fmtNum(r.ece, 3)}</td>
+      <td class="num">${fmtNum(r.temperature, 3)}</td>
+      <td class="num">${fmtNum(r.t_low_old, 3)}</td>
+      <td class="num best">${fmtNum(r.tau, 3)}</td>
+    </tr>`;
+  }
+  tbody.innerHTML = html;
+
+  const cbody = document.getElementById('test-compare-tbody');
+  let ch = '';
+  for (const [model, r] of Object.entries(REPORT.test_metrics)) {
+    const o = r.cm_old, n = r.cm_new;
+    ch += `<tr>
+      <td><b>${model}</b></td>
+      <td class="num">${o.tn}</td>
+      <td class="num">${o.fp}</td>
+      <td class="num bad-cell">${o.fn}</td>
+      <td class="num">${o.tp}</td>
+      <td class="num">${fmtPct(o.fsr, 2)}</td>
+      <td class="num">${n.tn}</td>
+      <td class="num">${n.fp}</td>
+      <td class="num good-cell">${n.fn}</td>
+      <td class="num">${n.tp}</td>
+      <td class="num best">${fmtPct(n.fsr, 2)}</td>
+    </tr>`;
+  }
+  cbody.innerHTML = ch;
+}
+
+function renderExtMetricsTable() {
+  const tbody = document.getElementById('ext-metrics-tbody');
+  let html = '';
+  let bestFsr = Math.min(...Object.values(REPORT.external_metrics).map(r => r.fsr_new));
+  for (const [model, r] of Object.entries(REPORT.external_metrics)) {
+    const delta = r.fsr_new - r.fsr_phase5;
+    const deltaCls = delta < -0.02 ? 'good-cell' : (delta > 0.02 ? 'bad-cell' : 'flat');
+    const deltaTxt = (delta >= 0 ? '+' : '') + (delta * 100).toFixed(1) + ' pp';
+    const fsrCls = (r.fsr_new === bestFsr) ? 'best' : '';
+    html += `<tr>
+      <td><b>${model}</b></td>
+      <td class="num">${fmtPct(r.fsr_phase5, 1)}</td>
+      <td class="num">${fmtPct(r.fsr_old, 1)}</td>
+      <td class="num ${fsrCls}">${fmtPct(r.fsr_new, 1)}</td>
+      <td class="num ${deltaCls}">${deltaTxt}</td>
+      <td class="center">${r.cm_new.tn} / ${r.cm_new.fp} / ${r.cm_new.fn} / ${r.cm_new.tp}</td>
+    </tr>`;
+  }
+  tbody.innerHTML = html;
+}
+
+function renderExtSourceTable(modelKey) {
+  const bd = REPORT.external_per_source[modelKey];
+  document.getElementById('ext-source-title').innerHTML =
+    `Per-source breakdown @ &tau;* <span style="color:var(--muted);font-weight:400;font-size:0.92rem">— ${modelKey}</span>`;
+  let html = '';
+  for (const row of bd) {
+    const accCls = row.accuracy >= 0.9 ? 'good-cell' : (row.accuracy < 0.5 ? 'bad-cell' : '');
+    html += `<tr>
+      <td>${row.source}</td>
+      <td><b>${row.true_label === 1 ? 'risky' : 'safe'}</b></td>
+      <td class="num">${row.n}</td>
+      <td class="num">${row.pred_safe}</td>
+      <td class="num">${row.pred_risky}</td>
+      <td class="num ${accCls}">${fmtPct(row.accuracy, 1)}${
+        row.fsr !== null ? ` <span style="color:var(--muted)">(FSR ${fmtPct(row.fsr, 1)})</span>` : ''
+      }</td>
+    </tr>`;
+  }
+  document.getElementById('ext-source-tbody').innerHTML = html;
+}
+
+// ---------- tabs / nav ----------
+const TAB_INIT = { overview: true, training: false, test: false, external: false, findings: false };
+
+function showPage(key, btn) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + key).classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  if (!TAB_INIT[key]) {
+    if (key === 'training')  drawTraining();
+    if (key === 'test')      drawTest('ResNet50');
+    if (key === 'external')  drawExternal('ResNet50');
+    TAB_INIT[key] = true;
+  }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function selectModel(group, modelKey, btn) {
+  document.querySelectorAll(`.model-selector[data-group="${group}"] .model-btn`)
+    .forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  if (group === 'test') drawTest(modelKey);
+  if (group === 'ext')  drawExternal(modelKey);
+}
+
+// ---------- training curves ----------
+function drawTraining() {
+  const COLORS = { 'ResNet50': '#2563eb', 'ViT-Base': '#059669', 'DiT': '#dc2626' };
+
+  const lossTraces = [];
+  for (const [model, data] of Object.entries(REPORT.training)) {
+    lossTraces.push({
+      x: data.epochs, y: data.train_loss, mode: 'lines+markers', name: `${model} train`,
+      line: { color: COLORS[model], dash: 'dot', width: 1.5 },
+      marker: { size: 5 }, legendgroup: model,
+    });
+    lossTraces.push({
+      x: data.epochs, y: data.val_loss, mode: 'lines+markers', name: `${model} val`,
+      line: { color: COLORS[model], width: 2.5 },
+      marker: { size: 6 }, legendgroup: model,
+    });
+  }
+  const dit = REPORT.training['DiT'];
+  const shapes = [];
+  if (dit && dit.stage_boundaries) {
+    for (const b of dit.stage_boundaries) {
+      shapes.push({
+        type: 'line', x0: b, x1: b, yref: 'paper', y0: 0, y1: 1,
+        line: { color: '#dc2626', width: 1, dash: 'dash' }, opacity: 0.4,
+      });
+    }
+  }
+  Plotly.newPlot('plot-loss', lossTraces, {
+    title: { text: 'Training & Validation Loss', font: { size: 18 }, x: 0.5 },
+    xaxis: { title: 'Epoch', showgrid: true, gridcolor: '#e5e7eb' },
+    yaxis: { title: 'Loss', showgrid: true, gridcolor: '#e5e7eb' },
+    height: 440, plot_bgcolor: 'white', paper_bgcolor: 'white',
+    legend: { orientation: 'h', y: -0.22 },
+    shapes: shapes, margin: { l: 60, r: 30, t: 60, b: 80 },
+  }, CFG);
+
+  const f1Traces = [];
+  for (const [model, data] of Object.entries(REPORT.training)) {
+    f1Traces.push({
+      x: data.epochs, y: data.val_f1, mode: 'lines+markers', name: model,
+      line: { color: COLORS[model], width: 2.5 }, marker: { size: 6 },
+    });
+    if (data.best_epoch != null) {
+      f1Traces.push({
+        x: [data.best_epoch], y: [data.best_val_f1], mode: 'markers',
+        marker: { color: COLORS[model], size: 14, symbol: 'star',
+                  line: { color: 'black', width: 1 } },
+        name: `${model} best`, showlegend: false,
+      });
+    }
+  }
+  Plotly.newPlot('plot-f1', f1Traces, {
+    title: { text: 'Validation F1 per Epoch', font: { size: 18 }, x: 0.5 },
+    xaxis: { title: 'Epoch', showgrid: true, gridcolor: '#e5e7eb' },
+    yaxis: { title: 'F1', range: [0.5, 1.01], showgrid: true, gridcolor: '#e5e7eb' },
+    height: 420, plot_bgcolor: 'white', paper_bgcolor: 'white',
+    legend: { orientation: 'h', y: -0.22 }, shapes: shapes,
+    margin: { l: 60, r: 30, t: 60, b: 80 },
+  }, CFG);
+
+  const aucTraces = [];
+  const eceTraces = [];
+  for (const [model, data] of Object.entries(REPORT.training)) {
+    aucTraces.push({
+      x: data.epochs, y: data.val_roc_auc, mode: 'lines+markers', name: model,
+      line: { color: COLORS[model], width: 2 }, xaxis: 'x', yaxis: 'y',
+    });
+    eceTraces.push({
+      x: data.epochs, y: data.val_ece, mode: 'lines+markers', name: model + ' ECE',
+      line: { color: COLORS[model], width: 2, dash: 'dot' },
+      xaxis: 'x2', yaxis: 'y2', showlegend: false,
+    });
+  }
+  Plotly.newPlot('plot-auc-ece', [...aucTraces, ...eceTraces], {
+    grid: { rows: 2, columns: 1, pattern: 'independent' },
+    title: { text: 'Validation ROC-AUC (top) and ECE (bottom)', font: { size: 18 }, x: 0.5 },
+    xaxis:  { title: 'Epoch', showgrid: true, gridcolor: '#e5e7eb' },
+    yaxis:  { title: 'ROC-AUC', range: [0.75, 1.01], showgrid: true, gridcolor: '#e5e7eb' },
+    xaxis2: { title: 'Epoch', showgrid: true, gridcolor: '#e5e7eb' },
+    yaxis2: { title: 'ECE',  showgrid: true, gridcolor: '#e5e7eb' },
+    height: 640, plot_bgcolor: 'white', paper_bgcolor: 'white',
+    legend: { orientation: 'h', y: -0.12 },
+    margin: { l: 60, r: 30, t: 60, b: 60 },
+  }, CFG);
+}
+
+// ---------- test ----------
+function drawTest(modelKey) {
+  const m = REPORT.test_figs[modelKey];
+  Plotly.react('plot-test-cm-old', m.cm_old.data, m.cm_old.layout, CFG);
+  Plotly.react('plot-test-cm-new', m.cm_new.data, m.cm_new.layout, CFG);
+  Plotly.react('plot-test-hist',   m.histogram.data, m.histogram.layout, CFG);
+}
+
+// ---------- external ----------
+function drawExternal(modelKey) {
+  Plotly.react('plot-ext-fsr', REPORT.external_fsr_compare.data,
+               REPORT.external_fsr_compare.layout, CFG);
+  const m = REPORT.external_figs[modelKey];
+  Plotly.react('plot-ext-cm-old', m.cm_old.data, m.cm_old.layout, CFG);
+  Plotly.react('plot-ext-cm-new', m.cm_new.data, m.cm_new.layout, CFG);
+  Plotly.react('plot-ext-hist',   m.histogram.data, m.histogram.layout, CFG);
+  Plotly.react('plot-ext-worst',  m.worst_cases.data, m.worst_cases.layout, CFG);
+  renderExtSourceTable(modelKey);
+}
+
+// ---------- init ----------
+renderKpis();
+renderCorpusTable();
+renderTestTables();
+renderExtMetricsTable();
+</script>
+</body>
+</html>

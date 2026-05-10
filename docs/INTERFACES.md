@@ -25,6 +25,9 @@ Changes to these interfaces must be reflected here before implementation.
 | `L` | int | Layout complexity rubric score: 0–3 (3 = complex layout) |
 | `risk_score` | int | Composite risk: `(3 - D) + H + S + L`, range 0–12 |
 | `split` | str | Assigned split: `train`, `val`, or `test` |
+| `source_folder` | str | Name of the source folder the page came from (e.g. `regular_forms`, `handwritten`, `regular_forms_edge_cases`) |
+| `source_doc_stem` | str | Stem of the source PDF filename — used as the grouping key for splits in Phase 6+ (prevents page leakage from multi-page PDFs) |
+| `is_edge_case` | bool | True if the page belongs to an edge-case subset (e.g. `regular_forms_edge_cases`) |
 
 ### `data/labels_binary.csv` — Minimal annotation file
 
@@ -216,6 +219,21 @@ class TemperatureCalibrator:
     ) -> dict[str, float]:
         """Returns {'T_low': float, 'T_high': float} for safe/review/risky mapping."""
 
+    def get_cost_weighted_thresholds(
+        self,
+        probs: np.ndarray,
+        labels: np.ndarray,
+        fn_cost: float = 10,
+        fp_cost: float = 1,
+    ) -> dict[str, float]:
+        """
+        Selects τ* that minimises cost(τ) = fn_cost·FN(τ) + fp_cost·FP(τ) on the
+        provided (probs, labels) split.
+        T_high is placed at (τ* + 1) / 2 for backward-compatible three-band routing.
+        Returns {'T_low': τ*, 'T_high': float}.
+        Use scripts/retune_thresholds.py to apply this to all checkpoints at once.
+        """
+
     def save(self, path: str) -> None: ...
     def load(self, path: str) -> None: ...
 ```
@@ -276,6 +294,50 @@ class PredictionResponse(BaseModel):
 
 ---
 
+## `src/inference/predict.py`
+
+```python
+def load_pipeline(
+    checkpoint_path: str,
+    calibrator_path: str,
+    model_type: str,      # one of: 'resnet50', 'efficientnet_b0', 'vit', 'dit'
+    config_path: str,     # configs/baseline.yaml for ResNet/ViT, configs/dit.yaml for DiT
+    device: str = 'auto', # 'auto' selects CUDA → MPS → CPU
+) -> tuple[nn.Module, TemperatureCalibrator, dict[str, float], str]:
+    """
+    Loads model + calibrator + thresholds from disk.
+    - Reads model_name from checkpoint (overrides config) so the correct timm/HF
+      backbone is built regardless of which config file is passed.
+    - Calibrator pkl may be a pickled TemperatureCalibrator object or a state dict —
+      both formats are handled transparently.
+    Returns: (model, calibrator, {'T_low': float, 'T_high': float}, device_str)
+    """
+
+def predict_single(
+    pdf_path: str,
+    model: nn.Module,
+    calibrator: TemperatureCalibrator,
+    thresholds: dict[str, float],
+    dpi: int = 150,
+    device: str = 'cpu',
+) -> PredictionResponse:
+    """
+    Renders the first page of pdf_path, runs inference, returns a PredictionResponse.
+    """
+
+def predict_batch(
+    pdf_paths: list[str],
+    model: nn.Module,
+    calibrator: TemperatureCalibrator,
+    thresholds: dict[str, float],
+    dpi: int = 150,
+    device: str = 'cpu',
+) -> list[PredictionResponse]:
+    """Batch version of predict_single."""
+```
+
+---
+
 ## Error Analysis Log Schema
 
 Used by `src/train/evaluate.py` when writing the per-page error analysis CSV.
@@ -296,3 +358,45 @@ Used by `src/train/evaluate.py` when writing the per-page error analysis CSV.
 | `L` | int | Layout complexity rubric score |
 | `scan_quality_note` | str | Free-text annotator note on scan quality |
 | `handwriting_note` | str | Free-text annotator note on handwriting |
+
+---
+
+## `src/utils/device.py`
+
+Shared device-selection and Apple Silicon (MPS) helpers used across all training
+and inference modules.
+
+```python
+def get_device(preference: str = "auto") -> torch.device:
+    """
+    Return the best available torch.device.
+    preference: one of "auto" | "cuda" | "mps" | "cpu".
+    "auto" selects CUDA > MPS > CPU in that priority order.
+    Explicit values fall back to CPU if the requested backend is unavailable.
+    """
+
+def prepare_model(model: nn.Module, device: torch.device) -> nn.Module:
+    """
+    Move model to device via .to(device).
+    channels_last (NHWC) is intentionally NOT applied — timm backbones use
+    internal .view() operations whose backward pass is incompatible with
+    channels_last on MPS (PyTorch 2.11 handles NCHW→NHWC transparently).
+    """
+
+def prepare_input(images: torch.Tensor, device: torch.device) -> torch.Tensor:
+    """Move a batch of images to device with non_blocking=True."""
+
+def mps_sync() -> None:
+    """
+    Force MPS command-queue synchronization.
+    Call after loss.backward() and before gradient clipping to surface NaN
+    corruption early on Apple Silicon. No-op when MPS is unavailable.
+    """
+
+def mps_empty_cache() -> None:
+    """
+    Release MPS memory back to the OS.
+    Call at the end of each epoch to prevent Metal memory pressure from
+    accumulating over long training runs. No-op when MPS is unavailable.
+    """
+```

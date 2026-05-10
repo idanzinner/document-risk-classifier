@@ -161,9 +161,19 @@ def load_pipeline(
     with open(config_path, "r", encoding="utf-8") as fh:
         config: dict = yaml.safe_load(fh)
 
+    # --- Load checkpoint ---
+    raw_ckpt = torch.load(checkpoint_path, map_location=device_str, weights_only=False)
+
+    # Patch config.model.name from the checkpoint so _build_model uses the right backbone.
+    # baseline.yaml always says "resnet50", which would be wrong for ViT.
+    if isinstance(raw_ckpt, dict) and "model_name" in raw_ckpt:
+        if "model" not in config:
+            config["model"] = {}
+        config["model"]["name"] = raw_ckpt["model_name"]
+
     # --- Build model and load weights ---
     model = _build_model(model_type, config)
-    state_dict = torch.load(checkpoint_path, map_location=device_str)
+    state_dict = raw_ckpt
     # Unwrap common checkpoint wrappers (e.g. {'model_state_dict': ...})
     if isinstance(state_dict, dict) and "model_state_dict" in state_dict:
         state_dict = state_dict["model_state_dict"]
@@ -174,8 +184,15 @@ def load_pipeline(
     model.eval()
 
     # --- Load calibrator ---
-    calibrator = TemperatureCalibrator()
-    calibrator.load(calibrator_path)
+    # Support both object-pickled and dict-pickled calibrators.
+    import pickle as _pickle
+    with open(calibrator_path, "rb") as _fh:
+        _raw = _pickle.load(_fh)
+    if isinstance(_raw, TemperatureCalibrator):
+        calibrator = _raw
+    else:
+        calibrator = TemperatureCalibrator()
+        calibrator.load(calibrator_path)
 
     # --- Resolve thresholds ---
     t_low: Optional[float] = getattr(calibrator, "t_low", None)

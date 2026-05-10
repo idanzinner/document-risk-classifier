@@ -157,6 +157,84 @@ class TemperatureCalibrator:
         self.t_high = t_high
         return {"T_low": t_low, "T_high": t_high}
 
+    def get_cost_weighted_thresholds(
+        self,
+        probs: np.ndarray,
+        labels: np.ndarray,
+        fn_cost: float = 10.0,
+        fp_cost: float = 1.0,
+    ) -> dict[str, float]:
+        """
+        Selects a single binary decision threshold τ* that minimises a
+        cost-weighted error:
+
+            cost(τ) = fn_cost · FN(τ) + fp_cost · FP(τ)
+
+        where FN = risky page predicted safe (prob < τ and label = 1)
+        and   FP = safe  page predicted risky (prob ≥ τ and label = 0).
+
+        The three-band routing thresholds are then set to
+            T_low  = τ*
+            T_high = (τ* + 1) / 2
+        so downstream code that still consumes T_low / T_high behaves as a
+        pure binary classifier below τ* and as "escalate" above the midpoint.
+
+        Args:
+            probs:   Calibrated probabilities [N] in [0, 1].
+            labels:  Binary ground-truth labels [N] (0 = safe, 1 = risky).
+            fn_cost: Penalty for one false-negative (default 10 — risky-as-safe
+                     is the dangerous error for this project).
+            fp_cost: Penalty for one false-positive (default 1).
+
+        Returns:
+            Dict with 'T_low', 'T_high', 'tau', 'total_cost', 'fn', 'fp' at τ*.
+        """
+        probs = np.asarray(probs, dtype=np.float64)
+        labels = np.asarray(labels, dtype=np.float64)
+
+        # Candidate thresholds: every unique observed prob plus the {0, 1}
+        # endpoints, slightly nudged so argmin is well-defined in ties.
+        unique = np.unique(np.concatenate([probs, [0.0, 1.0]]))
+        # Between consecutive unique probs the cost is piecewise-constant;
+        # evaluating on exact unique values is sufficient.
+        candidates = unique
+
+        best = {
+            "tau": 0.5,
+            "total_cost": float("inf"),
+            "fn": int(((probs < 0.5) & (labels == 1)).sum()),
+            "fp": int(((probs >= 0.5) & (labels == 0)).sum()),
+        }
+        for tau in candidates:
+            pred_risky = probs >= tau
+            fp = int((pred_risky & (labels == 0)).sum())
+            fn = int(((~pred_risky) & (labels == 1)).sum())
+            cost = fn_cost * fn + fp_cost * fp
+            # Strict < keeps the smallest τ (highest recall on risky class) at
+            # tied cost, which aligns with "don't miss risky pages".
+            if cost < best["total_cost"]:
+                best = {
+                    "tau": float(tau),
+                    "total_cost": float(cost),
+                    "fn": fn,
+                    "fp": fp,
+                }
+
+        t_low = best["tau"]
+        t_high = t_low + (1.0 - t_low) / 2.0
+        self.t_low = t_low
+        self.t_high = t_high
+        return {
+            "T_low":      t_low,
+            "T_high":     t_high,
+            "tau":        best["tau"],
+            "total_cost": best["total_cost"],
+            "fn":         best["fn"],
+            "fp":         best["fp"],
+            "fn_cost":    float(fn_cost),
+            "fp_cost":    float(fp_cost),
+        }
+
     def save(self, path: str) -> None:
         """Serialises temperature and threshold state to path using pickle."""
         state = {

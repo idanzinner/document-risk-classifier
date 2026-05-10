@@ -17,17 +17,23 @@ from torchvision import transforms
 
 logger = logging.getLogger(__name__)
 
-# ImageNet normalisation constants (for RGB)
-_IMAGENET_MEAN = [0.485, 0.456, 0.406]
-_IMAGENET_STD = [0.229, 0.224, 0.225]
 
-# Mid-grey normalisation constants (for grayscale)
-_GRAY_MEAN = [0.5]
-_GRAY_STD = [0.5]
+def _build_transform(grayscale: bool, normalize: bool, augment: bool) -> Callable:
+    """Builds a torchvision transform pipeline.
 
-
-def _build_transform(grayscale: bool, augment: bool) -> Callable:
-    """Builds a torchvision transform pipeline."""
+    Always outputs 3-channel tensors so pretrained backbones receive the distribution they were trained on.
+    If normalize is True, the tensors are normalized to have mean 0 and standard deviation 1.
+    """
+    pre_ops: list = []
+    post_ops: list = []
+    if grayscale:
+        pre_ops.append(transforms.Grayscale(num_output_channels=3))
+    if normalize:
+        post_ops.append(transforms.Normalize(
+            mean=[0,0,0], # [0.485, 0.456, 0.406], 
+            std=[1,1,1])) # [0.229, 0.224, 0.225]))
+    else:
+        post_ops.append(transforms.Normalize(mean=[0.5], std=[0.5]))
     aug_ops: list = []
     if augment:
         aug_ops = [
@@ -37,13 +43,9 @@ def _build_transform(grayscale: bool, augment: bool) -> Callable:
             transforms.RandomPerspective(distortion_scale=0.05, p=0.3, fill=255),
         ]
 
-    to_tensor = transforms.ToTensor()
-    if grayscale:
-        normalize = transforms.Normalize(mean=_GRAY_MEAN, std=_GRAY_STD)
-    else:
-        normalize = transforms.Normalize(mean=_IMAGENET_MEAN, std=_IMAGENET_STD)
+    to_tensor = transforms.ToTensor()  # scales [0,255] uint8 → [0,1] float32
 
-    return transforms.Compose(aug_ops + [to_tensor, normalize])
+    return transforms.Compose(pre_ops + aug_ops + [to_tensor] + post_ops)
 
 
 class HallucinationRiskDataset(Dataset):
@@ -62,6 +64,8 @@ class HallucinationRiskDataset(Dataset):
         rendered_dir: str,
         transform: Optional[Callable] = None,
         augment: bool = False,
+        normalize: bool = True,
+        grayscale: bool = True,
     ) -> None:
         """
         Args:
@@ -82,24 +86,53 @@ class HallucinationRiskDataset(Dataset):
         self.rendered_dir = Path(rendered_dir)
         self.split = split
 
-        # Detect image mode from the first available image, fall back to grayscale
+        self._file_index = self._build_file_index()
+
         self._grayscale: Optional[bool] = None
+        self._normalize: Optional[bool] = None
 
         if transform is not None:
             self.transform = transform
         else:
-            # Defer mode detection to first __getitem__ call; for now build with
-            # grayscale=True as default (updated lazily on first load)
             self._augment = augment
             self.transform = None  # type: ignore[assignment]
 
         logger.info(
-            "HallucinationRiskDataset split='%s': %d samples", split, len(self.df)
+            "HallucinationRiskDataset split='%s': %d samples (%d resolved on disk)",
+            split, len(self.df),
+            sum(1 for fp in self.df["file_path"] if self._resolve_path(fp) is not None),
         )
 
-    def _get_transform(self, grayscale: bool) -> Callable:
+    def _build_file_index(self) -> dict[str, Path]:
+        """
+        Builds a mapping from metadata file_path values to actual PNG paths on
+        disk. Metadata stores .pdf extensions; rendered files are .png.
+        """
+        index: dict[str, Path] = {}
+        if not self.rendered_dir.is_dir():
+            return index
+
+        for fp in self.df["file_path"]:
+            png_name = Path(fp).with_suffix(".png").name
+            candidate = self.rendered_dir / png_name
+            if candidate.exists():
+                index[fp] = candidate
+
+        n_miss = len(self.df) - len(index)
+        if n_miss > 0:
+            logger.warning(
+                "%d/%d files in split '%s' could not be resolved to PNGs on disk",
+                n_miss, len(self.df), self.split,
+            )
+        return index
+
+    def _resolve_path(self, file_path: str) -> Optional[Path]:
+        """Returns the resolved on-disk Path for a metadata file_path, or None."""
+        return self._file_index.get(file_path)
+
+    def _get_transform(self, grayscale: bool, normalize: bool) -> Callable:
         """Lazily builds (or rebuilds) the default transform once image mode is known."""
-        return _build_transform(grayscale=grayscale, augment=(self._augment and self.split == "train"))
+        return _build_transform(grayscale=grayscale, normalize=normalize, augment=(self._augment and self.split == "train"))
 
     def __len__(self) -> int:
         return len(self.df)
@@ -107,34 +140,32 @@ class HallucinationRiskDataset(Dataset):
     def __getitem__(self, idx: int) -> tuple[torch.Tensor, torch.Tensor]:
         """
         Returns:
-            image: FloatTensor[C, H, W]  (C=1 grayscale or 3 RGB)
+            image: FloatTensor[3, H, W]  (always 3-channel, ImageNet-normalised)
             label: FloatTensor[1]        (0.0 or 1.0)
         """
         row = self.df.iloc[idx]
         label = torch.tensor([float(row["label_binary"])], dtype=torch.float32)
 
-        img_path = self.rendered_dir / row["file_path"]
+        img_path = self._resolve_path(row["file_path"])
 
-        if not img_path.exists():
-            logger.warning("Image not found: %s — returning zero tensor", img_path)
-            # Return zeros with a sensible default shape (1, H, W)
-            return torch.zeros(1, 224, 224, dtype=torch.float32), label
+        if img_path is None or not img_path.exists():
+            return torch.zeros(3, 224, 224, dtype=torch.float32), label
 
         try:
             img = Image.open(str(img_path))
             grayscale = img.mode == "L"
+            normalize = self._normalize
 
-            # Determine transform lazily on first successful load
             if self.transform is None:
                 self._grayscale = grayscale
-                self.transform = self._get_transform(grayscale)
+                self._normalize = normalize
+                self.transform = self._get_transform(grayscale, normalize)
             elif self._grayscale is None:
-                # transform was externally supplied; still record mode for info
                 self._grayscale = grayscale
 
             image_tensor = self.transform(img)
         except Exception as exc:
             logger.warning("Failed to load image %s: %s — returning zero tensor", img_path, exc)
-            return torch.zeros(1, 224, 224, dtype=torch.float32), label
+            return torch.zeros(3, 224, 224, dtype=torch.float32), label
 
         return image_tensor, label

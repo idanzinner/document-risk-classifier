@@ -8,9 +8,6 @@ error slice summaries, and score distributions.
 All functions save to output_path and close the figure without displaying.
 """
 
-import matplotlib
-matplotlib.use("Agg")
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt

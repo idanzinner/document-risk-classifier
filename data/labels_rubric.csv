@@ -1,1 +1,2067 @@
 file_path,page_num,D,H,S,L,risk_score,label_ternary
+104-105______________________________20260222_095032_page_0001.pdf,1,2,1,1,1,4,review
+104-105______________________________20260222_095032_page_0002.pdf,2,2,2,1,2,6,review
+104-105נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0001.pdf,1,2,1,1,1,4,review
+104-105נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0002.pdf,2,2,1,1,2,5,review
+1a5f7ac7-fad5-457a-a1e1-1cb73b642b04 (dragged)_page_0001.pdf,1,2,0,1,1,3,safe_for_extraction
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0001.pdf,1,3,2,1,1,4,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0002.pdf,2,2,2,1,1,5,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0003.pdf,3,2,1,1,1,4,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0004.pdf,4,2,1,1,1,4,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0005.pdf,5,2,1,1,1,4,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0006.pdf,6,3,0,1,1,2,safe_for_extraction
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0007.pdf,7,2,0,0,1,2,safe_for_extraction
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0008.pdf,8,2,0,1,1,3,safe_for_extraction
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0009.pdf,9,3,1,1,1,3,safe_for_extraction
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0010.pdf,10,3,0,1,1,2,safe_for_extraction
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0011.pdf,11,3,1,1,1,3,safe_for_extraction
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0012.pdf,12,2,1,1,1,4,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0013.pdf,13,2,1,1,1,4,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0014.pdf,14,3,0,1,1,2,safe_for_extraction
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0015.pdf,15,3,2,1,1,4,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0016.pdf,16,3,1,1,1,3,safe_for_extraction
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0017.pdf,17,2,0,1,1,3,safe_for_extraction
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0018.pdf,18,2,1,1,1,4,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0019.pdf,19,2,1,1,2,5,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0020.pdf,20,2,1,1,1,4,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0021.pdf,21,2,2,1,2,6,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0022.pdf,22,2,1,1,1,4,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0023.pdf,23,2,2,1,1,5,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0024.pdf,24,2,2,1,2,6,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0025.pdf,25,2,1,1,1,4,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0026.pdf,26,2,1,1,1,4,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0027.pdf,27,2,1,0,1,3,safe_for_extraction
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0028.pdf,28,3,0,0,1,1,safe_for_extraction
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0029.pdf,29,1,0,1,2,5,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0030.pdf,30,2,0,1,1,3,safe_for_extraction
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0031.pdf,31,3,0,1,1,2,safe_for_extraction
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0032.pdf,32,3,0,1,1,2,safe_for_extraction
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0033.pdf,33,3,1,1,1,3,safe_for_extraction
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0034.pdf,34,2,1,1,1,4,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-2-36_page_0035.pdf,35,2,1,1,2,5,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-41-45_page_0001.pdf,1,3,2,1,1,4,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-41-45_page_0002.pdf,2,3,0,1,1,2,safe_for_extraction
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-41-45_page_0003.pdf,3,2,0,0,1,2,safe_for_extraction
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-41-45_page_0004.pdf,4,2,1,1,1,4,review
+1cb73767-12db-4f08-be5e-bd5fb99dc6fd-41-45_page_0005.pdf,5,3,2,1,1,4,review
+2-14________________20260222_095102_page_0001.pdf,1,3,2,1,1,4,review
+2-14________________20260222_095102_page_0002.pdf,2,2,2,1,1,5,review
+2-14________________20260222_095102_page_0003.pdf,3,2,1,1,1,4,review
+2-14________________20260222_095102_page_0004.pdf,4,2,1,1,1,4,review
+2-14________________20260222_095102_page_0005.pdf,5,2,1,1,1,4,review
+2-14________________20260222_095102_page_0006.pdf,6,3,0,1,1,2,safe_for_extraction
+2-14________________20260222_095102_page_0007.pdf,7,2,0,0,1,2,safe_for_extraction
+2-14________________20260222_095102_page_0008.pdf,8,2,0,1,1,3,safe_for_extraction
+2-14________________20260222_095102_page_0009.pdf,9,3,1,1,1,3,safe_for_extraction
+2-14________________20260222_095102_page_0010.pdf,10,3,0,1,1,2,safe_for_extraction
+2-14________________20260222_095102_page_0011.pdf,11,3,1,0,1,2,safe_for_extraction
+2-14________________20260222_095102_page_0012.pdf,12,2,1,1,1,4,review
+2-14________________20260222_095102_page_0013.pdf,13,2,2,1,1,5,review
+2-14רות_אשואל_קטינה_20260222_095102_page_0001.pdf,1,2,1,1,1,4,review
+2-14רות_אשואל_קטינה_20260222_095102_page_0002.pdf,2,2,2,1,1,5,review
+2-14רות_אשואל_קטינה_20260222_095102_page_0003.pdf,3,2,1,1,1,4,review
+2-14רות_אשואל_קטינה_20260222_095102_page_0004.pdf,4,2,1,1,1,4,review
+2-14רות_אשואל_קטינה_20260222_095102_page_0005.pdf,5,3,0,0,1,1,safe_for_extraction
+2-14רות_אשואל_קטינה_20260222_095102_page_0006.pdf,6,2,0,1,1,3,safe_for_extraction
+2-14רות_אשואל_קטינה_20260222_095102_page_0007.pdf,7,2,0,0,1,2,safe_for_extraction
+2-14רות_אשואל_קטינה_20260222_095102_page_0008.pdf,8,2,0,1,1,3,safe_for_extraction
+2-14רות_אשואל_קטינה_20260222_095102_page_0009.pdf,9,3,0,1,1,2,safe_for_extraction
+2-14רות_אשואל_קטינה_20260222_095102_page_0010.pdf,10,3,0,1,1,2,safe_for_extraction
+2-14רות_אשואל_קטינה_20260222_095102_page_0011.pdf,11,3,1,1,1,3,safe_for_extraction
+2-14רות_אשואל_קטינה_20260222_095102_page_0012.pdf,12,2,1,1,1,4,review
+2-14רות_אשואל_קטינה_20260222_095102_page_0013.pdf,13,2,2,1,1,5,review
+2cef1ae8-c6d5-4905-a062-5c0e79438fc1_page_0001.pdf,1,2,0,0,0,1,safe_for_extraction
+2cef1ae8-c6d5-4905-a062-5c0e79438fc1_page_0002.pdf,2,2,0,0,0,1,safe_for_extraction
+2cef1ae8-c6d5-4905-a062-5c0e79438fc1_page_0003.pdf,3,2,0,0,1,2,safe_for_extraction
+2cef1ae8-c6d5-4905-a062-5c0e79438fc1_page_0004.pdf,4,1,0,0,0,2,safe_for_extraction
+2cef1ae8-c6d5-4905-a062-5c0e79438fc1_page_0005.pdf,5,1,0,0,0,2,safe_for_extraction
+2cef1ae8-c6d5-4905-a062-5c0e79438fc1_page_0006.pdf,6,2,0,1,1,3,safe_for_extraction
+2cef1ae8-c6d5-4905-a062-5c0e79438fc1_page_0007.pdf,7,1,1,1,2,6,review
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0001.pdf,1,2,0,1,1,3,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0002.pdf,2,2,2,1,1,5,review
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0003.pdf,3,2,1,1,1,4,review
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0004.pdf,4,2,0,0,1,2,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0005.pdf,5,3,0,0,0,0,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0006.pdf,6,2,0,0,1,2,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0007.pdf,7,3,0,0,0,0,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0008.pdf,8,2,1,1,1,4,review
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0009.pdf,9,3,1,1,1,3,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0010.pdf,10,2,0,0,1,2,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0011.pdf,11,2,0,1,1,3,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0012.pdf,12,2,1,1,2,5,review
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0013.pdf,13,2,1,1,1,4,review
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0014.pdf,14,2,1,0,1,3,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0015.pdf,15,2,1,1,2,5,review
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0016.pdf,16,2,0,0,0,1,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0017.pdf,17,3,0,0,1,1,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0018.pdf,18,2,0,1,1,3,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0019.pdf,19,3,1,1,1,3,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0020.pdf,20,2,1,1,1,4,review
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0021.pdf,21,3,0,0,0,0,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0022.pdf,22,3,0,0,0,0,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0023.pdf,23,1,1,0,1,4,review
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0024.pdf,24,2,1,1,1,4,review
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0025.pdf,25,2,2,1,1,5,review
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0026.pdf,26,2,0,0,0,1,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0027.pdf,27,2,1,1,1,4,review
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0028.pdf,28,2,1,1,1,4,review
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0029.pdf,29,3,0,0,0,0,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0030.pdf,30,3,0,1,1,2,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0031.pdf,31,3,0,1,1,2,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0032.pdf,32,3,0,1,1,2,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0033.pdf,33,3,1,0,1,2,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0034.pdf,34,2,1,0,1,3,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0035.pdf,35,2,1,1,1,4,review
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0036.pdf,36,2,2,1,1,5,review
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0037.pdf,37,3,2,1,1,4,review
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0038.pdf,38,3,0,0,0,0,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0039.pdf,39,2,0,1,2,4,review
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0040.pdf,40,2,0,1,1,3,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0041.pdf,41,2,1,0,1,3,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0042.pdf,42,2,1,1,1,4,review
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0043.pdf,43,2,1,0,1,3,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0044.pdf,44,3,2,1,1,4,review
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0045.pdf,45,3,0,0,1,1,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0046.pdf,46,2,0,0,1,2,safe_for_extraction
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0047.pdf,47,2,0,1,2,4,review
+4091a37d-d25a-4cd0-baf8-fa9eae433c54-pages-2_page_0048.pdf,48,3,1,1,1,3,safe_for_extraction
+41-45________________20260222_095102_page_0001.pdf,1,3,2,1,1,4,review
+41-45________________20260222_095102_page_0002.pdf,2,3,1,1,1,3,safe_for_extraction
+41-45________________20260222_095102_page_0003.pdf,3,2,0,1,2,4,review
+41-45________________20260222_095102_page_0004.pdf,4,2,1,1,1,4,review
+41-45________________20260222_095102_page_0005.pdf,5,2,2,1,1,5,review
+41-45רות_אשואל_קטינה_20260222_095102_page_0001.pdf,1,2,2,1,2,6,review
+41-45רות_אשואל_קטינה_20260222_095102_page_0002.pdf,2,3,0,0,0,0,safe_for_extraction
+41-45רות_אשואל_קטינה_20260222_095102_page_0003.pdf,3,2,0,1,2,4,review
+41-45רות_אשואל_קטינה_20260222_095102_page_0004.pdf,4,2,1,1,1,4,review
+41-45רות_אשואל_קטינה_20260222_095102_page_0005.pdf,5,3,2,1,1,4,review
+59e30246-fc23-426f-9287-6e74886d5223-26-37_page_0001.pdf,1,2,0,0,0,1,safe_for_extraction
+59e30246-fc23-426f-9287-6e74886d5223-26-37_page_0002.pdf,2,2,1,1,2,5,review
+59e30246-fc23-426f-9287-6e74886d5223-26-37_page_0003.pdf,3,2,1,1,1,4,review
+59e30246-fc23-426f-9287-6e74886d5223-26-37_page_0004.pdf,4,2,0,0,1,2,safe_for_extraction
+59e30246-fc23-426f-9287-6e74886d5223-26-37_page_0005.pdf,5,3,0,0,1,1,safe_for_extraction
+59e30246-fc23-426f-9287-6e74886d5223-26-37_page_0006.pdf,6,2,0,1,1,3,safe_for_extraction
+59e30246-fc23-426f-9287-6e74886d5223-26-37_page_0007.pdf,7,1,0,0,1,3,safe_for_extraction
+59e30246-fc23-426f-9287-6e74886d5223-26-37_page_0008.pdf,8,2,0,0,1,2,safe_for_extraction
+59e30246-fc23-426f-9287-6e74886d5223-26-37_page_0009.pdf,9,2,1,1,1,4,review
+59e30246-fc23-426f-9287-6e74886d5223-26-37_page_0010.pdf,10,2,0,0,1,2,safe_for_extraction
+59e30246-fc23-426f-9287-6e74886d5223-26-37_page_0011.pdf,11,2,1,0,1,3,safe_for_extraction
+59e30246-fc23-426f-9287-6e74886d5223-26-37_page_0012.pdf,12,2,1,0,1,3,safe_for_extraction
+59e30246-fc23-426f-9287-6e74886d5223-47-52_page_0001.pdf,1,2,1,1,1,4,review
+59e30246-fc23-426f-9287-6e74886d5223-47-52_page_0002.pdf,2,2,1,1,1,4,review
+59e30246-fc23-426f-9287-6e74886d5223-47-52_page_0003.pdf,3,2,0,0,0,1,safe_for_extraction
+59e30246-fc23-426f-9287-6e74886d5223-47-52_page_0004.pdf,4,2,0,0,0,1,safe_for_extraction
+59e30246-fc23-426f-9287-6e74886d5223-47-52_page_0005.pdf,5,3,0,0,0,0,safe_for_extraction
+59e30246-fc23-426f-9287-6e74886d5223-47-52_page_0006.pdf,6,2,2,0,0,3,safe_for_extraction
+603f6e68-ad0d-428b-aa12-de552a8dadea-106-115_page_0001.pdf,1,2,0,0,1,2,safe_for_extraction
+603f6e68-ad0d-428b-aa12-de552a8dadea-106-115_page_0002.pdf,2,2,0,0,0,1,safe_for_extraction
+603f6e68-ad0d-428b-aa12-de552a8dadea-106-115_page_0003.pdf,3,2,0,0,1,2,safe_for_extraction
+603f6e68-ad0d-428b-aa12-de552a8dadea-106-115_page_0004.pdf,4,3,0,0,1,1,safe_for_extraction
+603f6e68-ad0d-428b-aa12-de552a8dadea-106-115_page_0005.pdf,5,1,0,0,1,3,safe_for_extraction
+603f6e68-ad0d-428b-aa12-de552a8dadea-106-115_page_0006.pdf,6,3,0,0,0,0,safe_for_extraction
+603f6e68-ad0d-428b-aa12-de552a8dadea-106-115_page_0007.pdf,7,2,0,0,1,2,safe_for_extraction
+603f6e68-ad0d-428b-aa12-de552a8dadea-106-115_page_0008.pdf,8,2,0,0,1,2,safe_for_extraction
+603f6e68-ad0d-428b-aa12-de552a8dadea-106-115_page_0009.pdf,9,2,0,0,0,1,safe_for_extraction
+603f6e68-ad0d-428b-aa12-de552a8dadea-106-115_page_0010.pdf,10,1,0,0,0,2,safe_for_extraction
+68-73______________________________20260222_095032_page_0002.pdf,2,2,1,1,2,5,review
+68-73______________________________20260222_095032_page_0003.pdf,3,2,0,0,1,2,safe_for_extraction
+68-73______________________________20260222_095032_page_0004.pdf,4,2,0,0,1,2,safe_for_extraction
+68-73נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0001.pdf,1,2,0,1,2,4,review
+68-73נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0002.pdf,2,2,1,1,2,5,review
+68-73נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0003.pdf,3,2,0,1,1,3,safe_for_extraction
+68-73נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0004.pdf,4,2,0,0,0,1,safe_for_extraction
+68-73נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0005.pdf,5,2,0,0,1,2,safe_for_extraction
+68-73נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0006.pdf,6,2,1,1,1,4,review
+78-89______________________________20260222_095032_page_0001.pdf,1,2,2,1,1,5,review
+78-89______________________________20260222_095032_page_0002.pdf,2,2,1,1,1,4,review
+78-89______________________________20260222_095032_page_0003.pdf,3,2,1,1,2,5,review
+78-89______________________________20260222_095032_page_0004.pdf,4,2,0,0,1,2,safe_for_extraction
+78-89______________________________20260222_095032_page_0005.pdf,5,2,0,0,1,2,safe_for_extraction
+78-89______________________________20260222_095032_page_0006.pdf,6,2,0,1,1,3,safe_for_extraction
+78-89______________________________20260222_095032_page_0007.pdf,7,2,0,1,1,3,safe_for_extraction
+78-89______________________________20260222_095032_page_0008.pdf,8,2,1,1,2,5,review
+78-89______________________________20260222_095032_page_0009.pdf,9,3,1,1,1,3,safe_for_extraction
+78-89______________________________20260222_095032_page_0010.pdf,10,2,1,1,1,4,review
+78-89______________________________20260222_095032_page_0011.pdf,11,2,1,1,1,4,review
+78-89______________________________20260222_095032_page_0012.pdf,12,2,2,1,2,6,review
+78-89נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0001.pdf,1,2,2,1,1,5,review
+78-89נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0002.pdf,2,2,1,1,1,4,review
+78-89נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0003.pdf,3,2,1,1,2,5,review
+78-89נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0004.pdf,4,2,0,1,1,3,safe_for_extraction
+78-89נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0005.pdf,5,2,0,0,1,2,safe_for_extraction
+78-89נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0006.pdf,6,2,0,1,1,3,safe_for_extraction
+78-89נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0007.pdf,7,2,0,1,1,3,safe_for_extraction
+78-89נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0008.pdf,8,2,1,1,2,5,review
+78-89נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0009.pdf,9,3,1,1,1,3,safe_for_extraction
+78-89נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0010.pdf,10,2,1,1,1,4,review
+78-89נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0011.pdf,11,2,1,1,1,4,review
+78-89נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0012.pdf,12,2,2,1,2,6,review
+7eab033e-0e68-46c2-aff0-6a585129fa00_page_0001.pdf,1,2,0,1,2,4,review
+7eab033e-0e68-46c2-aff0-6a585129fa00_page_0002.pdf,2,2,0,1,2,4,review
+7eab033e-0e68-46c2-aff0-6a585129fa00_page_0003.pdf,3,1,0,0,1,3,safe_for_extraction
+7eab033e-0e68-46c2-aff0-6a585129fa00_page_0004.pdf,4,2,0,1,2,4,review
+7eab033e-0e68-46c2-aff0-6a585129fa00_page_0005.pdf,5,2,0,1,2,4,review
+7eab033e-0e68-46c2-aff0-6a585129fa00_page_0006.pdf,6,1,0,0,1,3,safe_for_extraction
+7eab033e-0e68-46c2-aff0-6a585129fa00_page_0007.pdf,7,2,0,1,1,3,safe_for_extraction
+7eab033e-0e68-46c2-aff0-6a585129fa00_page_0008.pdf,8,1,0,1,1,4,review
+7eab033e-0e68-46c2-aff0-6a585129fa00_page_0009.pdf,9,2,1,1,1,4,review
+7eab033e-0e68-46c2-aff0-6a585129fa00_page_0010.pdf,10,3,0,0,1,1,safe_for_extraction
+7eab033e-0e68-46c2-aff0-6a585129fa00_page_0011.pdf,11,2,1,1,2,5,review
+7eab033e-0e68-46c2-aff0-6a585129fa00_page_0012.pdf,12,2,1,1,1,4,review
+7eab033e-0e68-46c2-aff0-6a585129fa00_page_0013.pdf,13,2,0,1,1,3,safe_for_extraction
+7eab033e-0e68-46c2-aff0-6a585129fa00_page_0014.pdf,14,2,0,1,2,4,review
+7eab033e-0e68-46c2-aff0-6a585129fa00_page_0015.pdf,15,1,0,1,2,5,review
+7eab033e-0e68-46c2-aff0-6a585129fa00_page_0016.pdf,16,3,1,2,2,5,review
+7eab033e-0e68-46c2-aff0-6a585129fa00_page_0017.pdf,17,1,0,1,2,5,review
+7eab033e-0e68-46c2-aff0-6a585129fa00_page_0018.pdf,18,2,0,1,1,3,safe_for_extraction
+7eab033e-0e68-46c2-aff0-6a585129fa00_page_0019.pdf,19,1,0,0,1,3,safe_for_extraction
+91-92______________________________20260222_095032_page_0001.pdf,1,2,1,1,1,4,review
+91-92______________________________20260222_095032_page_0002.pdf,2,2,2,1,2,6,review
+91-92נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0001.pdf,1,2,1,0,1,3,safe_for_extraction
+91-92נפומניאשצי_נתנאל_קטין_נ_מנורה_20260222_095032_page_0002.pdf,2,2,1,1,1,4,review
+9c83395e-bb06-45da-945a-b04c93f24305 (1)-158-177_page_0001.pdf,1,2,1,1,2,5,review
+9c83395e-bb06-45da-945a-b04c93f24305 (1)-158-177_page_0002.pdf,2,2,1,1,2,5,review
+9c83395e-bb06-45da-945a-b04c93f24305 (1)-158-177_page_0003.pdf,3,2,1,1,2,5,review
+9c83395e-bb06-45da-945a-b04c93f24305 (1)-158-177_page_0004.pdf,4,2,0,1,1,3,safe_for_extraction
+9c83395e-bb06-45da-945a-b04c93f24305 (1)-158-177_page_0005.pdf,5,2,0,1,1,3,safe_for_extraction
+9c83395e-bb06-45da-945a-b04c93f24305 (1)-158-177_page_0006.pdf,6,2,1,1,2,5,review
+9c83395e-bb06-45da-945a-b04c93f24305 (1)-158-177_page_0007.pdf,7,2,2,1,1,5,review
+9c83395e-bb06-45da-945a-b04c93f24305 (1)-158-177_page_0008.pdf,8,2,1,1,1,4,review
+9c83395e-bb06-45da-945a-b04c93f24305 (1)-158-177_page_0010.pdf,10,2,1,1,2,5,review
+9c83395e-bb06-45da-945a-b04c93f24305 (1)-158-177_page_0011.pdf,11,2,1,1,1,4,review
+9c83395e-bb06-45da-945a-b04c93f24305 (1)-158-177_page_0012.pdf,12,2,0,1,1,3,safe_for_extraction
+9c83395e-bb06-45da-945a-b04c93f24305 (1)-158-177_page_0013.pdf,13,2,0,1,1,3,safe_for_extraction
+9c83395e-bb06-45da-945a-b04c93f24305 (1)-158-177_page_0014.pdf,14,2,0,1,2,4,review
+9c83395e-bb06-45da-945a-b04c93f24305 (1)-158-177_page_0015.pdf,15,3,1,0,1,2,safe_for_extraction
+9c83395e-bb06-45da-945a-b04c93f24305 (1)-158-177_page_0016.pdf,16,3,1,1,1,3,safe_for_extraction
+9c83395e-bb06-45da-945a-b04c93f24305 (1)-158-177_page_0017.pdf,17,3,0,0,1,1,safe_for_extraction
+9c83395e-bb06-45da-945a-b04c93f24305 (1)-158-177_page_0018.pdf,18,2,1,1,1,4,review
+9c83395e-bb06-45da-945a-b04c93f24305 (1)-158-177_page_0019.pdf,19,2,1,1,2,5,review
+9c83395e-bb06-45da-945a-b04c93f24305 (1)-158-177_page_0020.pdf,20,2,1,1,1,4,review
+9c83395e-bb06-45da-945a-b04c93f24305-78-89_page_0001.pdf,1,2,2,1,1,5,review
+9c83395e-bb06-45da-945a-b04c93f24305-78-89_page_0002.pdf,2,2,1,1,1,4,review
+9c83395e-bb06-45da-945a-b04c93f24305-78-89_page_0003.pdf,3,2,1,1,2,5,review
+9c83395e-bb06-45da-945a-b04c93f24305-78-89_page_0004.pdf,4,2,0,1,1,3,safe_for_extraction
+9c83395e-bb06-45da-945a-b04c93f24305-78-89_page_0005.pdf,5,3,0,0,1,1,safe_for_extraction
+9c83395e-bb06-45da-945a-b04c93f24305-78-89_page_0006.pdf,6,2,0,1,1,3,safe_for_extraction
+9c83395e-bb06-45da-945a-b04c93f24305-78-89_page_0007.pdf,7,2,0,1,1,3,safe_for_extraction
+9c83395e-bb06-45da-945a-b04c93f24305-78-89_page_0008.pdf,8,2,1,1,2,5,review
+9c83395e-bb06-45da-945a-b04c93f24305-78-89_page_0009.pdf,9,3,1,1,1,3,safe_for_extraction
+9c83395e-bb06-45da-945a-b04c93f24305-78-89_page_0010.pdf,10,2,1,1,1,4,review
+9c83395e-bb06-45da-945a-b04c93f24305-78-89_page_0011.pdf,11,2,1,1,1,4,review
+9c83395e-bb06-45da-945a-b04c93f24305-78-89_page_0012.pdf,12,2,2,1,2,6,review
+_____-149-168_page_0001.pdf,1,1,2,1,2,7,high_hallucination_risk
+_____-149-168_page_0002.pdf,2,1,2,1,2,7,high_hallucination_risk
+_____-149-168_page_0003.pdf,3,1,2,1,2,7,high_hallucination_risk
+_____-149-168_page_0004.pdf,4,1,2,1,2,7,high_hallucination_risk
+_____-149-168_page_0005.pdf,5,1,2,1,2,7,high_hallucination_risk
+_____-149-168_page_0006.pdf,6,1,2,1,2,7,high_hallucination_risk
+_____-149-168_page_0007.pdf,7,1,2,1,2,7,high_hallucination_risk
+_____-149-168_page_0008.pdf,8,1,2,1,2,7,high_hallucination_risk
+_____-149-168_page_0009.pdf,9,1,2,1,2,7,high_hallucination_risk
+_____-149-168_page_0010.pdf,10,1,2,1,2,7,high_hallucination_risk
+_____-149-168_page_0011.pdf,11,1,2,1,2,7,high_hallucination_risk
+_____-149-168_page_0012.pdf,12,1,2,1,2,7,high_hallucination_risk
+_____-149-168_page_0013.pdf,13,1,2,1,2,7,high_hallucination_risk
+_____-149-168_page_0014.pdf,14,1,2,1,2,7,high_hallucination_risk
+_____-149-168_page_0015.pdf,15,1,2,1,2,7,high_hallucination_risk
+_____-149-168_page_0016.pdf,16,1,2,1,2,7,high_hallucination_risk
+_____-149-168_page_0017.pdf,17,1,2,1,2,7,high_hallucination_risk
+_____-149-168_page_0018.pdf,18,1,2,1,2,7,high_hallucination_risk
+_____-149-168_page_0019.pdf,19,1,2,1,2,7,high_hallucination_risk
+_____-149-168_page_0020.pdf,20,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0001.pdf,1,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0002.pdf,2,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0003.pdf,3,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0004.pdf,4,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0005.pdf,5,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0006.pdf,6,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0007.pdf,7,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0008.pdf,8,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0009.pdf,9,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0010.pdf,10,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0011.pdf,11,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0012.pdf,12,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0013.pdf,13,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0014.pdf,14,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0015.pdf,15,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0016.pdf,16,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0017.pdf,17,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0018.pdf,18,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0019.pdf,19,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0020.pdf,20,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0021.pdf,21,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0022.pdf,22,1,2,1,2,7,high_hallucination_risk
+_____-172-194_page_0023.pdf,23,1,2,1,2,7,high_hallucination_risk
+_____-215-228_page_0001.pdf,1,1,2,1,2,7,high_hallucination_risk
+_____-215-228_page_0002.pdf,2,1,2,1,2,7,high_hallucination_risk
+_____-215-228_page_0003.pdf,3,1,2,1,2,7,high_hallucination_risk
+_____-215-228_page_0004.pdf,4,1,2,1,2,7,high_hallucination_risk
+_____-215-228_page_0005.pdf,5,1,2,1,2,7,high_hallucination_risk
+_____-215-228_page_0006.pdf,6,1,2,1,2,7,high_hallucination_risk
+_____-215-228_page_0007.pdf,7,1,2,1,2,7,high_hallucination_risk
+_____-215-228_page_0009.pdf,9,1,2,1,2,7,high_hallucination_risk
+_____-215-228_page_0010.pdf,10,1,2,1,2,7,high_hallucination_risk
+_____-215-228_page_0011.pdf,11,1,2,1,2,7,high_hallucination_risk
+_____-215-228_page_0012.pdf,12,1,2,1,2,7,high_hallucination_risk
+_____-215-228_page_0013.pdf,13,1,2,1,2,7,high_hallucination_risk
+_____-215-228_page_0014.pdf,14,1,2,1,2,7,high_hallucination_risk
+_____-50-65_page_0001.pdf,1,1,2,1,2,7,high_hallucination_risk
+_____-50-65_page_0002.pdf,2,1,2,1,2,7,high_hallucination_risk
+_____-50-65_page_0003.pdf,3,1,2,1,2,7,high_hallucination_risk
+_____-50-65_page_0004.pdf,4,1,2,1,2,7,high_hallucination_risk
+_____-50-65_page_0005.pdf,5,1,2,1,2,7,high_hallucination_risk
+_____-50-65_page_0006.pdf,6,1,2,1,2,7,high_hallucination_risk
+_____-50-65_page_0007.pdf,7,1,2,1,2,7,high_hallucination_risk
+_____-50-65_page_0008.pdf,8,1,2,1,2,7,high_hallucination_risk
+_____-50-65_page_0009.pdf,9,1,2,1,2,7,high_hallucination_risk
+_____-50-65_page_0010.pdf,10,1,2,1,2,7,high_hallucination_risk
+_____-50-65_page_0013.pdf,13,1,2,1,2,7,high_hallucination_risk
+_____-50-65_page_0014.pdf,14,1,2,1,2,7,high_hallucination_risk
+_____-50-65_page_0015.pdf,15,1,2,1,2,7,high_hallucination_risk
+_____-50-65_page_0016.pdf,16,1,2,1,2,7,high_hallucination_risk
+_____-79-87_page_0001.pdf,1,1,2,1,2,7,high_hallucination_risk
+_____-79-87_page_0002.pdf,2,1,2,1,2,7,high_hallucination_risk
+_____-79-87_page_0003.pdf,3,1,2,1,2,7,high_hallucination_risk
+_____-79-87_page_0004.pdf,4,1,2,1,2,7,high_hallucination_risk
+_____-79-87_page_0005.pdf,5,1,2,1,2,7,high_hallucination_risk
+_____-79-87_page_0006.pdf,6,1,2,1,2,7,high_hallucination_risk
+_____-79-87_page_0007.pdf,7,1,2,1,2,7,high_hallucination_risk
+_____-79-87_page_0008.pdf,8,1,2,1,2,7,high_hallucination_risk
+_____-79-87_page_0009.pdf,9,1,2,1,2,7,high_hallucination_risk
+_____-91-93_page_0001.pdf,1,1,2,1,2,7,high_hallucination_risk
+_____-91-93_page_0002.pdf,2,1,2,1,2,7,high_hallucination_risk
+_____-91-93_page_0003.pdf,3,1,2,1,2,7,high_hallucination_risk
+_________20260222_114748_page_0001.pdf,1,2,1,1,2,5,review
+_________20260222_114748_page_0002.pdf,2,2,2,1,2,6,review
+_________20260222_114748_page_0003.pdf,3,2,2,1,2,6,review
+_________20260222_114748_page_0004.pdf,4,2,2,1,2,6,review
+_________20260222_114748_page_0005.pdf,5,2,2,1,1,5,review
+_________20260222_114748_page_0006.pdf,6,2,1,1,2,5,review
+_________20260222_114748_page_0007.pdf,7,3,2,1,1,4,review
+_________20260222_114748_page_0008.pdf,8,2,0,1,1,3,safe_for_extraction
+_________20260222_114748_page_0009.pdf,9,3,2,1,2,5,review
+___________20260222_114040_page_0001.pdf,1,3,0,0,0,0,safe_for_extraction
+___________20260222_114040_page_0002.pdf,2,1,2,1,1,6,review
+_____________1_page_0001.pdf,1,1,2,1,2,7,high_hallucination_risk
+_____________1_page_0002.pdf,2,1,2,1,2,7,high_hallucination_risk
+_____________1_page_0003.pdf,3,1,2,1,2,7,high_hallucination_risk
+_____________1_page_0004.pdf,4,1,2,1,2,7,high_hallucination_risk
+_____________1_page_0005.pdf,5,1,2,1,2,7,high_hallucination_risk
+_____________1_page_0006.pdf,6,1,2,1,2,7,high_hallucination_risk
+_____________1_page_0007.pdf,7,1,2,1,2,7,high_hallucination_risk
+_____________1_page_0008.pdf,8,1,2,1,2,7,high_hallucination_risk
+_____________1_page_0009.pdf,9,1,2,1,2,7,high_hallucination_risk
+_____________1_page_0010.pdf,10,1,2,1,2,7,high_hallucination_risk
+_____________1_page_0011.pdf,11,1,2,1,2,7,high_hallucination_risk
+_____________1_page_0012.pdf,12,1,2,1,2,7,high_hallucination_risk
+________________________20260222_0911071_page_0001.pdf,1,2,2,1,1,5,review
+________________________20260222_0911071_page_0002.pdf,2,2,2,1,1,5,review
+________________________20260222_0911071_page_0003.pdf,3,2,1,1,1,4,review
+________________________20260222_0911071_page_0004.pdf,4,2,0,0,1,2,safe_for_extraction
+________________________20260222_0911071_page_0005.pdf,5,3,0,0,1,1,safe_for_extraction
+________________________20260222_0911071_page_0006.pdf,6,3,0,1,1,2,safe_for_extraction
+________________________20260222_0911071_page_0007.pdf,7,3,0,1,1,2,safe_for_extraction
+________________________20260222_0911071_page_0008.pdf,8,2,1,1,1,4,review
+________________________20260222_0911071_page_0009.pdf,9,3,0,1,1,2,safe_for_extraction
+________________________20260222_0911071_page_0010.pdf,10,2,0,0,1,2,safe_for_extraction
+________________________20260222_0911071_page_0011.pdf,11,2,1,1,2,5,review
+________________________20260222_0911071_page_0012.pdf,12,3,2,1,1,4,review
+________________________20260222_0911071_page_0013.pdf,13,3,2,1,2,5,review
+________________________20260222_0911071_page_0014.pdf,14,2,2,1,2,6,review
+________________________20260222_0911071_page_0015.pdf,15,2,1,1,1,4,review
+________________________20260222_0911071_page_0016.pdf,16,2,1,1,2,5,review
+________________________20260222_0911071_page_0017.pdf,17,2,0,0,1,2,safe_for_extraction
+________________________20260222_0911071_page_0018.pdf,18,2,0,1,1,3,safe_for_extraction
+________________________20260222_0911071_page_0019.pdf,19,2,0,1,1,3,safe_for_extraction
+________________________20260222_0911071_page_0020.pdf,20,2,0,1,1,3,safe_for_extraction
+________________________20260222_0911071_page_0021.pdf,21,3,0,0,0,0,safe_for_extraction
+________________________20260222_0911071_page_0022.pdf,22,3,1,1,1,3,safe_for_extraction
+________________________20260222_0911071_page_0023.pdf,23,2,1,1,1,4,review
+________________________20260222_091107_page_0001.pdf,1,2,0,1,1,3,safe_for_extraction
+________________________20260222_091107_page_0002.pdf,2,2,2,1,1,5,review
+________________________20260222_091107_page_0003.pdf,3,2,1,1,2,5,review
+________________________20260222_091107_page_0004.pdf,4,2,0,0,0,1,safe_for_extraction
+________________________20260222_091107_page_0005.pdf,5,3,0,0,1,1,safe_for_extraction
+________________________20260222_091107_page_0006.pdf,6,2,0,1,1,3,safe_for_extraction
+________________________20260222_091107_page_0007.pdf,7,3,0,1,1,2,safe_for_extraction
+________________________20260222_091107_page_0008.pdf,8,2,0,1,2,4,review
+________________________20260222_091107_page_0009.pdf,9,3,1,1,1,3,safe_for_extraction
+________________________20260222_091107_page_0010.pdf,10,2,0,1,1,3,safe_for_extraction
+________________________20260222_091107_page_0011.pdf,11,2,0,1,1,3,safe_for_extraction
+________________________20260222_091107_page_0012.pdf,12,2,1,1,2,5,review
+______________page_0001.pdf,1,1,2,1,2,7,high_hallucination_risk
+______________page_0002.pdf,2,1,2,1,2,7,high_hallucination_risk
+______________page_0003.pdf,3,1,2,1,2,7,high_hallucination_risk
+______________page_0004.pdf,4,1,2,1,2,7,high_hallucination_risk
+______________page_0005.pdf,5,1,2,1,2,7,high_hallucination_risk
+______________page_0006.pdf,6,1,2,1,2,7,high_hallucination_risk
+______________page_0007.pdf,7,1,2,1,2,7,high_hallucination_risk
+______________page_0008.pdf,8,1,2,1,2,7,high_hallucination_risk
+______________page_0009.pdf,9,1,2,1,2,7,high_hallucination_risk
+______________page_0010.pdf,10,1,2,1,2,7,high_hallucination_risk
+______________page_0011.pdf,11,1,2,1,2,7,high_hallucination_risk
+______________page_0012.pdf,12,1,2,1,2,7,high_hallucination_risk
+____________page_0001.pdf,1,1,2,1,2,7,high_hallucination_risk
+____________page_0003.pdf,3,1,2,1,2,7,high_hallucination_risk
+____________page_0004.pdf,4,1,2,1,2,7,high_hallucination_risk
+____________page_0005.pdf,5,1,2,1,2,7,high_hallucination_risk
+da0838fa-e0fe-42e2-a355-6485db0c4008-221-249-24-29_page_001.pdf,1,2,0,1,1,3,safe_for_extraction
+da0838fa-e0fe-42e2-a355-6485db0c4008-221-249-24-29_page_002.pdf,2,2,0,0,1,2,safe_for_extraction
+da0838fa-e0fe-42e2-a355-6485db0c4008-221-249-24-29_page_003.pdf,3,2,0,0,0,1,safe_for_extraction
+da0838fa-e0fe-42e2-a355-6485db0c4008-221-249-24-29_page_004.pdf,4,3,0,1,2,3,safe_for_extraction
+da0838fa-e0fe-42e2-a355-6485db0c4008-221-249-24-29_page_005.pdf,5,3,0,0,0,0,safe_for_extraction
+da0838fa-e0fe-42e2-a355-6485db0c4008-221-249-24-29_page_006.pdf,6,3,0,0,0,0,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0001.pdf,1,2,0,1,1,3,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0002.pdf,2,2,2,1,1,5,review
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0003.pdf,3,2,1,1,2,5,review
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0004.pdf,4,2,1,1,1,4,review
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0005.pdf,5,3,0,0,1,1,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0006.pdf,6,2,0,1,1,3,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0007.pdf,7,3,0,1,1,2,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0008.pdf,8,2,0,1,2,4,review
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0009.pdf,9,3,0,0,1,1,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0010.pdf,10,2,0,1,1,3,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0011.pdf,11,2,1,1,1,4,review
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0012.pdf,12,2,1,1,1,4,review
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0013.pdf,13,2,2,1,1,5,review
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0014.pdf,14,2,2,1,1,5,review
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0015.pdf,15,2,1,1,1,4,review
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0016.pdf,16,2,0,0,1,2,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0017.pdf,17,3,0,0,1,1,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0018.pdf,18,3,0,1,1,2,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0019.pdf,19,3,0,1,1,2,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0020.pdf,20,3,1,1,1,3,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0021.pdf,21,3,0,1,1,2,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0022.pdf,22,2,0,0,1,2,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0023.pdf,23,2,0,1,1,3,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0024.pdf,24,3,1,0,0,1,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0025.pdf,25,3,2,1,2,5,review
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0026.pdf,26,2,2,1,2,6,review
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0027.pdf,27,2,1,1,1,4,review
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0028.pdf,28,2,1,1,2,5,review
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0029.pdf,29,2,0,0,1,2,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0030.pdf,30,2,0,1,1,3,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0031.pdf,31,2,0,1,1,3,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0032.pdf,32,2,0,1,1,3,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0033.pdf,33,3,0,0,1,1,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0034.pdf,34,2,1,1,1,4,review
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0035.pdf,35,2,1,0,1,3,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-2-37_page_0036.pdf,36,2,1,1,1,4,review
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-39-43 (1)_page_0001.pdf,1,2,0,0,0,1,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-39-43 (1)_page_0002.pdf,2,2,0,1,1,3,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-39-43 (1)_page_0003.pdf,3,2,0,0,1,2,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-39-43 (1)_page_0004.pdf,4,2,0,0,0,1,safe_for_extraction
+fc884587-b83b-4391-a9bb-c0243dc0ac1e-39-43 (1)_page_0005.pdf,5,3,0,0,1,1,safe_for_extraction
+test_page_0001.pdf,1,3,2,1,2,5,review
+בדיקה-1-44_page_0001.pdf,1,2,0,0,0,1,safe_for_extraction
+בדיקה-1-44_page_0002.pdf,2,3,0,0,0,0,safe_for_extraction
+בדיקה-1-44_page_0003.pdf,3,3,0,0,0,0,safe_for_extraction
+בדיקה-1-44_page_0004.pdf,4,3,0,0,0,0,safe_for_extraction
+בדיקה-1-44_page_0005.pdf,5,3,0,0,0,0,safe_for_extraction
+בדיקה-1-44_page_0006.pdf,6,3,0,0,0,0,safe_for_extraction
+בדיקה-1-44_page_0007.pdf,7,2,0,0,0,1,safe_for_extraction
+בדיקה-1-44_page_0008.pdf,8,3,0,0,0,0,safe_for_extraction
+בדיקה-1-44_page_0009.pdf,9,3,0,0,0,0,safe_for_extraction
+בדיקה-1-44_page_0010.pdf,10,3,0,0,1,1,safe_for_extraction
+בדיקה-1-44_page_0011.pdf,11,0,0,0,0,3,safe_for_extraction
+בדיקה-1-44_page_0012.pdf,12,1,0,0,0,2,safe_for_extraction
+בדיקה-1-44_page_0013.pdf,13,1,0,0,0,2,safe_for_extraction
+בדיקה-1-44_page_0014.pdf,14,2,0,0,1,2,safe_for_extraction
+בדיקה-1-44_page_0015.pdf,15,1,1,1,2,6,review
+בדיקה-1-44_page_0016.pdf,16,3,1,0,1,2,safe_for_extraction
+בדיקה-1-44_page_0017.pdf,17,2,0,1,1,3,safe_for_extraction
+בדיקה-1-44_page_0018.pdf,18,1,0,0,2,4,review
+בדיקה-1-44_page_0019.pdf,19,1,0,0,0,2,safe_for_extraction
+בדיקה-1-44_page_0020.pdf,20,1,0,0,0,2,safe_for_extraction
+בדיקה-1-44_page_0021.pdf,21,1,0,1,1,4,review
+בדיקה-1-44_page_0022.pdf,22,2,0,0,1,2,safe_for_extraction
+בדיקה-1-44_page_0023.pdf,23,3,0,1,1,2,safe_for_extraction
+בדיקה-1-44_page_0024.pdf,24,3,0,0,1,1,safe_for_extraction
+בדיקה-1-44_page_0025.pdf,25,3,0,0,1,1,safe_for_extraction
+בדיקה-1-44_page_0026.pdf,26,3,0,0,1,1,safe_for_extraction
+בדיקה-1-44_page_0027.pdf,27,3,0,0,1,1,safe_for_extraction
+בדיקה-1-44_page_0028.pdf,28,3,0,0,0,0,safe_for_extraction
+בדיקה-1-44_page_0029.pdf,29,3,0,0,1,1,safe_for_extraction
+בדיקה-1-44_page_0030.pdf,30,3,0,0,1,1,safe_for_extraction
+בדיקה-1-44_page_0031.pdf,31,3,0,0,1,1,safe_for_extraction
+בדיקה-1-44_page_0032.pdf,32,3,0,0,1,1,safe_for_extraction
+בדיקה-1-44_page_0033.pdf,33,3,0,0,1,1,safe_for_extraction
+בדיקה-1-44_page_0034.pdf,34,3,0,0,0,0,safe_for_extraction
+בדיקה-1-44_page_0035.pdf,35,3,0,0,1,1,safe_for_extraction
+בדיקה-1-44_page_0036.pdf,36,3,0,0,0,0,safe_for_extraction
+בדיקה-1-44_page_0037.pdf,37,3,0,0,1,1,safe_for_extraction
+בדיקה-1-44_page_0038.pdf,38,1,0,0,1,3,safe_for_extraction
+בדיקה-1-44_page_0039.pdf,39,2,0,0,1,2,safe_for_extraction
+בדיקה-1-44_page_0040.pdf,40,1,0,0,0,2,safe_for_extraction
+בדיקה-1-44_page_0041.pdf,41,0,0,0,0,3,safe_for_extraction
+בדיקה-1-44_page_0042.pdf,42,3,0,0,0,0,safe_for_extraction
+בדיקה-1-44_page_0043.pdf,43,3,0,0,0,0,safe_for_extraction
+בדיקה-1-44_page_0044.pdf,44,2,0,0,0,1,safe_for_extraction
+בדיקה-1-56_page_0001.pdf,1,2,0,0,0,1,safe_for_extraction
+בדיקה-1-56_page_0002.pdf,2,3,0,0,0,0,safe_for_extraction
+בדיקה-1-56_page_0003.pdf,3,1,0,0,1,3,safe_for_extraction
+בדיקה-1-56_page_0004.pdf,4,3,0,0,0,0,safe_for_extraction
+בדיקה-1-56_page_0005.pdf,5,2,0,1,1,3,safe_for_extraction
+בדיקה-1-56_page_0006.pdf,6,2,0,0,1,2,safe_for_extraction
+בדיקה-1-56_page_0007.pdf,7,2,0,0,1,2,safe_for_extraction
+בדיקה-1-56_page_0008.pdf,8,2,0,0,1,2,safe_for_extraction
+בדיקה-1-56_page_0009.pdf,9,2,0,0,1,2,safe_for_extraction
+בדיקה-1-56_page_0010.pdf,10,2,0,0,1,2,safe_for_extraction
+בדיקה-1-56_page_0011.pdf,11,2,0,0,1,2,safe_for_extraction
+בדיקה-1-56_page_0012.pdf,12,2,0,0,1,2,safe_for_extraction
+בדיקה-1-56_page_0013.pdf,13,2,0,0,1,2,safe_for_extraction
+בדיקה-1-56_page_0014.pdf,14,2,0,1,2,4,review
+בדיקה-1-56_page_0015.pdf,15,2,0,0,1,2,safe_for_extraction
+בדיקה-1-56_page_0016.pdf,16,2,0,0,1,2,safe_for_extraction
+בדיקה-1-56_page_0017.pdf,17,2,0,1,1,3,safe_for_extraction
+בדיקה-1-56_page_0018.pdf,18,2,0,0,0,1,safe_for_extraction
+בדיקה-1-56_page_0019.pdf,19,2,0,0,0,1,safe_for_extraction
+בדיקה-1-56_page_0020.pdf,20,1,0,0,0,2,safe_for_extraction
+בדיקה-1-56_page_0021.pdf,21,3,0,0,0,0,safe_for_extraction
+בדיקה-1-56_page_0022.pdf,22,1,0,0,1,3,safe_for_extraction
+בדיקה-1-56_page_0023.pdf,23,2,0,0,1,2,safe_for_extraction
+בדיקה-1-56_page_0024.pdf,24,1,0,0,1,3,safe_for_extraction
+בדיקה-1-56_page_0025.pdf,25,2,0,1,1,3,safe_for_extraction
+בדיקה-1-56_page_0026.pdf,26,2,0,1,1,3,safe_for_extraction
+בדיקה-1-56_page_0027.pdf,27,2,1,1,2,5,review
+בדיקה-1-56_page_0028.pdf,28,2,0,1,1,3,safe_for_extraction
+בדיקה-1-56_page_0029.pdf,29,2,0,1,2,4,review
+בדיקה-1-56_page_0030.pdf,30,2,0,0,0,1,safe_for_extraction
+בדיקה-1-56_page_0031.pdf,31,1,0,0,0,2,safe_for_extraction
+בדיקה-1-56_page_0032.pdf,32,2,0,0,1,2,safe_for_extraction
+בדיקה-1-56_page_0033.pdf,33,2,0,1,2,4,review
+בדיקה-1-56_page_0034.pdf,34,2,0,1,2,4,review
+בדיקה-1-56_page_0035.pdf,35,2,0,1,2,4,review
+בדיקה-1-56_page_0036.pdf,36,2,0,1,1,3,safe_for_extraction
+בדיקה-1-56_page_0037.pdf,37,3,0,1,1,2,safe_for_extraction
+בדיקה-1-56_page_0038.pdf,38,2,0,1,1,3,safe_for_extraction
+בדיקה-1-56_page_0039.pdf,39,3,0,0,0,0,safe_for_extraction
+בדיקה-1-56_page_0040.pdf,40,1,1,0,1,4,review
+בדיקה-1-56_page_0041.pdf,41,3,0,1,1,2,safe_for_extraction
+בדיקה-1-56_page_0042.pdf,42,2,0,1,1,3,safe_for_extraction
+בדיקה-1-56_page_0043.pdf,43,1,0,0,1,3,safe_for_extraction
+בדיקה-1-56_page_0044.pdf,44,2,0,0,1,2,safe_for_extraction
+בדיקה-1-56_page_0045.pdf,45,2,0,1,1,3,safe_for_extraction
+בדיקה-1-56_page_0046.pdf,46,2,0,1,1,3,safe_for_extraction
+בדיקה-1-56_page_0047.pdf,47,3,0,0,0,0,safe_for_extraction
+בדיקה-1-56_page_0048.pdf,48,3,0,0,1,1,safe_for_extraction
+בדיקה-1-56_page_0049.pdf,49,2,0,1,1,3,safe_for_extraction
+בדיקה-1-56_page_0050.pdf,50,2,0,1,1,3,safe_for_extraction
+בדיקה-1-56_page_0051.pdf,51,2,0,0,1,2,safe_for_extraction
+בדיקה-1-56_page_0052.pdf,52,2,0,1,1,3,safe_for_extraction
+בדיקה-1-56_page_0053.pdf,53,2,0,0,1,2,safe_for_extraction
+בדיקה-1-56_page_0054.pdf,54,2,0,0,0,1,safe_for_extraction
+בדיקה-1-56_page_0055.pdf,55,2,0,0,0,1,safe_for_extraction
+בדיקה-1-56_page_0056.pdf,56,2,0,1,1,3,safe_for_extraction
+בדיקה-149-168_page_0001.pdf,1,2,3,1,2,7,high_hallucination_risk
+בדיקה-149-168_page_0002.pdf,2,3,3,1,1,5,review
+בדיקה-149-168_page_0003.pdf,3,3,3,1,2,6,review
+בדיקה-149-168_page_0004.pdf,4,3,3,1,1,5,review
+בדיקה-149-168_page_0005.pdf,5,3,3,1,2,6,review
+בדיקה-149-168_page_0006.pdf,6,3,3,1,1,5,review
+בדיקה-149-168_page_0007.pdf,7,1,2,0,1,5,review
+בדיקה-149-168_page_0008.pdf,8,3,3,1,2,6,review
+בדיקה-149-168_page_0009.pdf,9,3,3,1,2,6,review
+בדיקה-149-168_page_0010.pdf,10,3,3,1,1,5,review
+בדיקה-149-168_page_0011.pdf,11,3,3,1,2,6,review
+בדיקה-149-168_page_0012.pdf,12,3,3,1,2,6,review
+בדיקה-149-168_page_0013.pdf,13,3,3,1,2,6,review
+בדיקה-149-168_page_0014.pdf,14,3,3,1,1,5,review
+בדיקה-149-168_page_0015.pdf,15,3,3,1,1,5,review
+בדיקה-149-168_page_0016.pdf,16,1,3,2,2,9,high_hallucination_risk
+בדיקה-149-168_page_0017.pdf,17,3,3,1,1,5,review
+בדיקה-149-168_page_0018.pdf,18,2,1,0,1,3,safe_for_extraction
+בדיקה-149-168_page_0019.pdf,19,3,3,1,1,5,review
+בדיקה-149-168_page_0020.pdf,20,2,2,1,1,5,review
+בדיקה-172-194_page_0001.pdf,1,1,2,0,1,5,review
+בדיקה-172-194_page_0002.pdf,2,1,3,2,2,9,high_hallucination_risk
+בדיקה-172-194_page_0003.pdf,3,1,2,1,1,6,review
+בדיקה-172-194_page_0004.pdf,4,2,3,1,1,6,review
+בדיקה-172-194_page_0005.pdf,5,3,3,1,1,5,review
+בדיקה-172-194_page_0006.pdf,6,3,3,1,2,6,review
+בדיקה-172-194_page_0007.pdf,7,3,3,1,1,5,review
+בדיקה-172-194_page_0008.pdf,8,2,3,1,1,6,review
+בדיקה-172-194_page_0009.pdf,9,2,3,1,1,6,review
+בדיקה-172-194_page_0010.pdf,10,2,3,1,1,6,review
+בדיקה-172-194_page_0011.pdf,11,3,3,1,2,6,review
+בדיקה-172-194_page_0012.pdf,12,2,3,1,1,6,review
+בדיקה-172-194_page_0013.pdf,13,2,3,1,2,7,high_hallucination_risk
+בדיקה-172-194_page_0014.pdf,14,2,3,1,1,6,review
+בדיקה-172-194_page_0015.pdf,15,2,2,1,1,5,review
+בדיקה-172-194_page_0016.pdf,16,1,2,1,1,6,review
+בדיקה-172-194_page_0017.pdf,17,3,0,0,0,0,safe_for_extraction
+בדיקה-172-194_page_0018.pdf,18,3,0,0,0,0,safe_for_extraction
+בדיקה-172-194_page_0019.pdf,19,1,3,2,2,9,high_hallucination_risk
+בדיקה-172-194_page_0020.pdf,20,2,2,1,1,5,review
+בדיקה-172-194_page_0021.pdf,21,3,3,1,2,6,review
+בדיקה-172-194_page_0022.pdf,22,1,2,1,2,7,high_hallucination_risk
+בדיקה-172-194_page_0023.pdf,23,2,3,2,2,8,high_hallucination_risk
+בדיקה-215-228_page_0001.pdf,1,2,2,1,1,5,review
+בדיקה-215-228_page_0002.pdf,2,2,3,1,1,6,review
+בדיקה-215-228_page_0003.pdf,3,2,3,1,2,7,high_hallucination_risk
+בדיקה-215-228_page_0004.pdf,4,3,3,1,2,6,review
+בדיקה-215-228_page_0005.pdf,5,1,2,0,1,5,review
+בדיקה-215-228_page_0006.pdf,6,1,3,2,2,9,high_hallucination_risk
+בדיקה-215-228_page_0007.pdf,7,1,2,1,1,6,review
+בדיקה-215-228_page_0009.pdf,9,2,3,2,2,8,high_hallucination_risk
+בדיקה-215-228_page_0010.pdf,10,2,1,1,1,4,review
+בדיקה-215-228_page_0011.pdf,11,2,0,0,1,2,safe_for_extraction
+בדיקה-215-228_page_0012.pdf,12,2,0,0,1,2,safe_for_extraction
+בדיקה-215-228_page_0013.pdf,13,2,0,0,1,2,safe_for_extraction
+בדיקה-215-228_page_0014.pdf,14,2,2,1,2,6,review
+בדיקה-284-791_page_0001.pdf,1,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0002.pdf,2,2,1,1,1,4,review
+בדיקה-284-791_page_0003.pdf,3,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0004.pdf,4,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0005.pdf,5,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0006.pdf,6,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0007.pdf,7,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0008.pdf,8,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0009.pdf,9,2,1,1,1,4,review
+בדיקה-284-791_page_0010.pdf,10,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0011.pdf,11,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0012.pdf,12,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0013.pdf,13,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0014.pdf,14,2,1,1,1,4,review
+בדיקה-284-791_page_0015.pdf,15,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0016.pdf,16,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0017.pdf,17,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0018.pdf,18,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0019.pdf,19,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0020.pdf,20,2,1,1,1,4,review
+בדיקה-284-791_page_0021.pdf,21,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0022.pdf,22,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0023.pdf,23,2,1,1,1,4,review
+בדיקה-284-791_page_0024.pdf,24,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0025.pdf,25,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0026.pdf,26,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0027.pdf,27,2,1,0,1,3,safe_for_extraction
+בדיקה-284-791_page_0028.pdf,28,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0029.pdf,29,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0030.pdf,30,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0031.pdf,31,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0032.pdf,32,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0033.pdf,33,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0034.pdf,34,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0035.pdf,35,2,1,1,1,4,review
+בדיקה-284-791_page_0036.pdf,36,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0037.pdf,37,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0038.pdf,38,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0039.pdf,39,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0040.pdf,40,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0041.pdf,41,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0042.pdf,42,3,0,0,1,1,safe_for_extraction
+בדיקה-284-791_page_0043.pdf,43,3,0,0,1,1,safe_for_extraction
+בדיקה-284-791_page_0044.pdf,44,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0045.pdf,45,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0046.pdf,46,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0047.pdf,47,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0048.pdf,48,3,0,0,1,1,safe_for_extraction
+בדיקה-284-791_page_0049.pdf,49,3,0,0,1,1,safe_for_extraction
+בדיקה-284-791_page_0050.pdf,50,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0051.pdf,51,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0052.pdf,52,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0053.pdf,53,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0054.pdf,54,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0055.pdf,55,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0056.pdf,56,2,1,1,1,4,review
+בדיקה-284-791_page_0057.pdf,57,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0058.pdf,58,2,1,1,1,4,review
+בדיקה-284-791_page_0059.pdf,59,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0060.pdf,60,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0061.pdf,61,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0062.pdf,62,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0063.pdf,63,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0064.pdf,64,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0065.pdf,65,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0066.pdf,66,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0067.pdf,67,2,1,1,1,4,review
+בדיקה-284-791_page_0068.pdf,68,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0069.pdf,69,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0070.pdf,70,3,0,1,2,3,safe_for_extraction
+בדיקה-284-791_page_0071.pdf,71,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0072.pdf,72,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0073.pdf,73,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0074.pdf,74,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0075.pdf,75,3,0,0,0,0,safe_for_extraction
+בדיקה-284-791_page_0076.pdf,76,3,0,0,1,1,safe_for_extraction
+בדיקה-284-791_page_0077.pdf,77,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0078.pdf,78,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0079.pdf,79,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0080.pdf,80,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0081.pdf,81,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0082.pdf,82,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0083.pdf,83,2,1,1,1,4,review
+בדיקה-284-791_page_0084.pdf,84,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0085.pdf,85,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0086.pdf,86,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0087.pdf,87,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0088.pdf,88,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0089.pdf,89,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0090.pdf,90,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0091.pdf,91,2,1,1,1,4,review
+בדיקה-284-791_page_0092.pdf,92,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0093.pdf,93,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0094.pdf,94,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0095.pdf,95,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0096.pdf,96,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0097.pdf,97,3,0,1,1,2,safe_for_extraction
+בדיקה-284-791_page_0098.pdf,98,2,0,1,2,4,review
+בדיקה-284-791_page_0099.pdf,99,3,0,0,0,0,safe_for_extraction
+בדיקה-284-791_page_0100.pdf,100,2,1,0,1,3,safe_for_extraction
+בדיקה-284-791_page_0101.pdf,101,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0102.pdf,102,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0103.pdf,103,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0104.pdf,104,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0105.pdf,105,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0106.pdf,106,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0107.pdf,107,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0108.pdf,108,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0109.pdf,109,2,1,1,1,4,review
+בדיקה-284-791_page_0110.pdf,110,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0111.pdf,111,3,0,1,2,3,safe_for_extraction
+בדיקה-284-791_page_0112.pdf,112,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0113.pdf,113,2,1,1,1,4,review
+בדיקה-284-791_page_0114.pdf,114,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0115.pdf,115,2,0,1,2,4,review
+בדיקה-284-791_page_0116.pdf,116,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0117.pdf,117,2,1,1,1,4,review
+בדיקה-284-791_page_0118.pdf,118,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0119.pdf,119,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0120.pdf,120,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0121.pdf,121,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0122.pdf,122,2,0,1,2,4,review
+בדיקה-284-791_page_0123.pdf,123,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0124.pdf,124,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0125.pdf,125,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0126.pdf,126,2,1,1,1,4,review
+בדיקה-284-791_page_0127.pdf,127,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0128.pdf,128,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0129.pdf,129,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0130.pdf,130,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0131.pdf,131,2,1,1,2,5,review
+בדיקה-284-791_page_0132.pdf,132,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0133.pdf,133,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0134.pdf,134,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0135.pdf,135,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0136.pdf,136,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0137.pdf,137,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0138.pdf,138,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0139.pdf,139,2,0,1,2,4,review
+בדיקה-284-791_page_0140.pdf,140,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0141.pdf,141,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0142.pdf,142,2,0,1,2,4,review
+בדיקה-284-791_page_0143.pdf,143,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0144.pdf,144,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0145.pdf,145,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0146.pdf,146,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0147.pdf,147,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0148.pdf,148,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0149.pdf,149,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0150.pdf,150,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0151.pdf,151,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0152.pdf,152,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0153.pdf,153,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0154.pdf,154,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0155.pdf,155,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0156.pdf,156,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0157.pdf,157,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0158.pdf,158,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0159.pdf,159,3,0,0,0,0,safe_for_extraction
+בדיקה-284-791_page_0160.pdf,160,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0161.pdf,161,2,0,1,2,4,review
+בדיקה-284-791_page_0162.pdf,162,3,0,0,0,0,safe_for_extraction
+בדיקה-284-791_page_0163.pdf,163,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0164.pdf,164,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0165.pdf,165,2,1,1,1,4,review
+בדיקה-284-791_page_0166.pdf,166,3,0,0,1,1,safe_for_extraction
+בדיקה-284-791_page_0167.pdf,167,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0168.pdf,168,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0169.pdf,169,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0170.pdf,170,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0171.pdf,171,2,1,1,1,4,review
+בדיקה-284-791_page_0172.pdf,172,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0173.pdf,173,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0174.pdf,174,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0175.pdf,175,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0176.pdf,176,3,0,0,0,0,safe_for_extraction
+בדיקה-284-791_page_0177.pdf,177,3,0,0,1,1,safe_for_extraction
+בדיקה-284-791_page_0178.pdf,178,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0179.pdf,179,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0180.pdf,180,3,0,1,1,2,safe_for_extraction
+בדיקה-284-791_page_0181.pdf,181,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0182.pdf,182,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0183.pdf,183,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0184.pdf,184,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0185.pdf,185,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0186.pdf,186,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0187.pdf,187,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0188.pdf,188,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0189.pdf,189,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0190.pdf,190,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0191.pdf,191,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0192.pdf,192,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0193.pdf,193,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0194.pdf,194,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0195.pdf,195,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0196.pdf,196,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0197.pdf,197,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0198.pdf,198,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0199.pdf,199,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0200.pdf,200,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0201.pdf,201,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0202.pdf,202,2,1,1,1,4,review
+בדיקה-284-791_page_0203.pdf,203,2,1,1,1,4,review
+בדיקה-284-791_page_0204.pdf,204,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0205.pdf,205,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0206.pdf,206,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0207.pdf,207,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0208.pdf,208,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0209.pdf,209,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0210.pdf,210,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0211.pdf,211,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0212.pdf,212,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0213.pdf,213,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0214.pdf,214,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0215.pdf,215,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0216.pdf,216,3,0,0,0,0,safe_for_extraction
+בדיקה-284-791_page_0217.pdf,217,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0218.pdf,218,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0219.pdf,219,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0220.pdf,220,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0221.pdf,221,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0222.pdf,222,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0223.pdf,223,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0224.pdf,224,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0225.pdf,225,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0226.pdf,226,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0227.pdf,227,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0228.pdf,228,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0229.pdf,229,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0230.pdf,230,2,0,1,2,4,review
+בדיקה-284-791_page_0231.pdf,231,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0232.pdf,232,2,1,1,1,4,review
+בדיקה-284-791_page_0233.pdf,233,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0234.pdf,234,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0235.pdf,235,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0236.pdf,236,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0237.pdf,237,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0238.pdf,238,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0239.pdf,239,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0240.pdf,240,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0241.pdf,241,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0242.pdf,242,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0243.pdf,243,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0244.pdf,244,3,0,0,0,0,safe_for_extraction
+בדיקה-284-791_page_0245.pdf,245,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0246.pdf,246,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0247.pdf,247,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0248.pdf,248,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0249.pdf,249,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0250.pdf,250,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0251.pdf,251,3,0,0,1,1,safe_for_extraction
+בדיקה-284-791_page_0252.pdf,252,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0253.pdf,253,3,0,0,0,0,safe_for_extraction
+בדיקה-284-791_page_0254.pdf,254,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0255.pdf,255,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0256.pdf,256,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0257.pdf,257,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0258.pdf,258,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0259.pdf,259,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0260.pdf,260,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0261.pdf,261,2,1,1,1,4,review
+בדיקה-284-791_page_0262.pdf,262,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0263.pdf,263,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0264.pdf,264,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0265.pdf,265,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0266.pdf,266,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0267.pdf,267,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0268.pdf,268,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0269.pdf,269,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0270.pdf,270,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0271.pdf,271,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0272.pdf,272,2,1,1,1,4,review
+בדיקה-284-791_page_0273.pdf,273,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0274.pdf,274,2,1,0,1,3,safe_for_extraction
+בדיקה-284-791_page_0275.pdf,275,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0276.pdf,276,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0277.pdf,277,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0278.pdf,278,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0279.pdf,279,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0280.pdf,280,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0281.pdf,281,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0282.pdf,282,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0283.pdf,283,2,0,1,2,4,review
+בדיקה-284-791_page_0284.pdf,284,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0285.pdf,285,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0286.pdf,286,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0287.pdf,287,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0288.pdf,288,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0289.pdf,289,3,0,1,1,2,safe_for_extraction
+בדיקה-284-791_page_0290.pdf,290,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0291.pdf,291,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0292.pdf,292,2,1,1,1,4,review
+בדיקה-284-791_page_0293.pdf,293,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0294.pdf,294,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0295.pdf,295,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0296.pdf,296,2,0,1,2,4,review
+בדיקה-284-791_page_0297.pdf,297,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0298.pdf,298,2,1,1,1,4,review
+בדיקה-284-791_page_0299.pdf,299,3,1,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0300.pdf,300,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0301.pdf,301,2,1,0,1,3,safe_for_extraction
+בדיקה-284-791_page_0302.pdf,302,2,1,1,2,5,review
+בדיקה-284-791_page_0303.pdf,303,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0304.pdf,304,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0305.pdf,305,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0306.pdf,306,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0307.pdf,307,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0308.pdf,308,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0309.pdf,309,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0310.pdf,310,1,1,0,1,4,review
+בדיקה-284-791_page_0311.pdf,311,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0312.pdf,312,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0313.pdf,313,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0314.pdf,314,2,1,1,1,4,review
+בדיקה-284-791_page_0315.pdf,315,2,0,1,2,4,review
+בדיקה-284-791_page_0316.pdf,316,2,1,1,1,4,review
+בדיקה-284-791_page_0317.pdf,317,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0318.pdf,318,2,0,1,2,4,review
+בדיקה-284-791_page_0319.pdf,319,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0320.pdf,320,2,1,1,1,4,review
+בדיקה-284-791_page_0321.pdf,321,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0322.pdf,322,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0323.pdf,323,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0324.pdf,324,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0325.pdf,325,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0326.pdf,326,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0327.pdf,327,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0328.pdf,328,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0329.pdf,329,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0330.pdf,330,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0331.pdf,331,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0332.pdf,332,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0333.pdf,333,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0334.pdf,334,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0335.pdf,335,2,0,1,2,4,review
+בדיקה-284-791_page_0336.pdf,336,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0337.pdf,337,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0338.pdf,338,2,1,1,1,4,review
+בדיקה-284-791_page_0339.pdf,339,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0340.pdf,340,2,1,1,1,4,review
+בדיקה-284-791_page_0341.pdf,341,2,1,0,1,3,safe_for_extraction
+בדיקה-284-791_page_0342.pdf,342,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0343.pdf,343,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0344.pdf,344,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0345.pdf,345,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0346.pdf,346,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0347.pdf,347,2,1,1,1,4,review
+בדיקה-284-791_page_0348.pdf,348,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0349.pdf,349,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0350.pdf,350,2,1,1,1,4,review
+בדיקה-284-791_page_0351.pdf,351,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0352.pdf,352,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0353.pdf,353,2,1,1,1,4,review
+בדיקה-284-791_page_0354.pdf,354,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0355.pdf,355,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0356.pdf,356,2,1,1,1,4,review
+בדיקה-284-791_page_0357.pdf,357,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0358.pdf,358,2,1,1,1,4,review
+בדיקה-284-791_page_0359.pdf,359,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0360.pdf,360,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0361.pdf,361,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0362.pdf,362,2,1,1,1,4,review
+בדיקה-284-791_page_0363.pdf,363,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0364.pdf,364,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0365.pdf,365,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0366.pdf,366,2,1,1,1,4,review
+בדיקה-284-791_page_0367.pdf,367,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0368.pdf,368,2,1,1,1,4,review
+בדיקה-284-791_page_0369.pdf,369,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0370.pdf,370,2,1,1,1,4,review
+בדיקה-284-791_page_0371.pdf,371,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0372.pdf,372,2,1,1,1,4,review
+בדיקה-284-791_page_0373.pdf,373,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0374.pdf,374,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0375.pdf,375,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0376.pdf,376,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0377.pdf,377,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0378.pdf,378,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0379.pdf,379,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0380.pdf,380,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0381.pdf,381,2,1,1,1,4,review
+בדיקה-284-791_page_0382.pdf,382,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0383.pdf,383,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0384.pdf,384,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0385.pdf,385,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0386.pdf,386,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0387.pdf,387,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0388.pdf,388,1,0,0,1,3,safe_for_extraction
+בדיקה-284-791_page_0389.pdf,389,1,0,0,1,3,safe_for_extraction
+בדיקה-284-791_page_0390.pdf,390,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0391.pdf,391,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0392.pdf,392,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0393.pdf,393,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0394.pdf,394,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0395.pdf,395,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0396.pdf,396,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0397.pdf,397,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0398.pdf,398,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0399.pdf,399,1,0,0,1,3,safe_for_extraction
+בדיקה-284-791_page_0400.pdf,400,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0401.pdf,401,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0402.pdf,402,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0403.pdf,403,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0404.pdf,404,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0405.pdf,405,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0406.pdf,406,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0407.pdf,407,1,0,0,1,3,safe_for_extraction
+בדיקה-284-791_page_0408.pdf,408,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0409.pdf,409,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0410.pdf,410,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0411.pdf,411,2,1,1,1,4,review
+בדיקה-284-791_page_0412.pdf,412,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0413.pdf,413,2,1,1,1,4,review
+בדיקה-284-791_page_0414.pdf,414,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0415.pdf,415,2,0,1,2,4,review
+בדיקה-284-791_page_0416.pdf,416,2,1,1,1,4,review
+בדיקה-284-791_page_0417.pdf,417,2,1,1,2,5,review
+בדיקה-284-791_page_0418.pdf,418,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0419.pdf,419,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0420.pdf,420,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0421.pdf,421,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0422.pdf,422,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0423.pdf,423,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0424.pdf,424,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0425.pdf,425,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0426.pdf,426,2,1,1,1,4,review
+בדיקה-284-791_page_0427.pdf,427,2,1,1,1,4,review
+בדיקה-284-791_page_0428.pdf,428,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0429.pdf,429,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0430.pdf,430,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0431.pdf,431,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0432.pdf,432,2,0,1,2,4,review
+בדיקה-284-791_page_0433.pdf,433,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0434.pdf,434,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0435.pdf,435,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0436.pdf,436,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0437.pdf,437,2,1,1,1,4,review
+בדיקה-284-791_page_0438.pdf,438,2,1,0,1,3,safe_for_extraction
+בדיקה-284-791_page_0439.pdf,439,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0440.pdf,440,2,1,1,1,4,review
+בדיקה-284-791_page_0441.pdf,441,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0442.pdf,442,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0443.pdf,443,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0444.pdf,444,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0445.pdf,445,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0446.pdf,446,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0447.pdf,447,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0448.pdf,448,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0449.pdf,449,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0450.pdf,450,2,1,1,1,4,review
+בדיקה-284-791_page_0451.pdf,451,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0452.pdf,452,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0453.pdf,453,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0454.pdf,454,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0455.pdf,455,2,1,1,1,4,review
+בדיקה-284-791_page_0456.pdf,456,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0457.pdf,457,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0458.pdf,458,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0459.pdf,459,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0460.pdf,460,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0461.pdf,461,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0462.pdf,462,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0463.pdf,463,2,1,1,1,4,review
+בדיקה-284-791_page_0464.pdf,464,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0465.pdf,465,2,1,1,1,4,review
+בדיקה-284-791_page_0466.pdf,466,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0467.pdf,467,2,1,1,1,4,review
+בדיקה-284-791_page_0468.pdf,468,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0469.pdf,469,2,1,1,1,4,review
+בדיקה-284-791_page_0470.pdf,470,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0471.pdf,471,2,1,1,1,4,review
+בדיקה-284-791_page_0472.pdf,472,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0473.pdf,473,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0474.pdf,474,2,0,1,2,4,review
+בדיקה-284-791_page_0475.pdf,475,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0476.pdf,476,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0477.pdf,477,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0478.pdf,478,2,1,1,1,4,review
+בדיקה-284-791_page_0479.pdf,479,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0480.pdf,480,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0481.pdf,481,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0482.pdf,482,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0483.pdf,483,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0484.pdf,484,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0485.pdf,485,1,0,0,1,3,safe_for_extraction
+בדיקה-284-791_page_0486.pdf,486,1,0,0,1,3,safe_for_extraction
+בדיקה-284-791_page_0487.pdf,487,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0488.pdf,488,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0489.pdf,489,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0490.pdf,490,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0491.pdf,491,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0492.pdf,492,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0493.pdf,493,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0494.pdf,494,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0495.pdf,495,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0496.pdf,496,1,0,0,1,3,safe_for_extraction
+בדיקה-284-791_page_0497.pdf,497,2,0,0,0,1,safe_for_extraction
+בדיקה-284-791_page_0498.pdf,498,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0499.pdf,499,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0500.pdf,500,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0501.pdf,501,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0502.pdf,502,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0503.pdf,503,2,0,1,1,3,safe_for_extraction
+בדיקה-284-791_page_0504.pdf,504,2,0,1,2,4,review
+בדיקה-284-791_page_0505.pdf,505,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0506.pdf,506,2,0,0,1,2,safe_for_extraction
+בדיקה-284-791_page_0507.pdf,507,2,1,1,2,5,review
+בדיקה-284-791_page_0508.pdf,508,2,1,1,2,5,review
+בדיקה-50-65_page_0001.pdf,1,2,0,0,1,2,safe_for_extraction
+בדיקה-50-65_page_0002.pdf,2,2,1,1,1,4,review
+בדיקה-50-65_page_0003.pdf,3,2,0,1,2,4,review
+בדיקה-50-65_page_0004.pdf,4,1,0,0,1,3,safe_for_extraction
+בדיקה-50-65_page_0005.pdf,5,3,0,1,2,3,safe_for_extraction
+בדיקה-50-65_page_0006.pdf,6,2,2,1,2,6,review
+בדיקה-50-65_page_0007.pdf,7,3,2,1,2,5,review
+בדיקה-50-65_page_0008.pdf,8,2,0,1,2,4,review
+בדיקה-50-65_page_0009.pdf,9,3,1,1,2,4,review
+בדיקה-50-65_page_0010.pdf,10,2,1,1,2,5,review
+בדיקה-50-65_page_0013.pdf,13,2,1,0,1,3,safe_for_extraction
+בדיקה-50-65_page_0014.pdf,14,2,1,1,2,5,review
+בדיקה-50-65_page_0015.pdf,15,2,0,1,2,4,review
+בדיקה-50-65_page_0016.pdf,16,2,1,1,1,4,review
+בדיקה-79-87_page_0001.pdf,1,2,1,1,1,4,review
+בדיקה-79-87_page_0002.pdf,2,1,2,0,1,5,review
+בדיקה-79-87_page_0003.pdf,3,2,3,2,2,8,high_hallucination_risk
+בדיקה-79-87_page_0004.pdf,4,2,1,1,1,4,review
+בדיקה-79-87_page_0005.pdf,5,2,3,1,2,7,high_hallucination_risk
+בדיקה-79-87_page_0006.pdf,6,1,2,0,1,5,review
+בדיקה-79-87_page_0007.pdf,7,1,2,1,1,6,review
+בדיקה-79-87_page_0008.pdf,8,3,2,1,2,5,review
+בדיקה-79-87_page_0009.pdf,9,2,2,1,1,5,review
+בדיקה-91-93_page_0001.pdf,1,3,1,1,2,4,review
+בדיקה-91-93_page_0002.pdf,2,2,2,1,2,6,review
+בדיקה-91-93_page_0003.pdf,3,2,2,1,1,5,review
+בן_דוד_רות_20260222_114040_page_0001.pdf,1,3,0,0,0,0,safe_for_extraction
+בן_דוד_רות_20260222_114040_page_0002.pdf,2,2,2,1,1,5,review
+גולדשטיין_יוליאנה_20260222_083622.pdf_221-228_page_001.pdf,1,3,0,0,0,0,safe_for_extraction
+גולדשטיין_יוליאנה_20260222_083622.pdf_221-228_page_002.pdf,2,2,1,1,1,4,review
+גולדשטיין_יוליאנה_20260222_083622.pdf_221-228_page_003.pdf,3,2,0,1,1,3,safe_for_extraction
+גולדשטיין_יוליאנה_20260222_083622.pdf_221-228_page_004.pdf,4,2,0,1,1,3,safe_for_extraction
+גולדשטיין_יוליאנה_20260222_083622.pdf_221-228_page_005.pdf,5,2,0,1,1,3,safe_for_extraction
+גולדשטיין_יוליאנה_20260222_083622.pdf_221-228_page_006.pdf,6,3,0,1,1,2,safe_for_extraction
+גולדשטיין_יוליאנה_20260222_083622.pdf_221-228_page_007.pdf,7,2,0,1,1,3,safe_for_extraction
+גולדשטיין_יוליאנה_20260222_083622.pdf_221-228_page_008.pdf,8,2,1,1,1,4,review
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0001.pdf,1,2,2,1,1,5,review
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0002.pdf,2,2,2,1,1,5,review
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0003.pdf,3,2,1,1,1,4,review
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0004.pdf,4,2,0,0,1,2,safe_for_extraction
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0005.pdf,5,2,0,0,1,2,safe_for_extraction
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0006.pdf,6,3,0,1,1,2,safe_for_extraction
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0007.pdf,7,3,0,1,1,2,safe_for_extraction
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0008.pdf,8,2,1,1,1,4,review
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0009.pdf,9,3,0,1,1,2,safe_for_extraction
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0010.pdf,10,2,0,0,1,2,safe_for_extraction
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0011.pdf,11,2,1,1,2,5,review
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0012.pdf,12,3,1,0,0,1,safe_for_extraction
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0013.pdf,13,3,2,1,2,5,review
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0014.pdf,14,2,2,1,2,6,review
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0015.pdf,15,2,1,1,1,4,review
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0016.pdf,16,2,1,1,2,5,review
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0017.pdf,17,3,0,0,1,1,safe_for_extraction
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0018.pdf,18,2,0,1,1,3,safe_for_extraction
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0019.pdf,19,2,0,1,1,3,safe_for_extraction
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0020.pdf,20,2,0,1,1,3,safe_for_extraction
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0021.pdf,21,3,0,1,1,2,safe_for_extraction
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0022.pdf,22,2,1,1,1,4,review
+דגהו_ניתאי_נ_מנורה_קטין_20260222_0911071_page_0023.pdf,23,2,1,1,1,4,review
+דגהו_ניתאי_נ_מנורה_קטין_20260222_091107_page_0001.pdf,1,2,0,1,1,3,safe_for_extraction
+דגהו_ניתאי_נ_מנורה_קטין_20260222_091107_page_0002.pdf,2,2,2,1,1,5,review
+דגהו_ניתאי_נ_מנורה_קטין_20260222_091107_page_0003.pdf,3,2,1,1,1,4,review
+דגהו_ניתאי_נ_מנורה_קטין_20260222_091107_page_0004.pdf,4,2,1,1,1,4,review
+דגהו_ניתאי_נ_מנורה_קטין_20260222_091107_page_0005.pdf,5,3,0,0,1,1,safe_for_extraction
+דגהו_ניתאי_נ_מנורה_קטין_20260222_091107_page_0006.pdf,6,3,0,0,1,1,safe_for_extraction
+דגהו_ניתאי_נ_מנורה_קטין_20260222_091107_page_0007.pdf,7,3,0,1,1,2,safe_for_extraction
+דגהו_ניתאי_נ_מנורה_קטין_20260222_091107_page_0008.pdf,8,2,1,1,2,5,review
+דגהו_ניתאי_נ_מנורה_קטין_20260222_091107_page_0009.pdf,9,3,0,0,1,1,safe_for_extraction
+דגהו_ניתאי_נ_מנורה_קטין_20260222_091107_page_0010.pdf,10,2,0,1,1,3,safe_for_extraction
+דגהו_ניתאי_נ_מנורה_קטין_20260222_091107_page_0011.pdf,11,2,0,1,1,3,safe_for_extraction
+דגהו_ניתאי_נ_מנורה_קטין_20260222_091107_page_0012.pdf,12,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0001.pdf,1,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0002.pdf,2,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0003.pdf,3,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0004.pdf,4,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0005.pdf,5,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0006.pdf,6,2,3,1,1,6,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0007.pdf,7,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0008.pdf,8,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0009.pdf,9,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0010.pdf,10,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0011.pdf,11,2,1,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0012.pdf,12,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0013.pdf,13,2,0,0,0,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0014.pdf,14,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0015.pdf,15,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0016.pdf,16,2,3,1,2,7,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים (dragged)_page_0017.pdf,17,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0018.pdf,18,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0019.pdf,19,2,3,1,2,7,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים (dragged)_page_0020.pdf,20,2,3,1,1,6,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0021.pdf,21,2,3,1,2,7,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים (dragged)_page_0022.pdf,22,2,3,1,2,7,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים (dragged)_page_0023.pdf,23,2,0,0,0,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0024.pdf,24,3,0,0,1,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0025.pdf,25,0,0,0,1,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0026.pdf,26,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0027.pdf,27,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0028.pdf,28,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0029.pdf,29,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0030.pdf,30,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0031.pdf,31,2,0,0,0,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0032.pdf,32,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0033.pdf,33,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0034.pdf,34,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0035.pdf,35,2,1,1,2,5,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0036.pdf,36,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0037.pdf,37,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0038.pdf,38,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0039.pdf,39,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0040.pdf,40,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0041.pdf,41,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0042.pdf,42,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0043.pdf,43,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0044.pdf,44,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0045.pdf,45,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0046.pdf,46,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0047.pdf,47,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0048.pdf,48,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0049.pdf,49,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0050.pdf,50,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0051.pdf,51,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0052.pdf,52,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0053.pdf,53,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0054.pdf,54,2,0,0,0,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0055.pdf,55,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0056.pdf,56,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0057.pdf,57,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0058.pdf,58,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0059.pdf,59,2,1,1,2,5,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0060.pdf,60,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0061.pdf,61,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0062.pdf,62,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0063.pdf,63,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0064.pdf,64,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0065.pdf,65,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0066.pdf,66,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0067.pdf,67,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0068.pdf,68,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0069.pdf,69,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0070.pdf,70,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0071.pdf,71,2,1,1,2,5,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0072.pdf,72,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0073.pdf,73,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0074.pdf,74,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0075.pdf,75,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0076.pdf,76,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0077.pdf,77,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0078.pdf,78,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0079.pdf,79,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0080.pdf,80,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0081.pdf,81,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0082.pdf,82,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0083.pdf,83,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0084.pdf,84,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0085.pdf,85,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0086.pdf,86,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0087.pdf,87,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0088.pdf,88,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0089.pdf,89,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0090.pdf,90,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0091.pdf,91,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0092.pdf,92,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0093.pdf,93,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0094.pdf,94,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0095.pdf,95,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0096.pdf,96,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0097.pdf,97,2,0,1,2,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0098.pdf,98,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0099.pdf,99,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0100.pdf,100,2,0,1,2,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0101.pdf,101,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0102.pdf,102,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0103.pdf,103,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0104.pdf,104,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0105.pdf,105,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0106.pdf,106,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0107.pdf,107,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0108.pdf,108,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0109.pdf,109,2,1,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0110.pdf,110,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0111.pdf,111,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0112.pdf,112,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0113.pdf,113,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0114.pdf,114,2,0,1,2,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0115.pdf,115,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0116.pdf,116,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0117.pdf,117,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0118.pdf,118,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0119.pdf,119,2,0,1,2,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0120.pdf,120,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0121.pdf,121,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0122.pdf,122,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0123.pdf,123,2,0,1,2,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0124.pdf,124,3,0,1,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0125.pdf,125,2,0,1,2,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0126.pdf,126,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0127.pdf,127,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0128.pdf,128,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0129.pdf,129,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0130.pdf,130,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0131.pdf,131,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0132.pdf,132,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0133.pdf,133,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0134.pdf,134,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0135.pdf,135,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0136.pdf,136,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0137.pdf,137,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0138.pdf,138,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0139.pdf,139,0,0,0,1,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0140.pdf,140,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0141.pdf,141,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0142.pdf,142,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0143.pdf,143,2,0,0,0,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0144.pdf,144,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0145.pdf,145,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0146.pdf,146,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0147.pdf,147,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0148.pdf,148,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0149.pdf,149,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0150.pdf,150,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0151.pdf,151,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0152.pdf,152,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0153.pdf,153,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0154.pdf,154,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0155.pdf,155,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0156.pdf,156,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0157.pdf,157,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0158.pdf,158,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0159.pdf,159,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0160.pdf,160,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0161.pdf,161,2,0,0,0,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0162.pdf,162,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0163.pdf,163,2,0,1,2,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0164.pdf,164,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0165.pdf,165,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0166.pdf,166,2,0,1,2,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0167.pdf,167,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0168.pdf,168,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0169.pdf,169,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0170.pdf,170,2,0,0,0,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0171.pdf,171,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0172.pdf,172,0,0,0,1,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0173.pdf,173,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0174.pdf,174,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0175.pdf,175,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0176.pdf,176,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0177.pdf,177,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0178.pdf,178,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0179.pdf,179,2,0,1,2,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0180.pdf,180,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0181.pdf,181,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0182.pdf,182,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0183.pdf,183,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0184.pdf,184,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0185.pdf,185,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0186.pdf,186,3,0,1,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0187.pdf,187,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0188.pdf,188,1,1,0,1,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0189.pdf,189,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0190.pdf,190,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0191.pdf,191,2,2,1,2,6,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0192.pdf,192,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0193.pdf,193,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0194.pdf,194,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0195.pdf,195,1,0,0,0,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0196.pdf,196,3,0,1,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0197.pdf,197,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0198.pdf,198,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0199.pdf,199,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0200.pdf,200,1,0,0,0,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0201.pdf,201,2,0,0,0,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0202.pdf,202,1,0,0,0,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0203.pdf,203,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0204.pdf,204,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0205.pdf,205,2,1,1,2,5,review
+דוגמאות לכתב יד ושאלונים (dragged)_page_0206.pdf,206,3,0,0,0,0,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0207.pdf,207,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0208.pdf,208,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0209.pdf,209,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0210.pdf,210,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0211.pdf,211,3,0,0,0,0,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0212.pdf,212,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0213.pdf,213,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0214.pdf,214,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0215.pdf,215,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0216.pdf,216,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0217.pdf,217,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0218.pdf,218,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0219.pdf,219,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0220.pdf,220,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0221.pdf,221,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים (dragged)_page_0222.pdf,222,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0001.pdf,1,1,0,0,0,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0002.pdf,2,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0003.pdf,3,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0004.pdf,4,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0005.pdf,5,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0006.pdf,6,3,0,0,1,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0007.pdf,7,1,0,0,0,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0008.pdf,8,1,1,1,2,6,review
+דוגמאות לכתב יד ושאלונים_page_0009.pdf,9,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0010.pdf,10,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0011.pdf,11,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0012.pdf,12,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0013.pdf,13,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0014.pdf,14,2,0,0,0,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0015.pdf,15,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0016.pdf,16,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0017.pdf,17,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0018.pdf,18,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0019.pdf,19,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0020.pdf,20,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0021.pdf,21,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0022.pdf,22,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0023.pdf,23,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0024.pdf,24,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0025.pdf,25,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0026.pdf,26,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0027.pdf,27,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0028.pdf,28,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0029.pdf,29,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0030.pdf,30,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0031.pdf,31,2,0,0,0,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0032.pdf,32,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0033.pdf,33,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0034.pdf,34,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0035.pdf,35,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0036.pdf,36,2,0,0,0,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0037.pdf,37,2,0,0,0,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0038.pdf,38,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0039.pdf,39,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0040.pdf,40,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0041.pdf,41,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0042.pdf,42,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0043.pdf,43,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0044.pdf,44,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0045.pdf,45,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0046.pdf,46,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0047.pdf,47,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0048.pdf,48,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0049.pdf,49,2,0,0,0,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0050.pdf,50,2,0,1,2,4,review
+דוגמאות לכתב יד ושאלונים_page_0051.pdf,51,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0052.pdf,52,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0053.pdf,53,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0054.pdf,54,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0055.pdf,55,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0056.pdf,56,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0057.pdf,57,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0058.pdf,58,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0059.pdf,59,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0060.pdf,60,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0061.pdf,61,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0062.pdf,62,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0063.pdf,63,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0064.pdf,64,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0065.pdf,65,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0066.pdf,66,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0067.pdf,67,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0068.pdf,68,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0069.pdf,69,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0070.pdf,70,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0071.pdf,71,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0072.pdf,72,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0073.pdf,73,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0074.pdf,74,2,0,0,0,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0075.pdf,75,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0076.pdf,76,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0077.pdf,77,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0078.pdf,78,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0079.pdf,79,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0080.pdf,80,1,0,0,0,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0081.pdf,81,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0082.pdf,82,2,1,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0083.pdf,83,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0084.pdf,84,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0085.pdf,85,1,0,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0086.pdf,86,3,0,0,1,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0087.pdf,87,0,0,0,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0088.pdf,88,1,1,1,2,6,review
+דוגמאות לכתב יד ושאלונים_page_0089.pdf,89,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0090.pdf,90,1,0,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0091.pdf,91,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0092.pdf,92,2,3,1,2,7,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים_page_0093.pdf,93,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0094.pdf,94,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0095.pdf,95,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0096.pdf,96,0,0,0,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0097.pdf,97,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0098.pdf,98,1,1,0,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0099.pdf,99,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0100.pdf,100,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0101.pdf,101,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0102.pdf,102,1,1,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0103.pdf,103,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0104.pdf,104,2,1,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0105.pdf,105,2,1,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0106.pdf,106,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0107.pdf,107,2,0,1,2,4,review
+דוגמאות לכתב יד ושאלונים_page_0108.pdf,108,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0109.pdf,109,1,0,0,0,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0110.pdf,110,2,2,1,2,6,review
+דוגמאות לכתב יד ושאלונים_page_0111.pdf,111,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0112.pdf,112,2,1,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0113.pdf,113,3,0,0,1,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0114.pdf,114,0,0,0,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0115.pdf,115,1,1,1,2,6,review
+דוגמאות לכתב יד ושאלונים_page_0116.pdf,116,3,0,0,1,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0117.pdf,117,1,1,0,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0118.pdf,118,1,0,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0119.pdf,119,1,0,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0120.pdf,120,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0121.pdf,121,1,1,1,2,6,review
+דוגמאות לכתב יד ושאלונים_page_0122.pdf,122,1,1,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0123.pdf,123,3,0,1,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0124.pdf,124,1,1,1,2,6,review
+דוגמאות לכתב יד ושאלונים_page_0125.pdf,125,2,2,1,2,6,review
+דוגמאות לכתב יד ושאלונים_page_0126.pdf,126,1,1,0,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0127.pdf,127,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0128.pdf,128,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0129.pdf,129,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0130.pdf,130,3,0,0,1,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0131.pdf,131,1,1,0,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0132.pdf,132,3,2,2,2,6,review
+דוגמאות לכתב יד ושאלונים_page_0133.pdf,133,3,2,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0134.pdf,134,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0135.pdf,135,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0136.pdf,136,1,0,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0137.pdf,137,2,0,1,2,4,review
+דוגמאות לכתב יד ושאלונים_page_0138.pdf,138,1,0,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0139.pdf,139,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0140.pdf,140,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0141.pdf,141,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0142.pdf,142,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0143.pdf,143,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0144.pdf,144,3,2,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0145.pdf,145,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0146.pdf,146,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0147.pdf,147,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0148.pdf,148,1,0,0,2,4,review
+דוגמאות לכתב יד ושאלונים_page_0149.pdf,149,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0150.pdf,150,1,2,1,1,6,review
+דוגמאות לכתב יד ושאלונים_page_0151.pdf,151,2,1,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0152.pdf,152,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0153.pdf,153,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0154.pdf,154,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0155.pdf,155,3,0,1,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0156.pdf,156,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0157.pdf,157,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0158.pdf,158,1,0,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0159.pdf,159,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0160.pdf,160,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0161.pdf,161,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0162.pdf,162,3,0,1,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0163.pdf,163,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0164.pdf,164,1,1,0,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0165.pdf,165,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0166.pdf,166,1,1,0,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0167.pdf,167,2,0,1,2,4,review
+דוגמאות לכתב יד ושאלונים_page_0168.pdf,168,1,2,1,1,6,review
+דוגמאות לכתב יד ושאלונים_page_0169.pdf,169,2,1,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0170.pdf,170,1,0,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0171.pdf,171,3,2,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0172.pdf,172,3,2,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0173.pdf,173,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0174.pdf,174,2,0,1,2,4,review
+דוגמאות לכתב יד ושאלונים_page_0175.pdf,175,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0176.pdf,176,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0177.pdf,177,2,0,1,2,4,review
+דוגמאות לכתב יד ושאלונים_page_0178.pdf,178,3,0,0,1,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0179.pdf,179,3,0,0,1,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0180.pdf,180,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0181.pdf,181,2,1,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0182.pdf,182,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0183.pdf,183,2,2,1,2,6,review
+דוגמאות לכתב יד ושאלונים_page_0184.pdf,184,1,1,0,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0185.pdf,185,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0186.pdf,186,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0187.pdf,187,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0188.pdf,188,2,0,1,2,4,review
+דוגמאות לכתב יד ושאלונים_page_0189.pdf,189,2,1,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0190.pdf,190,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0191.pdf,191,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0192.pdf,192,3,3,2,2,7,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים_page_0193.pdf,193,0,2,1,2,8,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים_page_0194.pdf,194,3,3,1,2,6,review
+דוגמאות לכתב יד ושאלונים_page_0195.pdf,195,3,3,1,2,6,review
+דוגמאות לכתב יד ושאלונים_page_0196.pdf,196,2,3,1,2,7,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים_page_0197.pdf,197,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0198.pdf,198,3,2,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0199.pdf,199,3,0,0,1,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0200.pdf,200,3,1,1,2,4,review
+דוגמאות לכתב יד ושאלונים_page_0201.pdf,201,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0202.pdf,202,3,2,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0203.pdf,203,3,2,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0204.pdf,204,1,2,1,2,7,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים_page_0205.pdf,205,2,2,1,2,6,review
+דוגמאות לכתב יד ושאלונים_page_0206.pdf,206,1,1,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0207.pdf,207,2,0,0,0,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0208.pdf,208,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0209.pdf,209,1,2,1,1,6,review
+דוגמאות לכתב יד ושאלונים_page_0210.pdf,210,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0211.pdf,211,2,1,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0212.pdf,212,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0213.pdf,213,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0214.pdf,214,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0215.pdf,215,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0216.pdf,216,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0217.pdf,217,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0218.pdf,218,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0219.pdf,219,2,1,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0220.pdf,220,3,1,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0221.pdf,221,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0222.pdf,222,3,2,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0223.pdf,223,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0224.pdf,224,3,2,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0225.pdf,225,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0226.pdf,226,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0227.pdf,227,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0228.pdf,228,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0229.pdf,229,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0230.pdf,230,1,1,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0231.pdf,231,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0232.pdf,232,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0233.pdf,233,3,0,0,0,0,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0234.pdf,234,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0235.pdf,235,2,0,0,0,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0236.pdf,236,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0237.pdf,237,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0238.pdf,238,2,0,0,0,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0239.pdf,239,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0240.pdf,240,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0241.pdf,241,1,3,0,0,5,review
+דוגמאות לכתב יד ושאלונים_page_0242.pdf,242,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0243.pdf,243,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0244.pdf,244,2,3,1,1,6,review
+דוגמאות לכתב יד ושאלונים_page_0245.pdf,245,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0246.pdf,246,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0247.pdf,247,1,2,1,2,7,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים_page_0248.pdf,248,1,3,2,2,9,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים_page_0249.pdf,249,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0250.pdf,250,3,0,1,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0251.pdf,251,3,2,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0252.pdf,252,2,3,1,2,7,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים_page_0253.pdf,253,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0254.pdf,254,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0255.pdf,255,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0256.pdf,256,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0257.pdf,257,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0258.pdf,258,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0259.pdf,259,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0260.pdf,260,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0261.pdf,261,1,0,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0262.pdf,262,2,3,1,1,6,review
+דוגמאות לכתב יד ושאלונים_page_0263.pdf,263,2,1,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0264.pdf,264,3,0,0,1,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0265.pdf,265,1,0,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0266.pdf,266,2,1,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0267.pdf,267,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0268.pdf,268,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0269.pdf,269,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0270.pdf,270,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0271.pdf,271,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0272.pdf,272,3,1,1,2,4,review
+דוגמאות לכתב יד ושאלונים_page_0273.pdf,273,3,0,0,0,0,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0274.pdf,274,1,3,2,2,9,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים_page_0275.pdf,275,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0276.pdf,276,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0277.pdf,277,3,1,1,2,4,review
+דוגמאות לכתב יד ושאלונים_page_0278.pdf,278,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0279.pdf,279,3,1,2,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0280.pdf,280,1,0,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0281.pdf,281,1,2,2,2,8,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים_page_0282.pdf,282,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0283.pdf,283,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0284.pdf,284,1,0,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0285.pdf,285,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0286.pdf,286,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0287.pdf,287,2,0,1,2,4,review
+דוגמאות לכתב יד ושאלונים_page_0288.pdf,288,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0289.pdf,289,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0290.pdf,290,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0291.pdf,291,3,2,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0292.pdf,292,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0293.pdf,293,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0294.pdf,294,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0295.pdf,295,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0296.pdf,296,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0297.pdf,297,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0298.pdf,298,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0299.pdf,299,1,2,1,2,7,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים_page_0300.pdf,300,1,1,1,2,6,review
+דוגמאות לכתב יד ושאלונים_page_0301.pdf,301,1,2,1,2,7,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים_page_0302.pdf,302,1,2,1,1,6,review
+דוגמאות לכתב יד ושאלונים_page_0303.pdf,303,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0304.pdf,304,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0305.pdf,305,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0306.pdf,306,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0307.pdf,307,2,1,0,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0308.pdf,308,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0309.pdf,309,2,1,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0310.pdf,310,3,0,0,1,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0311.pdf,311,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0312.pdf,312,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0313.pdf,313,1,0,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0314.pdf,314,3,2,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0315.pdf,315,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0316.pdf,316,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0317.pdf,317,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0318.pdf,318,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0319.pdf,319,2,3,1,2,7,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים_page_0320.pdf,320,1,2,0,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0321.pdf,321,1,2,2,2,8,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים_page_0322.pdf,322,1,1,0,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0323.pdf,323,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0324.pdf,324,2,3,1,2,7,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים_page_0325.pdf,325,1,2,1,1,6,review
+דוגמאות לכתב יד ושאלונים_page_0326.pdf,326,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0327.pdf,327,2,3,1,2,7,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים_page_0328.pdf,328,2,1,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0329.pdf,329,2,1,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0330.pdf,330,2,2,1,2,6,review
+דוגמאות לכתב יד ושאלונים_page_0331.pdf,331,2,3,1,1,6,review
+דוגמאות לכתב יד ושאלונים_page_0332.pdf,332,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0333.pdf,333,2,1,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0334.pdf,334,3,2,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0335.pdf,335,2,2,1,2,6,review
+דוגמאות לכתב יד ושאלונים_page_0336.pdf,336,3,0,1,2,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0337.pdf,337,2,1,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0338.pdf,338,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0339.pdf,339,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0340.pdf,340,2,0,1,2,4,review
+דוגמאות לכתב יד ושאלונים_page_0341.pdf,341,2,1,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0342.pdf,342,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0343.pdf,343,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0344.pdf,344,2,2,1,2,6,review
+דוגמאות לכתב יד ושאלונים_page_0345.pdf,345,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0346.pdf,346,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0347.pdf,347,2,3,1,2,7,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים_page_0348.pdf,348,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0349.pdf,349,2,0,0,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0350.pdf,350,1,1,1,2,6,review
+דוגמאות לכתב יד ושאלונים_page_0351.pdf,351,1,1,0,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0352.pdf,352,3,2,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0353.pdf,353,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0354.pdf,354,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0355.pdf,355,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0356.pdf,356,2,3,1,2,7,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים_page_0357.pdf,357,1,3,1,2,8,high_hallucination_risk
+דוגמאות לכתב יד ושאלונים_page_0358.pdf,358,3,1,1,2,4,review
+דוגמאות לכתב יד ושאלונים_page_0359.pdf,359,3,0,0,1,1,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0360.pdf,360,1,1,1,2,6,review
+דוגמאות לכתב יד ושאלונים_page_0361.pdf,361,2,2,1,1,5,review
+דוגמאות לכתב יד ושאלונים_page_0362.pdf,362,3,1,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0363.pdf,363,3,0,1,1,2,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0364.pdf,364,3,2,1,2,5,review
+דוגמאות לכתב יד ושאלונים_page_0365.pdf,365,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0366.pdf,366,2,0,1,1,3,safe_for_extraction
+דוגמאות לכתב יד ושאלונים_page_0367.pdf,367,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0368.pdf,368,2,1,1,1,4,review
+דוגמאות לכתב יד ושאלונים_page_0369.pdf,369,2,1,0,0,2,safe_for_extraction
+יוכבד_מזרחי_74-80_page_001.pdf,1,2,1,1,1,4,review
+יוכבד_מזרחי_74-80_page_002.pdf,2,2,0,1,1,3,safe_for_extraction
+יוכבד_מזרחי_74-80_page_003.pdf,3,2,0,1,1,3,safe_for_extraction
+יוכבד_מזרחי_74-80_page_004.pdf,4,3,0,0,1,1,safe_for_extraction
+יוכבד_מזרחי_74-80_page_005.pdf,5,3,0,0,0,0,safe_for_extraction
+יוכבד_מזרחי_74-80_page_006.pdf,6,3,0,1,1,2,safe_for_extraction
+יוכבד_מזרחי_74-80_page_007.pdf,7,2,0,1,1,3,safe_for_extraction
+יוכבד_מזרחי_page_0001.pdf,1,3,2,2,2,6,review
+יוכבד_מזרחי_page_0002.pdf,2,3,1,1,2,4,review
+יוכבד_מזרחי_page_0003.pdf,3,3,1,1,1,3,safe_for_extraction
+יוכבד_מזרחי_page_0004.pdf,4,3,1,1,2,4,review
+יוכבד_מזרחי_page_0005.pdf,5,2,1,1,2,5,review
+לין_אפרת_מרים1_page_0001.pdf,1,2,1,1,1,4,review
+לין_אפרת_מרים1_page_0002.pdf,2,2,2,1,2,6,review
+לין_אפרת_מרים1_page_0003.pdf,3,2,1,1,2,5,review
+לין_אפרת_מרים1_page_0004.pdf,4,2,0,0,0,1,safe_for_extraction
+לין_אפרת_מרים1_page_0005.pdf,5,3,0,0,1,1,safe_for_extraction
+לין_אפרת_מרים1_page_0006.pdf,6,2,0,1,1,3,safe_for_extraction
+לין_אפרת_מרים1_page_0007.pdf,7,3,1,1,1,3,safe_for_extraction
+לין_אפרת_מרים1_page_0008.pdf,8,2,0,1,1,3,safe_for_extraction
+לין_אפרת_מרים1_page_0009.pdf,9,3,0,0,0,0,safe_for_extraction
+לין_אפרת_מרים1_page_0010.pdf,10,3,0,0,0,0,safe_for_extraction
+לין_אפרת_מרים1_page_0011.pdf,11,1,1,0,1,4,review
+לין_אפרת_מרים1_page_0012.pdf,12,2,1,1,1,4,review
+לין_אפרת_מרים_page_0001.pdf,1,3,0,1,1,2,safe_for_extraction
+לין_אפרת_מרים_page_0002.pdf,2,2,2,1,1,5,review
+לין_אפרת_מרים_page_0003.pdf,3,2,1,1,1,4,review
+לין_אפרת_מרים_page_0004.pdf,4,2,0,0,1,2,safe_for_extraction
+לין_אפרת_מרים_page_0005.pdf,5,2,0,0,1,2,safe_for_extraction
+לין_אפרת_מרים_page_0006.pdf,6,2,0,0,0,1,safe_for_extraction
+לין_אפרת_מרים_page_0007.pdf,7,3,0,0,0,0,safe_for_extraction
+לין_אפרת_מרים_page_0008.pdf,8,2,1,1,1,4,review
+לין_אפרת_מרים_page_0009.pdf,9,3,0,0,1,1,safe_for_extraction
+לין_אפרת_מרים_page_0010.pdf,10,2,0,0,1,2,safe_for_extraction
+לין_אפרת_מרים_page_0011.pdf,11,2,0,0,1,2,safe_for_extraction
+לין_אפרת_מרים_page_0012.pdf,12,2,1,1,2,5,review
+סדי_חיים_20260222_114748_page_0001.pdf,1,2,1,1,2,5,review
+סדי_חיים_20260222_114748_page_0002.pdf,2,2,2,1,2,6,review
+סדי_חיים_20260222_114748_page_0003.pdf,3,2,2,1,2,6,review
+סדי_חיים_20260222_114748_page_0004.pdf,4,2,2,1,2,6,review
+סדי_חיים_20260222_114748_page_0005.pdf,5,2,2,1,1,5,review
+סדי_חיים_20260222_114748_page_0006.pdf,6,2,1,1,2,5,review
+סדי_חיים_20260222_114748_page_0007.pdf,7,3,2,1,1,4,review
+סדי_חיים_20260222_114748_page_0008.pdf,8,2,0,1,2,4,review
+סדי_חיים_20260222_114748_page_0009.pdf,9,3,2,1,2,5,review
+פונט מוזר מלל 2_removed_page_001.pdf,1,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_002.pdf,2,3,1,1,2,4,review
+פונט מוזר מלל 2_removed_page_003.pdf,3,2,1,1,1,4,review
+פונט מוזר מלל 2_removed_page_004.pdf,4,3,0,1,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_005.pdf,5,3,0,1,2,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_006.pdf,6,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_007.pdf,7,3,0,1,2,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_008.pdf,8,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_009.pdf,9,2,1,1,1,4,review
+פונט מוזר מלל 2_removed_page_010.pdf,10,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_011.pdf,11,2,1,1,2,5,review
+פונט מוזר מלל 2_removed_page_012.pdf,12,3,1,1,2,4,review
+פונט מוזר מלל 2_removed_page_013.pdf,13,2,1,1,2,5,review
+פונט מוזר מלל 2_removed_page_014.pdf,14,3,1,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_015.pdf,15,3,0,1,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_016.pdf,16,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_017.pdf,17,2,0,1,2,4,review
+פונט מוזר מלל 2_removed_page_018.pdf,18,2,0,0,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_019.pdf,19,2,0,1,2,4,review
+פונט מוזר מלל 2_removed_page_020.pdf,20,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_021.pdf,21,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_022.pdf,22,3,0,1,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_023.pdf,23,3,1,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_024.pdf,24,2,1,1,1,4,review
+פונט מוזר מלל 2_removed_page_025.pdf,25,3,0,1,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_026.pdf,26,3,0,1,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_027.pdf,27,2,1,1,2,5,review
+פונט מוזר מלל 2_removed_page_028.pdf,28,2,0,1,2,4,review
+פונט מוזר מלל 2_removed_page_029.pdf,29,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_030.pdf,30,2,1,1,2,5,review
+פונט מוזר מלל 2_removed_page_031.pdf,31,3,2,1,2,5,review
+פונט מוזר מלל 2_removed_page_032.pdf,32,2,0,1,2,4,review
+פונט מוזר מלל 2_removed_page_033.pdf,33,3,1,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_034.pdf,34,3,2,1,2,5,review
+פונט מוזר מלל 2_removed_page_035.pdf,35,3,0,1,2,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_036.pdf,36,3,0,1,2,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_037.pdf,37,3,0,1,2,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_038.pdf,38,3,0,1,2,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_039.pdf,39,2,1,1,1,4,review
+פונט מוזר מלל 2_removed_page_040.pdf,40,2,1,1,2,5,review
+פונט מוזר מלל 2_removed_page_041.pdf,41,3,1,1,2,4,review
+פונט מוזר מלל 2_removed_page_042.pdf,42,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_043.pdf,43,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_044.pdf,44,3,0,0,1,1,safe_for_extraction
+פונט מוזר מלל 2_removed_page_045.pdf,45,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_046.pdf,46,2,0,0,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_047.pdf,47,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_048.pdf,48,2,1,1,2,5,review
+פונט מוזר מלל 2_removed_page_049.pdf,49,2,0,0,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_050.pdf,50,2,1,1,1,4,review
+פונט מוזר מלל 2_removed_page_051.pdf,51,3,1,1,2,4,review
+פונט מוזר מלל 2_removed_page_052.pdf,52,2,1,1,2,5,review
+פונט מוזר מלל 2_removed_page_053.pdf,53,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_054.pdf,54,3,0,1,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_055.pdf,55,2,1,1,1,4,review
+פונט מוזר מלל 2_removed_page_056.pdf,56,2,0,0,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_057.pdf,57,2,0,0,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_058.pdf,58,2,0,1,2,4,review
+פונט מוזר מלל 2_removed_page_059.pdf,59,2,1,1,1,4,review
+פונט מוזר מלל 2_removed_page_060.pdf,60,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_061.pdf,61,2,1,1,2,5,review
+פונט מוזר מלל 2_removed_page_062.pdf,62,2,0,1,2,4,review
+פונט מוזר מלל 2_removed_page_063.pdf,63,2,1,0,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_064.pdf,64,3,0,1,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_065.pdf,65,3,0,1,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_066.pdf,66,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_067.pdf,67,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_068.pdf,68,2,0,0,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_069.pdf,69,2,1,1,2,5,review
+פונט מוזר מלל 2_removed_page_070.pdf,70,2,1,1,1,4,review
+פונט מוזר מלל 2_removed_page_071.pdf,71,2,1,1,2,5,review
+פונט מוזר מלל 2_removed_page_072.pdf,72,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_073.pdf,73,2,0,0,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_074.pdf,74,3,0,1,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_075.pdf,75,3,1,0,2,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_076.pdf,76,2,0,0,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_077.pdf,77,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_078.pdf,78,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_079.pdf,79,2,0,1,2,4,review
+פונט מוזר מלל 2_removed_page_080.pdf,80,2,0,1,2,4,review
+פונט מוזר מלל 2_removed_page_081.pdf,81,2,1,1,1,4,review
+פונט מוזר מלל 2_removed_page_082.pdf,82,2,0,1,2,4,review
+פונט מוזר מלל 2_removed_page_083.pdf,83,2,0,1,2,4,review
+פונט מוזר מלל 2_removed_page_084.pdf,84,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_085.pdf,85,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_086.pdf,86,2,1,1,1,4,review
+פונט מוזר מלל 2_removed_page_087.pdf,87,2,0,0,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_088.pdf,88,3,0,1,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_089.pdf,89,2,0,0,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_090.pdf,90,2,1,1,2,5,review
+פונט מוזר מלל 2_removed_page_091.pdf,91,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_092.pdf,92,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל 2_removed_page_093.pdf,93,3,0,1,1,2,safe_for_extraction
+פונט מוזר מלל 2_removed_page_094.pdf,94,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_page_001.pdf,1,3,0,0,1,1,safe_for_extraction
+פונט מוזר מלל_page_002.pdf,2,2,1,1,1,4,review
+פונט מוזר מלל_page_003.pdf,3,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_page_004.pdf,4,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_page_005.pdf,5,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_page_006.pdf,6,3,0,1,1,2,safe_for_extraction
+פונט מוזר מלל_page_007.pdf,7,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_page_008.pdf,8,2,1,1,1,4,review
+פונט מוזר מלל_removed_page_001.pdf,1,3,1,1,2,4,review
+פונט מוזר מלל_removed_page_002.pdf,2,2,0,0,1,2,safe_for_extraction
+פונט מוזר מלל_removed_page_003.pdf,3,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_004.pdf,4,3,1,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_005.pdf,5,2,0,1,2,4,review
+פונט מוזר מלל_removed_page_006.pdf,6,2,0,0,1,2,safe_for_extraction
+פונט מוזר מלל_removed_page_007.pdf,7,2,0,0,1,2,safe_for_extraction
+פונט מוזר מלל_removed_page_008.pdf,8,2,1,1,2,5,review
+פונט מוזר מלל_removed_page_009.pdf,9,2,1,1,1,4,review
+פונט מוזר מלל_removed_page_010.pdf,10,2,0,1,2,4,review
+פונט מוזר מלל_removed_page_011.pdf,11,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_012.pdf,12,3,2,1,2,5,review
+פונט מוזר מלל_removed_page_013.pdf,13,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_014.pdf,14,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_015.pdf,15,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_016.pdf,16,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_017.pdf,17,3,0,0,1,1,safe_for_extraction
+פונט מוזר מלל_removed_page_018.pdf,18,2,1,1,1,4,review
+פונט מוזר מלל_removed_page_019.pdf,19,2,1,0,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_020.pdf,20,3,1,1,2,4,review
+פונט מוזר מלל_removed_page_021.pdf,21,2,1,1,1,4,review
+פונט מוזר מלל_removed_page_022.pdf,22,3,0,2,2,4,review
+פונט מוזר מלל_removed_page_023.pdf,23,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_024.pdf,24,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_025.pdf,25,3,0,1,1,2,safe_for_extraction
+פונט מוזר מלל_removed_page_026.pdf,26,3,0,1,1,2,safe_for_extraction
+פונט מוזר מלל_removed_page_027.pdf,27,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_028.pdf,28,3,2,1,1,4,review
+פונט מוזר מלל_removed_page_029.pdf,29,2,1,1,2,5,review
+פונט מוזר מלל_removed_page_030.pdf,30,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_031.pdf,31,2,1,1,1,4,review
+פונט מוזר מלל_removed_page_032.pdf,32,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_033.pdf,33,2,1,1,1,4,review
+פונט מוזר מלל_removed_page_034.pdf,34,3,1,1,2,4,review
+פונט מוזר מלל_removed_page_035.pdf,35,2,1,1,1,4,review
+פונט מוזר מלל_removed_page_036.pdf,36,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_037.pdf,37,3,1,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_038.pdf,38,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_039.pdf,39,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_040.pdf,40,2,0,0,1,2,safe_for_extraction
+פונט מוזר מלל_removed_page_041.pdf,41,2,1,1,2,5,review
+פונט מוזר מלל_removed_page_042.pdf,42,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_043.pdf,43,2,0,1,2,4,review
+פונט מוזר מלל_removed_page_044.pdf,44,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_045.pdf,45,3,2,1,2,5,review
+פונט מוזר מלל_removed_page_046.pdf,46,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_047.pdf,47,2,1,1,2,5,review
+פונט מוזר מלל_removed_page_048.pdf,48,2,0,1,2,4,review
+פונט מוזר מלל_removed_page_049.pdf,49,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_050.pdf,50,3,1,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_051.pdf,51,2,1,1,1,4,review
+פונט מוזר מלל_removed_page_052.pdf,52,2,1,1,1,4,review
+פונט מוזר מלל_removed_page_053.pdf,53,3,1,1,2,4,review
+פונט מוזר מלל_removed_page_054.pdf,54,2,1,1,1,4,review
+פונט מוזר מלל_removed_page_055.pdf,55,3,0,2,2,4,review
+פונט מוזר מלל_removed_page_056.pdf,56,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_057.pdf,57,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_058.pdf,58,3,1,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_059.pdf,59,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_060.pdf,60,2,1,1,1,4,review
+פונט מוזר מלל_removed_page_061.pdf,61,3,1,1,2,4,review
+פונט מוזר מלל_removed_page_062.pdf,62,2,1,1,1,4,review
+פונט מוזר מלל_removed_page_063.pdf,63,2,0,1,1,3,safe_for_extraction
+פונט מוזר מלל_removed_page_064.pdf,64,3,0,1,2,3,safe_for_extraction
+פונט מוזר מלל_removed_page_065.pdf,65,2,1,1,1,4,review
+פונט מוזר מלל_removed_page_066.pdf,66,3,0,1,1,2,safe_for_extraction
+פונט מוזר מלל_removed_page_067.pdf,67,2,1,1,1,4,review
+פונט מוזר מלל_removed_page_068.pdf,68,2,1,1,1,4,review
+תיק טוב לאימון המודל ובדיקה  - שאלונים וכתב יד (dragged)_page_0001.pdf,1,3,0,1,1,2,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד (dragged) 2_page_0001.pdf,1,2,0,0,0,1,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד (dragged) 3_page_0001.pdf,1,2,0,0,0,1,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד (dragged) 4_page_0001.pdf,1,2,0,0,1,2,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד (dragged) 5_page_0001.pdf,1,2,0,0,0,1,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד (dragged) 6_page_0001.pdf,1,2,0,0,0,1,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד (dragged) 7_page_0001.pdf,1,2,0,0,0,1,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד (dragged) 9_page_0001.pdf,1,1,0,0,0,2,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד (dragged)_page_0001.pdf,1,1,0,0,0,2,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0001.pdf,1,1,0,0,1,3,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0002.pdf,2,2,1,2,2,6,review
+תיק לבדיקה של המודל של הכתב יד_page_0003.pdf,3,3,2,1,2,5,review
+תיק לבדיקה של המודל של הכתב יד_page_0004.pdf,4,2,1,1,1,4,review
+תיק לבדיקה של המודל של הכתב יד_page_0005.pdf,5,2,0,1,1,3,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0006.pdf,6,3,1,1,2,4,review
+תיק לבדיקה של המודל של הכתב יד_page_0007.pdf,7,3,1,1,1,3,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0008.pdf,8,2,1,1,1,4,review
+תיק לבדיקה של המודל של הכתב יד_page_0009.pdf,9,2,2,1,1,5,review
+תיק לבדיקה של המודל של הכתב יד_page_0010.pdf,10,3,1,1,1,3,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0011.pdf,11,2,1,1,2,5,review
+תיק לבדיקה של המודל של הכתב יד_page_0012.pdf,12,2,2,1,1,5,review
+תיק לבדיקה של המודל של הכתב יד_page_0013.pdf,13,3,2,2,2,6,review
+תיק לבדיקה של המודל של הכתב יד_page_0014.pdf,14,2,1,1,2,5,review
+תיק לבדיקה של המודל של הכתב יד_page_0015.pdf,15,2,1,1,2,5,review
+תיק לבדיקה של המודל של הכתב יד_page_0016.pdf,16,2,1,1,2,5,review
+תיק לבדיקה של המודל של הכתב יד_page_0017.pdf,17,2,3,1,1,6,review
+תיק לבדיקה של המודל של הכתב יד_page_0018.pdf,18,2,0,0,1,2,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0019.pdf,19,3,0,0,0,0,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0020.pdf,20,2,0,0,0,1,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0021.pdf,21,2,0,0,1,2,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0022.pdf,22,2,0,0,0,1,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0023.pdf,23,1,0,0,0,2,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0024.pdf,24,2,0,0,0,1,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0025.pdf,25,2,0,0,0,1,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0026.pdf,26,2,0,0,0,1,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0027.pdf,27,2,0,0,1,2,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0028.pdf,28,2,0,0,0,1,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0029.pdf,29,2,0,0,0,1,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0030.pdf,30,1,0,0,0,2,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0031.pdf,31,2,0,1,1,3,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0032.pdf,32,2,0,0,0,1,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0033.pdf,33,2,0,0,0,1,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0034.pdf,34,2,0,0,0,1,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0035.pdf,35,2,0,0,0,1,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0036.pdf,36,3,0,0,0,0,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0037.pdf,37,2,0,0,0,1,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0038.pdf,38,2,1,0,0,2,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0039.pdf,39,3,0,0,0,0,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0040.pdf,40,2,0,0,0,1,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0041.pdf,41,1,0,1,1,4,review
+תיק לבדיקה של המודל של הכתב יד_page_0042.pdf,42,1,0,0,0,2,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0043.pdf,43,2,1,1,2,5,review
+תיק לבדיקה של המודל של הכתב יד_page_0044.pdf,44,2,0,1,1,3,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0045.pdf,45,3,0,0,0,0,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0046.pdf,46,2,0,0,1,2,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0047.pdf,47,3,0,0,1,1,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0048.pdf,48,2,0,1,1,3,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0049.pdf,49,3,0,1,0,1,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0050.pdf,50,3,0,0,0,0,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0051.pdf,51,2,0,0,1,2,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0052.pdf,52,2,0,1,1,3,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0053.pdf,53,2,1,1,1,4,review
+תיק לבדיקה של המודל של הכתב יד_page_0054.pdf,54,2,0,1,1,3,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0055.pdf,55,3,0,1,1,2,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0056.pdf,56,2,0,0,1,2,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0057.pdf,57,3,3,1,2,6,review
+תיק לבדיקה של המודל של הכתב יד_page_0058.pdf,58,2,0,0,1,2,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0059.pdf,59,3,0,2,2,4,review
+תיק לבדיקה של המודל של הכתב יד_page_0060.pdf,60,2,0,0,1,2,safe_for_extraction
+תיק לבדיקה של המודל של הכתב יד_page_0061.pdf,61,2,0,0,0,1,safe_for_extraction

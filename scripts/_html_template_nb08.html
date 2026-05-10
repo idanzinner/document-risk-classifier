@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validation Inference Report</title>
+<script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+<style>
+  :root {
+    --bg: #f4f6fb; --surface: #ffffff; --primary: #1a1a2e;
+    --accent: #2563eb; --muted: #6b7280; --border: #e5e7eb;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--primary); min-height: 100vh;
+  }
+  header {
+    background: var(--primary); color: white;
+    padding: 24px 40px 20px; border-bottom: 3px solid var(--accent);
+  }
+  header h1 { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.5px; }
+  header p  { font-size: 0.875rem; color: #94a3b8; margin-top: 4px; }
+  .controls {
+    background: var(--surface); border-bottom: 1px solid var(--border);
+    padding: 14px 40px; display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+  }
+  .model-label { font-size: 0.85rem; color: var(--muted); font-weight: 600;
+                 text-transform: uppercase; letter-spacing: 0.5px; }
+  #modelSelect {
+    padding: 8px 14px; border: 1px solid var(--border); border-radius: 6px;
+    background: var(--bg); font-size: 0.9rem; color: var(--primary);
+    cursor: pointer; outline: none; min-width: 180px;
+  }
+  #modelSelect:focus { border-color: var(--accent); }
+  .summary-bar {
+    display: flex; gap: 32px; flex-wrap: wrap; padding: 14px 40px;
+    background: var(--surface); border-bottom: 1px solid var(--border);
+  }
+  .stat { display: flex; flex-direction: column; }
+  .stat .val { font-size: 1.35rem; font-weight: 700; color: var(--accent); }
+  .stat .lbl { font-size: 0.72rem; color: var(--muted);
+               text-transform: uppercase; letter-spacing: 0.5px; }
+  .tabs {
+    display: flex; gap: 4px; padding: 16px 40px 0;
+    background: var(--bg); border-bottom: 1px solid var(--border);
+  }
+  .tab-btn {
+    padding: 10px 22px; border: 1px solid var(--border); border-bottom: none;
+    background: #f3f4f6; color: var(--muted); font-size: 0.875rem;
+    font-weight: 500; cursor: pointer; border-radius: 6px 6px 0 0; transition: all 0.15s;
+  }
+  .tab-btn:hover { background: #e0e7ff; color: var(--accent); }
+  .tab-btn.active {
+    background: var(--surface); color: var(--accent); font-weight: 600;
+    border-bottom: 2px solid var(--surface); box-shadow: 0 -2px 0 var(--accent);
+  }
+  .pages { padding: 28px 40px 40px; }
+  .page { display: none; }
+  .page.active { display: block; }
+  .plot-card {
+    background: var(--surface); border-radius: 10px; border: 1px solid var(--border);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06); padding: 28px 24px 20px;
+  }
+  .plot-card .caption {
+    margin-top: 12px; font-size: 0.82rem; color: var(--muted); text-align: center;
+  }
+  .plotly-chart { width: 100%; }
+  footer {
+    text-align: center; padding: 20px; font-size: 0.78rem; color: var(--muted);
+    border-top: 1px solid var(--border); margin-top: 20px;
+  }
+  @media (max-width: 640px) {
+    header { padding: 14px 16px 12px; } header h1 { font-size: 1.15rem; }
+    .controls { padding: 10px 16px; } .summary-bar { padding: 10px 16px; gap: 14px; }
+    .stat .val { font-size: 1.1rem; } .stat .lbl { font-size: 0.68rem; }
+    .tabs { padding: 10px 0 0; overflow-x: auto; flex-wrap: nowrap; }
+    .tab-btn { white-space: nowrap; padding: 8px 14px; font-size: 0.8rem; flex-shrink: 0; }
+    .pages { padding: 14px 12px 28px; }
+    .plot-card { padding: 14px 10px 12px; border-radius: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Validation Inference Report</h1>
+  <p>Hebrew PDF Hallucination-Risk Classifier &mdash; External validation set (400 documents)</p>
+</header>
+
+<div class="controls">
+  <span class="model-label">Model:</span>
+  <select id="modelSelect" onchange="switchModel(this.value)">
+    <option value="ResNet50">ResNet50</option>
+    <option value="ViT-Base">ViT-Base</option>
+    <option value="DiT">DiT (best stage)</option>
+  </select>
+</div>
+
+<div class="summary-bar" id="summary-bar"></div>
+
+<div class="tabs">
+  <button class="tab-btn active" onclick="showPage(0, this)">Confusion Matrix</button>
+  <button class="tab-btn" onclick="showPage(1, this)">Classification Report</button>
+  <button class="tab-btn" onclick="showPage(2, this)">Probability Distribution</button>
+  <button class="tab-btn" onclick="showPage(3, this)">Worst Cases</button>
+</div>
+
+<div class="pages">
+  <div class="page active" id="page-0">
+    <div class="plot-card">
+      <div id="plot-cm" class="plotly-chart"></div>
+      <p class="caption">Rows = true labels &bull; Columns = predicted labels &bull; Binary threshold at 0.5</p>
+    </div>
+  </div>
+  <div class="page" id="page-1">
+    <div class="plot-card">
+      <div id="plot-cr" class="plotly-chart"></div>
+      <p class="caption">Precision, Recall, F1-Score per class with macro and weighted averages</p>
+    </div>
+  </div>
+  <div class="page" id="page-2">
+    <div class="plot-card">
+      <div id="plot-hist" class="plotly-chart"></div>
+      <p class="caption">Dashed line = T_low (safe routing) &bull; Dotted line = T_high (risky routing)</p>
+    </div>
+  </div>
+  <div class="page" id="page-3">
+    <div class="plot-card">
+      <div id="plot-wc" class="plotly-chart"></div>
+      <p class="caption">Top 10 cases where the model is most wrong in each direction</p>
+    </div>
+  </div>
+</div>
+
+<footer>Generated by notebook 08_validation_inference.ipynb &bull; ResNet50 / ViT-Base / DiT checkpoints</footer>
+
+<script>
+const REPORT_DATA = __REPORT_DATA__;
+const CONFIG = { responsive: true, displayModeBar: true };
+
+function statBar(s) {
+  const items = [
+    { val: s.total,                                    lbl: 'Total samples' },
+    { val: s.n_safe,                                   lbl: 'Safe (label 0)' },
+    { val: s.n_risky,                                  lbl: 'Risky (label 1)' },
+    { val: (s.accuracy * 100).toFixed(1) + '%',        lbl: 'Accuracy (thr 0.5)' },
+    { val: (s.false_safe_rate * 100).toFixed(1) + '%', lbl: 'False-safe rate' },
+    { val: s.t_low.toFixed(3),                         lbl: 'T_low' },
+    { val: s.t_high.toFixed(3),                        lbl: 'T_high' },
+  ];
+  return items.map(i =>
+    `<div class="stat"><span class="val">${i.val}</span><span class="lbl">${i.lbl}</span></div>`
+  ).join('');
+}
+
+function renderModel(modelKey) {
+  const m = REPORT_DATA.models[modelKey];
+  document.getElementById('summary-bar').innerHTML = statBar(m.summary);
+  Plotly.react('plot-cm',   m.confusion_matrix.data,         m.confusion_matrix.layout,         CONFIG);
+  Plotly.react('plot-cr',   m.classification_report.data,    m.classification_report.layout,    CONFIG);
+  Plotly.react('plot-hist', m.probability_histogram.data,    m.probability_histogram.layout,    CONFIG);
+  Plotly.react('plot-wc',   m.worst_cases.data,              m.worst_cases.layout,              CONFIG);
+}
+
+function switchModel(modelKey) { renderModel(modelKey); }
+
+function showPage(idx, btn) {
+  document.querySelectorAll('.page').forEach((p, i) => p.classList.toggle('active', i === idx));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+renderModel('ResNet50');
+</script>
+</body>
+</html>

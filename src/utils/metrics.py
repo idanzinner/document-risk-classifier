@@ -8,13 +8,17 @@ Supports both aggregate and per-institution breakdowns.
 
 import numpy as np
 import pandas as pd
-from sklearn.metrics import (
-    roc_auc_score,
-    average_precision_score,
-    precision_score,
-    recall_score,
-    f1_score,
-)
+from sklearn.metrics import roc_auc_score, average_precision_score
+
+
+def _binary_f1(y_true: np.ndarray, y_pred: np.ndarray) -> float:
+    """F1 for binary classification (pos_label=1), zero_division=0."""
+    tp = int(((y_true == 1) & (y_pred == 1)).sum())
+    fp = int(((y_true == 0) & (y_pred == 1)).sum())
+    fn = int(((y_true == 1) & (y_pred == 0)).sum())
+    prec = tp / (tp + fp) if (tp + fp) > 0 else 0.0
+    rec = tp / (tp + fn) if (tp + fn) > 0 else 0.0
+    return 2 * prec * rec / (prec + rec) if (prec + rec) > 0 else 0.0
 
 
 def _apply_thresholds(y_prob: np.ndarray, thresholds: dict) -> np.ndarray:
@@ -58,8 +62,8 @@ def compute_metrics(
           f1, precision_safe, recall_risky, false_safe_rate,
           review_rate, roc_auc, pr_auc, ece
     """
-    y_true = np.asarray(y_true)
-    y_prob = np.asarray(y_prob, dtype=float)
+    y_true = (np.asarray(y_true).ravel() >= 0.5).astype(np.intp)
+    y_prob = np.asarray(y_prob, dtype=float).ravel()
     n = len(y_true)
 
     if n == 0:
@@ -77,12 +81,11 @@ def compute_metrics(
     pred_ternary = _apply_thresholds(y_prob, thresholds)
 
     # Binary predictions: review → risky (conservative for safety)
-    pred_binary = np.where(pred_ternary == 0, 0, 1)
+    pred_binary = (pred_ternary != 0).astype(np.intp)
 
     n_classes = len(np.unique(y_true))
 
-    # F1 score (treating risky=1 as positive, review counted as risky)
-    f1 = f1_score(y_true, pred_binary, pos_label=1, zero_division=0)
+    f1 = _binary_f1(y_true, pred_binary)
 
     # precision_safe: among predicted-safe, fraction that are truly safe
     safe_mask = pred_ternary == 0
@@ -155,9 +158,9 @@ def compute_per_institution_metrics(
         DataFrame with columns:
           institution, n_samples, f1, recall_risky, false_safe_rate, review_rate
     """
-    y_true = np.asarray(y_true)
-    y_prob = np.asarray(y_prob, dtype=float)
-    institutions = np.asarray(institutions)
+    y_true = (np.asarray(y_true).ravel() >= 0.5).astype(np.intp)
+    y_prob = np.asarray(y_prob, dtype=float).ravel()
+    institutions = np.asarray(institutions).ravel()
 
     records = []
     for inst in np.unique(institutions):
@@ -199,8 +202,8 @@ def compute_ece(
     Returns:
         Scalar ECE value.
     """
-    y_true = np.asarray(y_true)
-    y_prob = np.asarray(y_prob, dtype=float)
+    y_true = (np.asarray(y_true).ravel() >= 0.5).astype(np.intp)
+    y_prob = np.asarray(y_prob, dtype=float).ravel()
     n = len(y_true)
 
     if n == 0:

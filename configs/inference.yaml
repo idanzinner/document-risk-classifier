@@ -1,13 +1,6 @@
-# GCS bucket name — set this to your actual bucket before running on Vertex AI Workbench
-# On Vertex AI Workbench the bucket is mounted at /gcs/<bucket_name>/
-gcs:
-  bucket_name: "YOUR_BUCKET_NAME"          # <-- replace with your GCS bucket name
-  mount_root: "/gcs"                       # GCSFuse mount point on Vertex AI Workbench
-
 model:
-  # GCS-mounted paths — populated after training completes
-  checkpoint_path: "/gcs/YOUR_BUCKET_NAME/checkpoints/dit/best_model.pt"
-  calibrator_path: "/gcs/YOUR_BUCKET_NAME/checkpoints/dit/calibrator.pkl"
+  checkpoint_path: "checkpoints/dit/best_model.pt"
+  calibrator_path: "checkpoints/dit/calibrator.pkl"
 
 thresholds:
   safe_upper: 0.3
@@ -17,11 +10,9 @@ data:
   dpi: 150
   image_size: 224
   grayscale: true
-  # GCS-mounted path for pre-rendered PNGs
-  rendered_dir: "/gcs/YOUR_BUCKET_NAME/rendered_pages"
+  rendered_dir: "data/rendered_pages"
 
 output:
   structured_logging: true
   confidence_routing: true
-  # Results written back to GCS via GCSFuse
-  output_dir: "/gcs/YOUR_BUCKET_NAME/inference_results"
+  output_dir: "inference_results"
