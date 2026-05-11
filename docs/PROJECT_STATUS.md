@@ -365,6 +365,93 @@ batch inference service and integrating the review-queue routing logic.
 
 ---
 
+### Phase 7s — Simple Two-Folder Ingestion (In Progress, May 2026)
+
+**Goal:** add a parallel, minimal ingestion path that starts from only two
+folders — `data/safe/` and `data/risky/` — alongside the existing 5-folder
+pipeline. Decision rationale, alternatives, and constraints are recorded in
+[`docs/decisions/0001-simple-two-folder-ingestion.md`](decisions/0001-simple-two-folder-ingestion.md).
+
+**Status:** scaffolding shipped; awaiting first run against real PDFs.
+
+**Pipeline (run in order):**
+
+```bash
+python scripts/build_metadata_simple.py     # data/safe + data/risky → data/metadata_simple.csv
+python scripts/render_pages_simple.py       # → data/rendered_pages_simple/ (224x224 grayscale)
+python scripts/make_splits_simple.py        # random stratified 70/15/15, writes data/splits_simple/
+```
+
+Training reuses `src/train/train_baseline.py` and `src/train/train_dit.py`
+unchanged via the new configs:
+
+```bash
+python -m src.train.train_baseline --config configs/baseline_simple.yaml
+python -m src.train.train_dit --config configs/dit_simple.yaml
+```
+
+**Schema (`data/metadata_simple.csv`):** `file_path`, `page_num`,
+`label_binary`, `source_pdf`, `num_pages`, `split`, `D`, `H`, `S`, `L`,
+`risk_score`. The rubric columns (D/H/S/L/risk_score) are initialised to
+`-1` and can be populated later with a future adapter for
+`scripts/annotate_rubric.py`.
+
+**Key contracts** (also documented in the script headers and ADR-0001):
+
+- `data/safe/` → `label_binary=0`; `data/risky/` → `label_binary=1`.
+- Source PDFs may be nested arbitrarily under the two roots; the renderer
+  walks them recursively.
+- Each metadata row is **one page** of a source PDF. Multi-page PDFs are
+  expanded by PyMuPDF page count at ingest time.
+- Rendered PNG filenames are slug-based and globally unique because
+  `HallucinationRiskDataset` flattens to basename:
+  `data/safe/sub/foo.pdf` page 1 → `safe__sub__foo__page_001.png`.
+- Random per-page stratified split — no `source_doc_stem` grouping. This
+  is a deliberate simplification (per ADR-0001); use the legacy pipeline
+  if document-level holdout is required to prevent page leakage from
+  multi-page source PDFs.
+- The simple pipeline writes to **disjoint** paths
+  (`metadata_simple.csv`, `rendered_pages_simple/`, `splits_simple/`,
+  `checkpoints/{baseline,dit}_simple/`, `logs/{baseline,dit}_simple/`).
+  The legacy 5-folder pipeline is untouched.
+
+**Artefacts created in this phase:**
+
+- `docs/decisions/0001-simple-two-folder-ingestion.md` (ADR)
+- `scripts/build_metadata_simple.py`
+- `scripts/render_pages_simple.py`
+- `scripts/make_splits_simple.py`
+- `scripts/annotate_rubric_simple.py`
+- `configs/baseline_simple.yaml`
+- `configs/dit_simple.yaml`
+
+**Rubric annotation (optional, after rendering):**
+
+```bash
+export ANTHROPIC_API_KEY="sk-ant-..."
+python scripts/annotate_rubric_simple.py --concurrency 10
+# or, no API key handy:
+python scripts/annotate_rubric_simple.py --dry-run
+```
+
+Writes `data/labels_rubric_simple.csv` and patches D/H/S/L/risk_score in
+`data/metadata_simple.csv` in place. Resume state lives in
+`data/rubric_simple_checkpoint.jsonl` — re-runs skip pages already scored.
+Pages whose PNGs are missing are logged and skipped (no fabricated scores —
+the simple pipeline guarantees direct stem-match resolution).
+
+**Open task queue:**
+
+| Task | Status |
+|---|---|
+| Populate `data/safe/` and `data/risky/` with PDFs | pending (user) |
+| First end-to-end smoke run against real data | pending |
+| ~~Adapter to point `scripts/annotate_rubric.py` at `metadata_simple.csv`~~ → shipped as `scripts/annotate_rubric_simple.py` | done |
+| Train ResNet/DiT against the simple pipeline and compare to Phase 6d | pending |
+| Add `anthropic` to `requirements.txt` (currently used by both rubric scripts but undeclared) | pending |
+
+---
+
 ## Cross-Step Knowledge
 
 ### Data

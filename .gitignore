@@ -57,6 +57,15 @@ data/spaciel_font/
 data/spaciel_font_pages/
 data/validation_set/
 
+# Simple two-folder pipeline (ADR-0001) — raw PDFs and generated artefacts
+data/safe/
+data/risky/
+data/rendered_pages_simple/
+data/splits_simple/
+data/metadata_simple.csv
+data/labels_rubric_simple.csv
+data/rubric_simple_checkpoint.jsonl
+
 # Hebrew Drive archive zip
 "data/פונט מוזר*"
 

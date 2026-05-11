@@ -1,0 +1,39 @@
+model:
+  name: microsoft/dit-base
+  num_classes: 1
+  staged_training: true
+
+training:
+  stage1_epochs: 30
+  stage2_epochs: 30
+  stage3_epochs: 30
+  stage1_lr: 1.0e-3
+  stage2_lr: 1.0e-5
+  stage3_lr: 5.0e-6
+  batch_size: 16
+  weight_decay: 1.0e-4
+  early_stopping_patience: 15
+  loss: bce_with_logits
+  device: auto              # "auto" | "cpu" | "mps" | "cuda"
+  pos_weight: auto          # "auto" (n_neg/n_pos from train set) | float | null
+  use_weighted_sampler: true  # oversample minority class each epoch
+
+data:
+  dpi: 150
+  image_size: 224
+  grayscale: true
+  augmentation: true
+  metadata_csv: "data/metadata_simple.csv"
+  rendered_dir: "data/rendered_pages_simple"
+
+splits:
+  strategy: stratified_random          # simple two-folder pipeline (ADR-0001) — random per-page
+  group_col: null                      # no source-doc grouping in simple pipeline
+  stratify_col: label_binary
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+
+output:
+  checkpoint_dir: "checkpoints/dit_simple"
+  log_dir: "logs/dit_simple"

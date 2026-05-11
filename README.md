@@ -18,17 +18,19 @@ risk categories for downstream LLM-based text extraction:
 3. [Environment Setup](#3-environment-setup)
 4. [Data Organisation](#4-data-organisation)
 5. [Data Pipeline](#5-data-pipeline)
-6. [Training](#6-training)
-7. [Checkpoints and Saved Artefacts](#7-checkpoints-and-saved-artefacts)
-8. [Calibration and Thresholds](#8-calibration-and-thresholds)
-9. [Evaluation](#9-evaluation)
-10. [Inference on New PDFs](#10-inference-on-new-pdfs)
-11. [Results Summary](#11-results-summary)
-12. [Reports](#12-reports)
-13. [Special-Font OCR Track](#13-special-font-ocr-track)
-14. [Config Reference](#14-config-reference)
-15. [Repository Structure](#15-repository-structure)
-16. [Known Gotchas](#16-known-gotchas)
+6. [Simple Two-Folder Pipeline (ADR-0001)](#6-simple-two-folder-pipeline-adr-0001)
+7. [Training](#7-training)
+8. [Checkpoints and Saved Artefacts](#8-checkpoints-and-saved-artefacts)
+9. [Calibration and Thresholds](#9-calibration-and-thresholds)
+10. [Evaluation](#10-evaluation)
+11. [Inference on New PDFs](#11-inference-on-new-pdfs)
+12. [Results Summary](#12-results-summary)
+13. [Reports](#13-reports)
+14. [Special-Font OCR Track](#14-special-font-ocr-track)
+15. [Config Reference](#15-config-reference)
+16. [Repository Structure](#16-repository-structure)
+17. [Known Gotchas](#17-known-gotchas)
+18. [Architecture Decision Records](#18-architecture-decision-records)
 
 ---
 
@@ -236,11 +238,140 @@ PDFs, and spot-checks the output.
 
 ---
 
-## 6. Training
+## 6. Simple Two-Folder Pipeline (ADR-0001)
+
+A **parallel** ingestion path that consumes only two top-level folders —
+`data/safe/` and `data/risky/` — instead of the five legacy source folders
+described above. The legacy pipeline is left fully intact; this one writes to
+disjoint paths so both can coexist.
+
+The decision, rejected alternatives, and contracts are recorded in
+[`docs/decisions/0001-simple-two-folder-ingestion.md`](docs/decisions/0001-simple-two-folder-ingestion.md).
+
+### 6.1 When to use it
+
+| You want… | Use… |
+|---|---|
+| Document-level holdout, rich provenance (`source_doc_stem`, `template_family`, `institution`, `is_edge_case`) | Legacy pipeline (Section 5) |
+| A fresh classifier from raw PDFs with the simplest possible folder layout | Simple pipeline (this section) |
+| To reproduce Phase 5/6/6c/6d artefacts | Legacy pipeline (Section 5) |
+
+### 6.2 Folder layout
+
+```
+data/
+├── safe/                    # label_binary = 0
+│   ├── foo.pdf
+│   └── nested/bar.pdf       # arbitrary nesting allowed
+└── risky/                   # label_binary = 1
+    └── baz.pdf
+```
+
+PDFs may be nested arbitrarily under either root. Multi-page PDFs are expanded
+to one row per page at ingest time.
+
+### 6.3 Pipeline
+
+Run in order. Stage 4 (rubric annotation) is optional.
+
+```bash
+# 1. Enumerate PDFs → one row per page → data/metadata_simple.csv
+python scripts/build_metadata_simple.py
+
+# 2. Render every page → data/rendered_pages_simple/*.png  (224x224 grayscale)
+python scripts/render_pages_simple.py
+
+# 3. (Optional) Annotate D/H/S/L/risk_score via Claude vision
+export ANTHROPIC_API_KEY="sk-ant-..."
+python scripts/annotate_rubric_simple.py --concurrency 10
+# or, without an API key, run with synthetic scores:
+python scripts/annotate_rubric_simple.py --dry-run
+
+# 4. Stratified random 70/15/15 train/val/test split (by label_binary)
+python scripts/make_splits_simple.py
+```
+
+All four scripts accept `--help` for path overrides. Re-runs are safe:
+`build_metadata_simple` overwrites the metadata CSV deterministically,
+`render_pages_simple` skips PNGs that already exist (`--force` to override),
+and `annotate_rubric_simple` resumes from
+`data/rubric_simple_checkpoint.jsonl`.
+
+### 6.4 Metadata schema (`data/metadata_simple.csv`)
+
+| Column | Description |
+|---|---|
+| `file_path` | Slug-based virtual filename ending in `.pdf` (resolves to a `.png` in `rendered_pages_simple/`) |
+| `page_num` | 1-indexed page number within the source PDF |
+| `label_binary` | `0` (safe) or `1` (risky) |
+| `source_pdf` | Original relative path from `data/` — kept for traceability |
+| `num_pages` | Total page count of the source PDF (denormalised) |
+| `split` | `train`, `val`, or `test` (populated by `make_splits_simple.py`) |
+| `D`, `H`, `S`, `L` | Rubric scores 0–3 (init `-1`, populated by `annotate_rubric_simple.py`) |
+| `risk_score` | `(3 − D) + H + S + L`, range 0–12 (init `-1`) |
+
+### 6.5 Unique-filename contract
+
+`HallucinationRiskDataset` flattens rendered PNG paths to basename, so each
+row's `file_path` is a globally unique slug built from the PDF's relative path:
+
+```
+data/safe/sub/foo.pdf  page 1
+    → file_path  "safe__sub__foo__page_001.pdf"
+    → rendered   data/rendered_pages_simple/safe__sub__foo__page_001.png
+```
+
+`build_metadata_simple.py` refuses to ingest any of the legacy folder names
+(`regular_forms`, `handwritten`, `spaciel_font`, …) to prevent accidental
+misuse of the wrong pipeline.
+
+### 6.6 Training against the simple pipeline
+
+Reuses the existing training scripts unchanged — only the config changes:
+
+```bash
+python -m src.train.train_baseline --config configs/baseline_simple.yaml
+python -m src.train.train_dit       --config configs/dit_simple.yaml
+```
+
+Checkpoints land in `checkpoints/{baseline,dit}_simple/` and logs in
+`logs/{baseline,dit}_simple/`. Inference loads them the same way as the legacy
+checkpoints (Section 11).
+
+### 6.7 Isolation guarantees
+
+The simple pipeline writes to **disjoint** paths and never mutates legacy
+artefacts:
+
+| Concept | Legacy path | Simple path |
+|---|---|---|
+| Metadata CSV | `data/metadata.csv` | `data/metadata_simple.csv` |
+| Rendered PNGs | `data/rendered_pages/` | `data/rendered_pages_simple/` |
+| Splits | `data/splits/` | `data/splits_simple/` |
+| Rubric labels | `data/labels_rubric.csv` | `data/labels_rubric_simple.csv` |
+| Rubric checkpoint | `data/rubric_checkpoint.jsonl` | `data/rubric_simple_checkpoint.jsonl` |
+| Model checkpoints | `checkpoints/{baseline,dit}/` | `checkpoints/{baseline,dit}_simple/` |
+| Logs | `logs/{baseline,dit}/` | `logs/{baseline,dit}_simple/` |
+
+Zero changes to `src/` are required to use the simple pipeline — the unmodified
+`HallucinationRiskDataset` consumes its artefacts via the new configs.
+
+### 6.8 Limitations
+
+- **Random per-page split** (stratified by `label_binary`), not document-grouped.
+  Multi-page source PDFs may have their pages split across train/val/test. If
+  page leakage matters, use the legacy pipeline.
+- **No `template_family` / `institution` / `is_edge_case` columns** — the
+  schema is deliberately minimal. Reports/notebooks that reference those
+  columns target the legacy `metadata.csv` only.
+
+---
+
+## 7. Training
 
 All training commands must be run from the **repository root**.
 
-### 6.1 ResNet50
+### 7.1 ResNet50
 
 ```bash
 python -m src.train.train_baseline --config configs/baseline.yaml
@@ -251,7 +382,7 @@ Produces:
 - `checkpoints/baseline/calibrator_resnet50.pkl`
 - `logs/baseline/baseline_resnet50.json`
 
-### 6.2 EfficientNet-B0
+### 7.2 EfficientNet-B0
 
 ```bash
 python -m src.train.train_baseline \
@@ -262,7 +393,7 @@ python -m src.train.train_baseline \
 The `--model` flag overrides `cfg["model"]["name"]` at runtime without editing
 the YAML. Any timm model name works here.
 
-### 6.3 ViT-Base
+### 7.3 ViT-Base
 
 ```bash
 python -m src.train.train_baseline \
@@ -278,7 +409,7 @@ Produces:
 ViT typically early-stops at epoch 2–5 on this dataset — that is expected and
 genuine; it is not underfitting.
 
-### 6.4 DiT (recommended)
+### 7.4 DiT (recommended)
 
 ```bash
 python -m src.train.train_dit --config configs/dit.yaml
@@ -292,7 +423,7 @@ Produces:
 The best checkpoint is always the one with the highest val F1 across all stages.
 Stage 2 often outperforms stage 3 (the full fine-tune) due to early stopping.
 
-### 6.5 What happens during training
+### 7.5 What happens during training
 
 For all models:
 
@@ -309,7 +440,7 @@ For all models:
    The checkpoint is then expanded with all logits/labels/metrics for downstream
    analysis in the evaluation notebooks.
 
-### 6.6 Training augmentations
+### 7.6 Training augmentations
 
 Applied only to the training split when `data.augmentation: true` in config:
 
@@ -318,7 +449,7 @@ Applied only to the training split when `data.augmentation: true` in config:
 - `GaussianBlur(kernel=3, σ=0.1–1.0)` — scan focus blur
 - `RandomPerspective(distortion=0.05, p=0.3)` — slight physical warping
 
-### 6.7 Overriding config values
+### 7.7 Overriding config values
 
 The simplest override is `--model` (for baseline). For other values, edit the
 YAML directly or pass a second YAML that overrides specific keys:
@@ -333,9 +464,9 @@ YAML directly or pass a second YAML that overrides specific keys:
 
 ---
 
-## 7. Checkpoints and Saved Artefacts
+## 8. Checkpoints and Saved Artefacts
 
-### 7.1 Checkpoint format
+### 8.1 Checkpoint format
 
 Every `.pt` checkpoint is a Python dict saved with `torch.save`. After the
 final evaluation pass the dict contains:
@@ -359,7 +490,7 @@ final evaluation pass the dict contains:
 | `test_labels` | np.ndarray | Ground-truth labels for test set |
 | `test_metrics` | dict | Computed metrics on test set |
 
-### 7.2 Loading a checkpoint manually
+### 8.2 Loading a checkpoint manually
 
 ```python
 import torch, pickle
@@ -384,7 +515,7 @@ with open("checkpoints/dit/calibrator.pkl", "rb") as fh:
     calibrator = pickle.load(fh)
 ```
 
-### 7.3 Calibrator format
+### 8.3 Calibrator format
 
 Calibrators are pickled as full `TemperatureCalibrator` objects (not dicts).
 `load_pipeline()` handles both the object and the legacy dict format automatically.
@@ -392,7 +523,7 @@ Calibrators are pickled as full `TemperatureCalibrator` objects (not dicts).
 Do **not** use `calibrator.load(path)` directly on a pkl saved as an object —
 use `pickle.load()` instead.
 
-### 7.4 Threshold backup
+### 8.4 Threshold backup
 
 Every run of `scripts/retune_thresholds.py` creates a timestamped backup:
 
@@ -411,9 +542,9 @@ Roll back by copying the desired files back to `checkpoints/baseline/` or
 
 ---
 
-## 8. Calibration and Thresholds
+## 9. Calibration and Thresholds
 
-### 8.1 Temperature scaling
+### 9.1 Temperature scaling
 
 After training, a scalar temperature `T` is fit by minimising binary
 cross-entropy on the validation logits:
@@ -428,7 +559,7 @@ calibrated_prob = sigmoid(logit / T)
 The calibrator is fit once per training run (on val logits) and applied to
 all splits thereafter.
 
-### 8.2 Threshold selection
+### 9.2 Threshold selection
 
 Two thresholds produce three output bands:
 
@@ -446,7 +577,7 @@ prob > T_high →  high_hallucination_risk
 τ* minimises `cost(τ) = 10·FN(τ) + 1·FP(τ)` on the validation split.
 This is the method stored in the checkpoints after `retune_thresholds.py`.
 
-### 8.3 Retuning thresholds
+### 9.3 Retuning thresholds
 
 ```bash
 # Default: FN is 10× more expensive than FP
@@ -465,9 +596,9 @@ cause inference to use inconsistent thresholds.
 
 ---
 
-## 9. Evaluation
+## 10. Evaluation
 
-### 9.1 Evaluation notebooks (eval-only — no retraining)
+### 10.1 Evaluation notebooks (eval-only — no retraining)
 
 | Notebook | Models | What it shows |
 |---|---|---|
@@ -479,7 +610,7 @@ These notebooks **do not retrain**. They load the checkpoint, read stored
 logits/labels from the checkpoint dict, and replot everything. Run all cells top
 to bottom — a fresh kernel is sufficient.
 
-### 9.2 Standalone evaluator
+### 10.2 Standalone evaluator
 
 ```bash
 python -m src.train.evaluate \
@@ -491,7 +622,7 @@ Writes:
 - `eval_output/eval_summary.json` — full metric dict
 - `eval_output/error_analysis.csv` — per-page false-safe and false-risky cases
 
-### 9.3 Metrics computed
+### 10.3 Metrics computed
 
 All evaluation surfaces the same metric set via `src/utils/metrics.py`:
 
@@ -509,7 +640,7 @@ All evaluation surfaces the same metric set via `src/utils/metrics.py`:
 Per-institution breakdowns of F1, recall, and FSR are logged to console and
 available in the evaluation notebooks.
 
-### 9.4 External validation set (400 documents)
+### 10.4 External validation set (400 documents)
 
 ```bash
 python scripts/_run_validation_inference.py
@@ -529,9 +660,9 @@ will error with a clear message about missing `per_doc` arrays.
 
 ---
 
-## 10. Inference on New PDFs
+## 11. Inference on New PDFs
 
-### 10.1 Python API (recommended)
+### 11.1 Python API (recommended)
 
 ```python
 from src.inference.predict import load_pipeline, predict_single, predict_batch
@@ -579,7 +710,7 @@ responses = predict_batch(
 automatically — passing `configs/baseline.yaml` with `model_type="vit"` works
 correctly without manually editing the YAML.
 
-### 10.2 CLI — batch inference over a directory
+### 11.2 CLI — batch inference over a directory
 
 ```bash
 python -m src.inference.predict \
@@ -596,7 +727,7 @@ python -m src.inference.predict \
 The output JSON is a list of objects with keys:
 `file_path`, `page_num`, `risk_category`, `confidence`, `raw_logit`.
 
-### 10.3 Response schema
+### 11.3 Response schema
 
 ```python
 class PredictionResponse(BaseModel):
@@ -614,7 +745,7 @@ class PredictionResponse(BaseModel):
     def is_high_risk(self) -> bool: ...
 ```
 
-### 10.4 Routing logic
+### 11.4 Routing logic
 
 ```
 confidence < T_low  → safe_for_extraction   (proceed with LLM extraction)
@@ -626,14 +757,14 @@ With the Phase 6d cost-weighted thresholds (FN:FP = 10:1), τ* is in the range
 0.02–0.05, meaning the model is very conservative — nearly all uncertain pages
 are routed to review rather than declared safe.
 
-### 10.5 End-to-end demo
+### 11.5 End-to-end demo
 
 See `notebooks/07_inference_demo.ipynb` for a walkthrough that loads ResNet50,
 renders raw PDFs on the fly, and prints a risk summary per page.
 
 ---
 
-## 11. Results Summary
+## 12. Results Summary
 
 ### Held-out test set (n=284, source-doc grouped — Phase 6d)
 
@@ -671,7 +802,7 @@ The improvement comes from three sources: expanded training corpus (1,873 vs
 
 ---
 
-## 12. Reports
+## 13. Reports
 
 Three self-contained HTML reports are committed to the repository (Plotly loaded
 from CDN — no server required, just open in a browser):
@@ -699,7 +830,7 @@ python scripts/build_mixed_eval_report.py      # → reports/mixed_eval_report.h
 
 ---
 
-## 13. Special-Font OCR Track
+## 14. Special-Font OCR Track
 
 An independent pipeline for scanned Hebrew PDFs that use a non-standard font
 (unreadable by standard OCR tools). Lives under `data/spaciel_font/` and runs
@@ -750,7 +881,7 @@ on-disk directories are untouched.
 
 ---
 
-## 14. Config Reference
+## 15. Config Reference
 
 ### `configs/baseline.yaml` (ResNet / ViT)
 
@@ -809,6 +940,29 @@ output:
   log_dir: "logs/dit"
 ```
 
+### `configs/baseline_simple.yaml` and `configs/dit_simple.yaml`
+
+Mirror the structure above but point at the simple two-folder pipeline
+artefacts (see Section 6):
+
+```yaml
+data:
+  metadata_csv: "data/metadata_simple.csv"
+  rendered_dir: "data/rendered_pages_simple"
+
+splits:
+  strategy: stratified_random   # random per-page (no source_doc_stem grouping)
+  group_col: null
+  stratify_col: label_binary
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+
+output:
+  checkpoint_dir: "checkpoints/baseline_simple"   # or "checkpoints/dit_simple"
+  log_dir: "logs/baseline_simple"                 # or "logs/dit_simple"
+```
+
 ### `configs/inference.yaml`
 
 Used by `scripts/_run_validation_inference.py` and the CLI. Specifies model
@@ -827,28 +981,35 @@ thresholds:
 
 ---
 
-## 15. Repository Structure
+## 16. Repository Structure
 
 ```
 for_tal/
 ├── data/
-│   ├── handwritten/                       # source PDFs — handwritten questionnaires
-│   ├── handwritten_and_questioniers/      # source PDFs — mixed handwritten + typed
-│   ├── handwritten_edge_cases/            # source PDFs — edge-case handwritten pages
-│   ├── regular_forms/                     # source PDFs — standard typed forms
+│   ├── handwritten/                       # source PDFs — handwritten questionnaires (legacy pipeline)
+│   ├── handwritten_and_questioniers/      # source PDFs — mixed handwritten + typed (legacy pipeline)
+│   ├── handwritten_edge_cases/            # source PDFs — edge-case handwritten pages (legacy pipeline)
+│   ├── regular_forms/                     # source PDFs — standard typed forms (legacy pipeline)
 │   ├── regular_forms_edge_cases/          # source PDFs — edge-case regular forms (was spaciel_font)
 │   ├── spaciel_font/                      # source PDFs — special-font scans (OCR track only)
+│   ├── safe/                              # source PDFs — simple pipeline, label=0 (ADR-0001)
+│   ├── risky/                             # source PDFs — simple pipeline, label=1 (ADR-0001)
 │   ├── validation_set/                    # external validation PDFs (400 docs)
-│   ├── rendered_pages/                    # 224×224 grayscale PNGs (gitignored, regenerable)
-│   ├── splits/                            # train.csv / val.csv / test.csv (gitignored, regenerable)
+│   ├── rendered_pages/                    # 224×224 grayscale PNGs (legacy, gitignored)
+│   ├── rendered_pages_simple/             # 224×224 grayscale PNGs (simple pipeline, gitignored)
+│   ├── splits/                            # train.csv / val.csv / test.csv (legacy, gitignored)
+│   ├── splits_simple/                     # train.csv / val.csv / test.csv (simple pipeline, gitignored)
 │   ├── splits_v1/, splits_v2_precorrection/  # pre-correction split backups
-│   ├── metadata.csv                       # master index (1873 rows, all schema columns)
+│   ├── metadata.csv                       # master index — legacy pipeline (1873 rows)
+│   ├── metadata_simple.csv                # master index — simple pipeline (ADR-0001)
 │   ├── metadata_v1.csv                    # Phase 5 backup (1014 rows)
 │   ├── metadata_v2_precorrection.csv      # pre-Phase-6d backup (1873 rows)
 │   ├── labels_binary.csv                  # original binary annotation
 │   ├── labels_binary_clean.csv            # schema-normalised binary labels
-│   ├── labels_rubric.csv                  # D/H/S/L rubric scores (all pages)
-│   ├── rubric_checkpoint.jsonl            # Claude vision API annotation checkpoint
+│   ├── labels_rubric.csv                  # D/H/S/L rubric scores (legacy pipeline)
+│   ├── labels_rubric_simple.csv           # D/H/S/L rubric scores (simple pipeline)
+│   ├── rubric_checkpoint.jsonl            # Claude vision API checkpoint (legacy)
+│   ├── rubric_simple_checkpoint.jsonl     # Claude vision API checkpoint (simple)
 │   ├── validation_results_full.csv        # per-doc external validation output
 │   ├── handwritten.xlsx                   # ground-truth source spreadsheet
 │   ├── regular_forms.xlsx                 # ground-truth source spreadsheet
@@ -878,10 +1039,14 @@ for_tal/
 │       └── device.py                      # get_device, prepare_model, mps_sync, mps_empty_cache
 ├── scripts/
 │   ├── clean_labels.py                    # label cleaning + metadata bootstrap (Phase 0)
-│   ├── build_metadata_v2.py               # multi-folder metadata builder (Phase 6)
-│   ├── render_all_pages.py                # batch PDF → PNG renderer (Phase 6)
-│   ├── regenerate_splits.py               # grouped split generator (Phase 6)
-│   ├── annotate_rubric.py                 # Claude vision API rubric annotator (Phase 4)
+│   ├── build_metadata_v2.py               # 5-folder metadata builder (legacy, Phase 6)
+│   ├── render_all_pages.py                # batch PDF → PNG renderer (legacy, Phase 6)
+│   ├── regenerate_splits.py               # grouped split generator (legacy, Phase 6)
+│   ├── annotate_rubric.py                 # Claude vision rubric annotator (legacy, Phase 4)
+│   ├── build_metadata_simple.py           # 2-folder metadata builder (simple, ADR-0001)
+│   ├── render_pages_simple.py             # batch PDF → PNG renderer (simple, ADR-0001)
+│   ├── make_splits_simple.py              # stratified random split (simple, ADR-0001)
+│   ├── annotate_rubric_simple.py          # Claude vision rubric annotator (simple, ADR-0001)
 │   ├── retune_thresholds.py               # cost-weighted threshold recalibration (Phase 6c)
 │   ├── split_pdfs_to_pages.py             # 300 DPI renderer for OCR (Phase 5d)
 │   ├── build_finetune_report.py           # regenerates reports/finetune_report.html
@@ -901,8 +1066,10 @@ for_tal/
 │   ├── 08_validation_inference.ipynb      # external validation (400 docs, 3 models)
 │   └── 09_special_font_ocr.ipynb          # Gemma 4 OCR for special-font scans
 ├── configs/
-│   ├── baseline.yaml
-│   ├── dit.yaml
+│   ├── baseline.yaml                      # ResNet/ViT — legacy 5-folder pipeline
+│   ├── dit.yaml                           # DiT — legacy 5-folder pipeline
+│   ├── baseline_simple.yaml               # ResNet/ViT — simple 2-folder pipeline (ADR-0001)
+│   ├── dit_simple.yaml                    # DiT — simple 2-folder pipeline (ADR-0001)
 │   └── inference.yaml
 ├── eval/
 │   ├── evnaluation.py                     # Gemini vs DiT evaluation script
@@ -921,13 +1088,15 @@ for_tal/
 ├── docs/
 │   ├── PROJECT_STATUS.md
 │   ├── INTERFACES.md
-│   └── FINETUNE_REPORT.md
+│   ├── FINETUNE_REPORT.md
+│   └── decisions/
+│       └── 0001-simple-two-folder-ingestion.md   # ADR (Section 6)
 └── requirements.txt
 ```
 
 ---
 
-## 16. Known Gotchas
+## 17. Known Gotchas
 
 - **`file_path` in metadata.csv stores `.pdf` extensions**, not `.png`.
   `HallucinationRiskDataset._build_file_index()` resolves this automatically
@@ -971,3 +1140,34 @@ for_tal/
 - **`pos_weight: auto` computes `n_neg / n_pos` from the training split at
   runtime.** Do not set it to a hard-coded value unless you have a specific
   reason to deviate from the class-frequency ratio.
+
+- **Simple pipeline (Section 6) splits at the page level, not the document
+  level.** Multi-page source PDFs may have their pages split across
+  train/val/test. Use the legacy pipeline when document-level holdout
+  matters.
+
+- **Simple pipeline file paths must remain disjoint from the legacy
+  pipeline.** Never set `data.metadata_csv: data/metadata.csv` in
+  `configs/*_simple.yaml`, or vice versa — the schemas and splitting
+  strategies are incompatible and silently mixing them will produce wrong
+  metrics. See ADR-0001 for the full contract.
+
+- **`anthropic` is not declared in `requirements.txt`** but is imported by
+  both `scripts/annotate_rubric.py` and `scripts/annotate_rubric_simple.py`.
+  Install separately (`pip install anthropic`) before running either, or use
+  `--dry-run` on the simple annotator for plumbing tests.
+
+---
+
+## 18. Architecture Decision Records
+
+Architectural decisions live under `docs/decisions/` as MADR-style ADRs.
+They are append-only: to change a decision, write a new ADR with
+`supersedes: [ADR-NNNN]` rather than editing the existing one.
+
+| ID | Title | Status |
+|---|---|---|
+| [ADR-0001](docs/decisions/0001-simple-two-folder-ingestion.md) | Add parallel simple two-folder ingestion path (safe/ + risky/) | accepted |
+
+See [`docs/PROJECT_STATUS.md`](docs/PROJECT_STATUS.md) for the per-phase
+status board and the open-task queue.
